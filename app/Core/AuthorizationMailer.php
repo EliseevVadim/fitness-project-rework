@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Mail;
 
 class AuthorizationMailer
 {
-    public function sendAuthorizationMessage($email, $password)
+    public function sendAuthorizationMessage($email, $name, $link)
     {
         $details = [
-            'email' => $email,
-            'password' => $password
+            'programName' => $name,
+            'link' => $link
         ];
         Mail::to($email)->send(new ConfirmedRegistrationMail($details));
     }

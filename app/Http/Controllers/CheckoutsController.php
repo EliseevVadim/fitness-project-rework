@@ -8,6 +8,7 @@ use App\Models\ActivityCalendar;
 use App\Models\FoodCalendar;
 use App\Models\Menu;
 use App\Models\PersonalAccount;
+use App\Models\ProgramContent;
 use App\Models\Training;
 use App\Models\TrainingUser;
 use App\Models\User;
@@ -253,6 +254,7 @@ class CheckoutsController extends Controller
         $user = User::where('email', $userInfo->email)->first();
         $user->delete();
         $this->createUserAccount($userInfo);
+        return view('thanks');
     }
 
     public function finishStripeCheckoutForDiet()
@@ -276,6 +278,7 @@ class CheckoutsController extends Controller
         $userInfo = Session::get('user_info');
         Session::remove('tinkoff_id');
         $this->createUserAccount($userInfo);
+        return view('thanks');
     }
 
     public function finishTinkoffCheckoutForDiet()
@@ -338,13 +341,18 @@ class CheckoutsController extends Controller
 
     public function createUserAccount($userInfo)
     {
+        $programContent = ProgramContent::where('training_location_id', $userInfo->training_location_id)
+            ->where('menu_calories_id', $userInfo->menu_calories_id)
+            ->first();
+        if (is_null($programContent))
+            abort(404);
         $password = Str::random(12);
         $user = User::create([
             'name' => $userInfo->name,
             'email' => $userInfo->email,
             'password' => Hash::make($password)
         ]);
-        (new AuthorizationMailer())->sendAuthorizationMessage($user->email, $password);
+        (new AuthorizationMailer())->sendAuthorizationMessage($user->email, $programContent->name, $programContent->google_drive_link);
         $personalAccount = PersonalAccount::create([
             'user_id' => $user->id,
             'age' => $userInfo->age,
@@ -353,34 +361,7 @@ class CheckoutsController extends Controller
             'training_location_id' => $userInfo->training_location_id,
             'menu_calories_id' => $userInfo->menu_calories_id
         ]);
-        $menu = Menu::find($userInfo->menu_id);
-        $userMenu = UserMenu::create([
-            'user_id' => $user->id,
-            'menu_id' => $userInfo->menu_id,
-            'menu_type_id' => $menu->menu_type_id
-        ]);
-        $trainingUser = TrainingUser::create([
-            'user_id' => $user->id,
-            'training_location_id' => $userInfo->training_location_id,
-            'training_id' => $userInfo->training_id
-        ]);
-        $activityCalendar = ActivityCalendar::create([
-            'training_user_id' => $trainingUser->id,
-            'day' => 1,
-            'is_active' => 1
-        ]);
-        $accessHistory = AccessHistory::create([
-            'user_id' => $user->id,
-            'activation_date' => Carbon::now(),
-            'deactivation_date' => Carbon::now()->addDays(self::ADDITIONAL_DAYS)
-        ]);
-        $foodCalendar = FoodCalendar::create([
-            'users_menus_id' => $userMenu->id,
-            'day' => 1,
-            'is_active' => true
-        ]);
         Session::remove('user_info');
-        return view('thanks');
     }
 
     private function checkPaymentState($paymentId)

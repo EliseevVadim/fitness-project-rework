@@ -192,6 +192,11 @@ export default {
         value: "Ваш образ жизни"
       },
       {
+         id : "problem_zone_id",
+         label: "Выберите проблемные зоны: ",
+         value: "Руки"
+      },
+      {
         id : "training_location_id",
         label: "Тренировки для: ",
         value: "Дома"

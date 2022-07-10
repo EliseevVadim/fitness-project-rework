@@ -4051,6 +4051,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         label: "Выберите Ваш образ жизни: ",
         value: "Ваш образ жизни"
       }, {
+        id: "problem_zone_id",
+        label: "Выберите проблемные зоны: ",
+        value: "Руки"
+      }, {
         id: "training_location_id",
         label: "Тренировки для: ",
         value: "Дома"
