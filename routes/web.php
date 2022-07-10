@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutsController;
+use App\Http\Controllers\ProgramContentsController;
 use App\Http\Controllers\ProgramsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,14 @@ Route::prefix('/admin')->group(function () {
     Route::prefix('/users')->group(function () {  // word: "icons" - not working as part of adress
         //Route::get('/', function(){         return view('admin.dashboard.admin.usersList'); });
         Route::get('/', [PersonalAccountController::class,'adminUsers'])->name('user');
+    });
+    Route::prefix('/program-contents')->group(function () {
+        Route::get('/', [ProgramContentsController::class, "showAll"])->name('showAllContents');
+        Route::get('/add', [ProgramContentsController::class, "openAddingForm"]);
+        Route::post('/add', [ProgramContentsController::class, "addProgramContent"])->name('addProgramContent');
+        Route::get('/edit/{id}', [ProgramContentsController::class, "openProgramContentEditingPage"]);
+        Route::post('/edit/{id}', [ProgramContentsController::class, "editProgramContent"])->name('editProgramContent');
+        Route::delete('/remove/{id}', [ProgramContentsController::class, "deleteProgramContent"]);
     });
     Route::prefix('/menu')->group(function () {  // word: "icons" - not working as part of adress
         Route::get('/', [MenuController::class,'adminMenus'])->name('menu');
@@ -106,7 +115,6 @@ Route::prefix('/admin')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/upload/{id}', [FileController::class, 'upload'])->name('uploadIMG');
 
 Route::prefix('api/personal-account')->group(function () {

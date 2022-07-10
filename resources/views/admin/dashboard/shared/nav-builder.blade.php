@@ -72,6 +72,12 @@ if (!function_exists('renderDropdown')) {
         </a>
     </li>
     <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="/admin/program-contents">
+            <i class="c-sidebar-nav-icon"></i>
+            Содержимое программ
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
         <a class="c-sidebar-nav-link" href="/admin/main">
             <i class="c-sidebar-nav-icon"></i>
             Главная
