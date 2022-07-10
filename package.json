@@ -1,0 +1,65 @@
+{
+    "private": true,
+    "keywords": [
+        "admin",
+        "admin panel",
+        "admin template",
+        "bootstrap",
+        "css",
+        "dashboard",
+        "framework",
+        "front-end",
+        "responsive",
+        "sass",
+        "ui kit",
+        "webapp",
+        "laravel"
+    ],
+    "homepage": "https://coreui.io",
+    "bugs": {
+        "url": "https://github.com/coreui/coreui-free-laravel-admin-template/issues",
+        "email": "support@coreui.io"
+    },
+    "license": "MIT",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "^0.21",
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.6",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "popper.js": "^1.16.1",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1",
+        "tailwindcss": "^2.2.19",
+        "vue": "^2.6.12",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@coreui/chartjs": "^2.0.0",
+        "@coreui/coreui": "^3.2.0",
+        "@coreui/icons": "^1.0.1",
+        "@coreui/utils": "^1.2.4",
+        "@popperjs/core": "^2.4.0",
+        "axios": "^0.21.4",
+        "chart.js": "^2.9.3",
+        "cropperjs": "^1.5.7",
+        "perfect-scrollbar": "1.5.0",
+        "save": "^2.4.0",
+        "swiper": "^7.4.1",
+        "vuejs-loading-plugin": "^1.0.51",
+        "vuelidate": "^0.7.6",
+        "vuex": "^3.6.2"
+    }
+}
