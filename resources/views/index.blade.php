@@ -416,7 +416,9 @@
                 <div class="swiper-wrapper">
                     <script type="application/javascript">
                         function processMarathon(marathon) {
-                            var countDownDate = new Date(marathon.finish_date * 1000).getTime();
+                            let now = new Date();
+                            now.setDate(now.getDate() + 7)
+                            let countDownDate = now.getTime();
                             let f = setInterval(() => {
                                 // Get today's date and time
                                 var now = new Date().getTime();
@@ -433,7 +435,7 @@
                                 // If the count down is over, write some text
                                 if (distance < 0) {
                                     clearInterval(f);
-                                    document.getElementById('marathon' + marathon.id).remove();
+                                    processMarathon(marathon);
                                 }
                             }, 1000);
                         }

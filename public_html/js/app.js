@@ -3983,7 +3983,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -4051,10 +4050,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         id: "life_style_id",
         label: "Выберите Ваш образ жизни: ",
         value: "Ваш образ жизни"
-      }, {
-        id: "problem_zone_id",
-        label: "Выберите проблемные зоны: ",
-        value: "Руки"
       }, {
         id: "training_location_id",
         label: "Тренировки для: ",
@@ -50727,7 +50722,7 @@ var render = function () {
             _vm._v(" "),
             _c("div", { staticClass: "buy__label buy-head__txt-small" }, [
               _vm._v(
-                "\n                Логин/пароль придёт на указанную Вами электронную почту в течении\n                суток после оплаты - эти данные используйте для входа в Личный\n                кабинет.\n            "
+                "\n                Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении\n                суток после оплаты - используйте ее для начала Ваших тренировок!\n            "
               ),
             ]),
             _vm._v(" "),
