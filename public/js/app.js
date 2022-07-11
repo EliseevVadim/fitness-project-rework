@@ -2951,6 +2951,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var program__slider = new Swiper(".program__slider", {
     slidesPerView: 1,
     spaceBetween: 20,
+    IOSEdgeSwipeDetection: true,
     allowSlidePrev: true,
     pagination: {
       el: ".program-pagination",
