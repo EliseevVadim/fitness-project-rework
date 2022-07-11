@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    var swiperProgram = new Swiper(".program__slider", {
+    /*var swiperProgram = new Swiper(".program__slider", {
         spaceBetween: 100,
         slidesPerView: 2,
-    });
+        allowSlidePrev: true
+    });*/
     // var swiperDiet = new Swiper(".calendar__slider-account", {
     //     spaceBetween: 0,
     //     slidesPerView: 1,
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var program__slider = new Swiper(".program__slider", {
         slidesPerView: 1,
         spaceBetween: 20,
+        allowSlidePrev: true,
         pagination: {
             el: ".program-pagination",
             clickable: true,
