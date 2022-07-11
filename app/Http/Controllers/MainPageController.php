@@ -15,7 +15,6 @@ class MainPageController extends Controller
         $address_us_if = MainPage::where('name','=','address_us_if')->first();
 
         $marathons = MarathonAndProgram::all();
-
         return view('index')->with(compact('main_welcome','address_us_if', 'marathons'));
     }
 
