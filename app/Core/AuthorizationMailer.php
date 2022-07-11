@@ -10,7 +10,6 @@ class AuthorizationMailer
     public function sendAuthorizationMessage($email, $name, $link)
     {
         $details = [
-            'programName' => $name,
             'link' => $link
         ];
         Mail::to($email)->send(new ConfirmedRegistrationMail($details));
