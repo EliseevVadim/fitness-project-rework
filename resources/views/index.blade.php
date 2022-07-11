@@ -99,7 +99,7 @@
                                 <ul class="main">
                                     <li><a href="#first">Главная</a></li>
                                     <li><a href="#welcome">О проекте</a></li>
-                                    <li><a href="#office">Личный кабинет</a></li>
+                                    <li><a href="#office">О приложении</a></li>
                                     <li><a href="#program">Программы и марафоны</a></li>
                                     <li><a href="#questions">Вопрос-ответ</a></li>
                                     <div id="indicator"></div>
@@ -273,7 +273,7 @@
                 Как это работает
             </h3>
             <h2 class="title-second">
-                Личный кабинет
+                О приложении
             </h2>
             <h4 class="office__caption">
                 Это твое персональное пространство, где собрано все необходимое для достижения идеального тела!
@@ -284,28 +284,28 @@
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin1.png') }}" alt="">
+                                    <img src="{{ ('images/scrin/scrin6.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin2.png') }}" alt="">
+                                    <img src="{{ ('images/scrin/scrin10.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin3.png') }}" alt="">
+                                    <img src="{{ ('images/scrin/scrin7.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin4.png') }}" alt="">
+                                    <img src="{{ ('images/scrin/scrin8.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
