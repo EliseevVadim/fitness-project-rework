@@ -28,7 +28,6 @@
                                 <tr>
                                     <th>Название</th>
                                     <th>Количесво дней</th>
-                                    <th>Тренировка для</th>
                                     <th>Цена руб.</th>
                                     <th>Id в Stripe</th>
                                     <th>Уровень</th>
@@ -51,9 +50,6 @@
                                                 {{--                                                @else--}}
                                                 {{--                                                    <p>Не указано</p>--}}
                                                 {{--                                                @endif--}}
-                                            </td>
-                                            <td>
-                                                {{$training->problemZone->name}}
                                             </td>
                                             <td>{{ $training->training_price }}</td>
                                             <td>{{ $training->stripe_id }}</td>

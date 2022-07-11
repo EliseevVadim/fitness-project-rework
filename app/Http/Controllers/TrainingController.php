@@ -9,7 +9,6 @@ use App\Http\Resources\TrainingResource;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use App\Models\TrainingLocation;
-use App\Models\ProblemZone;
 use App\Models\TrainingUser;
 use App\Models\Days;
 use Illuminate\Support\Facades\Auth;
@@ -55,7 +54,7 @@ class TrainingController extends Controller
 //        $trainings = Training::with('trainingDays', 'problemZone')->get();
         if(is_null(Auth::guard('admin')->user()))
             abort(401);
-        $trainings = Training::with('days', 'problemZone')->get();
+        $trainings = Training::with('days')->get();
 
         return view('admin.dashboard.workout.workoutList')->with(compact('trainings'));
     }
@@ -65,8 +64,7 @@ class TrainingController extends Controller
         if(is_null(Auth::guard('admin')->user()))
             abort(401);
         $training = Training::find($id);
-        $problem_zones = ProblemZone::all();
-        return view('admin.dashboard.workout.workoutEditForm')->with(compact('training', 'problem_zones'));
+        return view('admin.dashboard.workout.workoutEditForm')->with(compact('training'));
     }
 
     public function adminEditTraining(Request $request, $id)
@@ -77,7 +75,6 @@ class TrainingController extends Controller
         $input = $request->validate([
             'name' => 'required|string',
             'training_price' => 'required',
-            'problem_zone_id' => 'required|integer',
             'stripe_id' => 'nullable',
             'description' => 'required|string',
             'level' => 'required|integer'
@@ -91,8 +88,7 @@ class TrainingController extends Controller
         if(is_null(Auth::guard('admin')->user()))
             abort(401);
         $locations = TrainingLocation::all();
-        $problem_zones = ProblemZone::all();
-        return view('admin.dashboard.workout.workoutAddForm')->with(compact('locations', 'problem_zones'));
+        return view('admin.dashboard.workout.workoutAddForm')->with(compact('locations'));
     }
 
     public function adminAddTraining(Request $request)
@@ -102,7 +98,6 @@ class TrainingController extends Controller
         $input = $request->validate([
             'name' => 'required|string',
             'training_price' => 'required',
-            'problem_zone_id' => 'required|integer',
             'stripe_id' => 'nullable',
             'description' => 'required|string',
             'level' => 'required|integer'

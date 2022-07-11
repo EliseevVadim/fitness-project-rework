@@ -2835,27 +2835,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _modules_problemZones__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/problemZones */ "./resources/js/store/modules/problemZones.js");
-/* harmony import */ var _modules_lifeStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/lifeStyles */ "./resources/js/store/modules/lifeStyles.js");
-/* harmony import */ var _modules_trainingLocations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/trainingLocations */ "./resources/js/store/modules/trainingLocations.js");
-/* harmony import */ var _modules_menuCalories__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menuCalories */ "./resources/js/store/modules/menuCalories.js");
-/* harmony import */ var _modules_menuType__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menuType */ "./resources/js/store/modules/menuType.js");
-/* harmony import */ var _modules_menus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/menus */ "./resources/js/store/modules/menus.js");
-/* harmony import */ var _modules_trainings__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/trainings */ "./resources/js/store/modules/trainings.js");
-/* harmony import */ var _modules_topics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/topics */ "./resources/js/store/modules/topics.js");
-/* harmony import */ var _modules_questions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/questions */ "./resources/js/store/modules/questions.js");
-/* harmony import */ var _modules_notifications__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/notifications */ "./resources/js/store/modules/notifications.js");
-/* harmony import */ var _modules_physicsParameters__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/physicsParameters */ "./resources/js/store/modules/physicsParameters.js");
-/* harmony import */ var _modules_personalAccount__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/personalAccount */ "./resources/js/store/modules/personalAccount.js");
-/* harmony import */ var _modules_userMenus__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/userMenus */ "./resources/js/store/modules/userMenus.js");
-/* harmony import */ var _modules_foodCalendars__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/foodCalendars */ "./resources/js/store/modules/foodCalendars.js");
-/* harmony import */ var _modules_trainingUsers__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/trainingUsers */ "./resources/js/store/modules/trainingUsers.js");
-/* harmony import */ var _modules_activityCalendars__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/activityCalendars */ "./resources/js/store/modules/activityCalendars.js");
-/* harmony import */ var _modules_accessHistory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/accessHistory */ "./resources/js/store/modules/accessHistory.js");
-/* harmony import */ var _modules_pricing__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/pricing */ "./resources/js/store/modules/pricing.js");
-/* harmony import */ var _modules_serviceInfo__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/serviceInfo */ "./resources/js/store/modules/serviceInfo.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _modules_lifeStyles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/lifeStyles */ "./resources/js/store/modules/lifeStyles.js");
+/* harmony import */ var _modules_trainingLocations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/trainingLocations */ "./resources/js/store/modules/trainingLocations.js");
+/* harmony import */ var _modules_menuCalories__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menuCalories */ "./resources/js/store/modules/menuCalories.js");
+/* harmony import */ var _modules_menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menuType */ "./resources/js/store/modules/menuType.js");
+/* harmony import */ var _modules_menus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menus */ "./resources/js/store/modules/menus.js");
+/* harmony import */ var _modules_trainings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/trainings */ "./resources/js/store/modules/trainings.js");
+/* harmony import */ var _modules_topics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/topics */ "./resources/js/store/modules/topics.js");
+/* harmony import */ var _modules_questions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/questions */ "./resources/js/store/modules/questions.js");
+/* harmony import */ var _modules_notifications__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/notifications */ "./resources/js/store/modules/notifications.js");
+/* harmony import */ var _modules_physicsParameters__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/physicsParameters */ "./resources/js/store/modules/physicsParameters.js");
+/* harmony import */ var _modules_personalAccount__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/personalAccount */ "./resources/js/store/modules/personalAccount.js");
+/* harmony import */ var _modules_userMenus__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/userMenus */ "./resources/js/store/modules/userMenus.js");
+/* harmony import */ var _modules_foodCalendars__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/foodCalendars */ "./resources/js/store/modules/foodCalendars.js");
+/* harmony import */ var _modules_trainingUsers__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/trainingUsers */ "./resources/js/store/modules/trainingUsers.js");
+/* harmony import */ var _modules_activityCalendars__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/activityCalendars */ "./resources/js/store/modules/activityCalendars.js");
+/* harmony import */ var _modules_accessHistory__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/accessHistory */ "./resources/js/store/modules/accessHistory.js");
+/* harmony import */ var _modules_pricing__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/pricing */ "./resources/js/store/modules/pricing.js");
+/* harmony import */ var _modules_serviceInfo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/serviceInfo */ "./resources/js/store/modules/serviceInfo.js");
 
  //#region import modules
 
@@ -2876,31 +2875,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
  //#endregion
 
-vue__WEBPACK_IMPORTED_MODULE_19__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_20__["default"]);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_20__["default"].Store({
+vue__WEBPACK_IMPORTED_MODULE_18__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_19__["default"]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_19__["default"].Store({
   modules: {
-    problemZones: _modules_problemZones__WEBPACK_IMPORTED_MODULE_0__["default"],
-    lifeStyles: _modules_lifeStyles__WEBPACK_IMPORTED_MODULE_1__["default"],
-    trainingLocations: _modules_trainingLocations__WEBPACK_IMPORTED_MODULE_2__["default"],
-    menuCalories: _modules_menuCalories__WEBPACK_IMPORTED_MODULE_3__["default"],
-    menuTypes: _modules_menuType__WEBPACK_IMPORTED_MODULE_4__["default"],
-    personalAccount: _modules_personalAccount__WEBPACK_IMPORTED_MODULE_11__["default"],
-    menus: _modules_menus__WEBPACK_IMPORTED_MODULE_5__["default"],
-    userMenus: _modules_userMenus__WEBPACK_IMPORTED_MODULE_12__["default"],
-    foodCalendars: _modules_foodCalendars__WEBPACK_IMPORTED_MODULE_13__["default"],
-    trainings: _modules_trainings__WEBPACK_IMPORTED_MODULE_6__["default"],
-    trainingUsers: _modules_trainingUsers__WEBPACK_IMPORTED_MODULE_14__["default"],
-    activityCalendars: _modules_activityCalendars__WEBPACK_IMPORTED_MODULE_15__["default"],
-    questions: _modules_questions__WEBPACK_IMPORTED_MODULE_8__["default"],
-    notifications: _modules_notifications__WEBPACK_IMPORTED_MODULE_9__["default"],
-    physicsParameters: _modules_physicsParameters__WEBPACK_IMPORTED_MODULE_10__["default"],
-    topics: _modules_topics__WEBPACK_IMPORTED_MODULE_7__["default"],
-    accessHistory: _modules_accessHistory__WEBPACK_IMPORTED_MODULE_16__["default"],
-    pricing: _modules_pricing__WEBPACK_IMPORTED_MODULE_17__["default"],
-    serviceInfo: _modules_serviceInfo__WEBPACK_IMPORTED_MODULE_18__["default"]
+    lifeStyles: _modules_lifeStyles__WEBPACK_IMPORTED_MODULE_0__["default"],
+    trainingLocations: _modules_trainingLocations__WEBPACK_IMPORTED_MODULE_1__["default"],
+    menuCalories: _modules_menuCalories__WEBPACK_IMPORTED_MODULE_2__["default"],
+    menuTypes: _modules_menuType__WEBPACK_IMPORTED_MODULE_3__["default"],
+    personalAccount: _modules_personalAccount__WEBPACK_IMPORTED_MODULE_10__["default"],
+    menus: _modules_menus__WEBPACK_IMPORTED_MODULE_4__["default"],
+    userMenus: _modules_userMenus__WEBPACK_IMPORTED_MODULE_11__["default"],
+    foodCalendars: _modules_foodCalendars__WEBPACK_IMPORTED_MODULE_12__["default"],
+    trainings: _modules_trainings__WEBPACK_IMPORTED_MODULE_5__["default"],
+    trainingUsers: _modules_trainingUsers__WEBPACK_IMPORTED_MODULE_13__["default"],
+    activityCalendars: _modules_activityCalendars__WEBPACK_IMPORTED_MODULE_14__["default"],
+    questions: _modules_questions__WEBPACK_IMPORTED_MODULE_7__["default"],
+    notifications: _modules_notifications__WEBPACK_IMPORTED_MODULE_8__["default"],
+    physicsParameters: _modules_physicsParameters__WEBPACK_IMPORTED_MODULE_9__["default"],
+    topics: _modules_topics__WEBPACK_IMPORTED_MODULE_6__["default"],
+    accessHistory: _modules_accessHistory__WEBPACK_IMPORTED_MODULE_15__["default"],
+    pricing: _modules_pricing__WEBPACK_IMPORTED_MODULE_16__["default"],
+    serviceInfo: _modules_serviceInfo__WEBPACK_IMPORTED_MODULE_17__["default"]
   }
 }));
 
@@ -4345,142 +4342,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     GetPricing: function GetPricing(state) {
       return state.Pricing;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/store/modules/problemZones.js":
-/*!****************************************************!*\
-  !*** ./resources/js/store/modules/problemZones.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  actions: {
-    fetchProblemZones: function fetchProblemZones(_ref) {
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var commit;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                commit = _ref.commit;
-                axios.get('/api/problem-zone/list').then(function (response) {
-                  commit('LoadProblemZones', response.data);
-                })["catch"](function (error) {
-                  console.log("fetchProblemZones:", error.response);
-                });
-
-              case 2:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    fetchProblemZone: function fetchProblemZone(_ref2, ProblemZoneId) {
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        var commit;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                commit = _ref2.commit;
-                axios.get('/api/problem-zone/show/' + ProblemZoneId).then(function (response) {
-                  commit('LoadProblemZone', response.data);
-                })["catch"](function (error) {
-                  console.log("LoadProblemZone:", error.response);
-                });
-
-              case 2:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
-    storeProblemZone: function storeProblemZone(_ref3, ProblemZone) {
-      var commit = _ref3.commit;
-      axios.post('/api/problem-zone/create', {
-        name: ProblemZone.name
-      }).then(function (response) {
-        commit('CreateProblemZone', ProblemZone);
-      })["catch"](function (error) {
-        console.log("storeProblemZone:", error.response);
-      });
-    },
-    setProblemZone: function setProblemZone(_ref4, ProblemZone) {
-      var commit = _ref4.commit;
-      axios.put('/api/problem-zone/update/' + ProblemZone.id, {
-        name: ProblemZone.name
-      }).then(function (response) {
-        commit('UpdateProblemZone', ProblemZone);
-      })["catch"](function (error) {
-        console.log("setProblemZone:", error.response);
-      });
-    },
-    delProblemZone: function delProblemZone(_ref5, ProblemZone) {
-      var commit = _ref5.commit;
-      axios["delete"]('/api/problem-zone/delete/' + ProblemZone.id).then(function (response) {
-        commit('DeleteProblemZone', ProblemZone);
-      })["catch"](function (error) {
-        console.log("delProblemZone:", error.response);
-      });
-    }
-  },
-  mutations: {
-    LoadProblemZones: function LoadProblemZones(state, ProblemZones) {
-      state.ProblemZones = ProblemZones;
-    },
-    LoadProblemZone: function LoadProblemZone(state, ProblemZone) {
-      state.ProblemZone = ProblemZone;
-    },
-    CreateProblemZone: function CreateProblemZone(state, ProblemZone) {
-      var index = state.ProblemZones.findIndex(function (ProblemZone) {
-        return ProblemZone.id == id;
-      });
-      state.ProblemZones.unshift(index);
-    },
-    UpdateProblemZone: function UpdateProblemZone(state, ProblemZone) {
-      var index = state.ProblemZones.findIndex(function (p) {
-        return p.id === ProblemZone.id;
-      });
-      state.ProblemZones[index] = ProblemZone;
-    },
-    DeleteProblemZone: function DeleteProblemZone(state, ProblemZone) {
-      var index = state.ProblemZones.findIndex(function (ProblemZone) {
-        return ProblemZone.id == id;
-      });
-      state.ProblemZones.splice(index, 1);
-    }
-  },
-  state: {
-    ProblemZones: [],
-    ProblemZone: null
-  },
-  getters: {
-    GetProblemZones: function GetProblemZones(state) {
-      return state.ProblemZones;
-    },
-    GetProblemZone: function GetProblemZone(state) {
-      return state.ProblemZone;
     }
   }
 });

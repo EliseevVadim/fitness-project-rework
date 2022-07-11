@@ -357,7 +357,6 @@ class CheckoutsController extends Controller
             'user_id' => $user->id,
             'age' => $userInfo->age,
             'life_style_id' => $userInfo->life_style_id,
-            'problem_zone_id' => $userInfo->problem_zone_id,
             'training_location_id' => $userInfo->training_location_id,
             'menu_calories_id' => $userInfo->menu_calories_id
         ]);

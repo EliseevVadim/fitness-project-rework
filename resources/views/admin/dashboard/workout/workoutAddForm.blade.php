@@ -47,16 +47,6 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Тренировка для</label>
-                                <div class="col-md-9">
-                                    <select name="problem_zone_id" class="form-control">
-                                        @foreach($problem_zones as $problem_zone)
-                                            <option value="{{$problem_zone->id}}">{{$problem_zone->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Id в Stripe</label>
                                 <div class="col-md-9">
                                     <input required name="stripe_id" class="form-control" placeholder="Id в Stripe " type="text">

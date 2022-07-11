@@ -19,7 +19,6 @@ class Training extends Model
         'description',
         'level',
         'training_price',
-        'problem_zone_id',
         'stripe_id'
     ];
 
@@ -33,7 +32,6 @@ class Training extends Model
         'training_days' => 'array',
         'level' => 'integer',
         'training_price' => 'double',
-        'problem_zone_id'=>'integer',
         'info'=>'array',
     ];
     public function days()
@@ -44,11 +42,6 @@ class Training extends Model
     public function trainingDays()
     {
         return $this->belongsTo(\App\Models\Days::class,"id","training_id");
-    }
-
-    public function problemZone()
-    {
-        return $this->belongsTo(\App\Models\ProblemZone::class);
     }
 
     public function trainingLocation()

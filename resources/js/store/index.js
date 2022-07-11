@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 //#region import modules
-import problemZones from './modules/problemZones'
 import lifeStyles from './modules/lifeStyles'
 import trainingLocations from './modules/trainingLocations'
 import menuCalories from './modules/menuCalories'
@@ -27,7 +26,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     modules: {
-        problemZones,
         lifeStyles,
         trainingLocations,
         menuCalories,

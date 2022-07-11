@@ -48,19 +48,6 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label">Тренировка для</label>
-                                    <div class="col-md-9">
-                                        <select name="problem_zone_id" class="form-control">
-                                            <option value="{{$training->problemZone}}">{{$training->problemZone->name}}</option>
-                                            @foreach($problem_zones as $problem_zone)
-                                                <option value="{{$problem_zone->id}}"
-                                                    @if($training->problem_zone_id === $problem_zone->id)
-                                                        selected
-                                                    @endif>
-                                                    {{$problem_zone->name}}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label">Id в Stripe</label>

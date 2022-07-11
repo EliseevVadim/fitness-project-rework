@@ -70,16 +70,11 @@
                         ></Myselect>
                         <Myselect
                             :select="selects[1]"
-                            :list="GetProblemZones.data"
-                            v-on:result="result"
-                        ></Myselect>
-                        <Myselect
-                            :select="selects[2]"
                             :list="trainingLocations"
                             v-on:result="resultForLocation"
                         ></Myselect>
                         <Myselect
-                            :select="selects[3]"
+                            :select="selects[2]"
                             :list="GetMenuCalories"
                             v-on:result="result"
                         ></Myselect>
@@ -125,7 +120,6 @@ export default {
     mounted() {
         this.$store.dispatch('fetchLifeStyles');
         this.$store.dispatch('fetchMenuCalories');
-        this.$store.dispatch('fetchProblemZones');
         this.$store.dispatch('fetchTrainingLocations');
     },
     data: () => ({
@@ -182,7 +176,6 @@ export default {
     additionValues: {
         'training_location_id' : 1,
         'life_style_id' : 1,
-        'problem_zone_id' : 1,
         'menu_calories_id' : 1
     },
     selects: [
@@ -190,11 +183,6 @@ export default {
         id : "life_style_id",
         label: "Выберите Ваш образ жизни: ",
         value: "Ваш образ жизни"
-      },
-      {
-         id : "problem_zone_id",
-         label: "Выберите проблемные зоны: ",
-         value: "Руки"
       },
       {
         id : "training_location_id",
@@ -211,7 +199,6 @@ export default {
     computed: {
         ...mapGetters(['GetLifeStyles']),
         ...mapGetters(['GetMenuCalories']),
-        ...mapGetters(['GetProblemZones']),
         ...mapGetters(['GetTrainingLocations']),
         ...mapGetters(['SERVICE_INFO']),
         trainingLocations() {
@@ -219,6 +206,7 @@ export default {
                 return this.GetTrainingLocations;
             this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 100р.)";
             this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 100;
+            console.log(this.GetTrainingLocations);
             return this.GetTrainingLocations;
         }
     },
@@ -256,7 +244,6 @@ export default {
             "required_weight" : this.users[5].value,
             "training_location_id" : this.additionValues.training_location_id,
             "menu_calories_id" : this.additionValues.menu_calories_id,
-            "problem_zone_id" : this.additionValues.problem_zone_id,
             "life_style_id" : this.additionValues.life_style_id,
             "product_name" : this.SERVICE_INFO.name,
             "price" : this.SERVICE_INFO.price,
@@ -284,7 +271,6 @@ export default {
               "required_weight" : this.users[5].value,
               "training_location_id" : this.additionValues.training_location_id,
               "menu_calories_id" : this.additionValues.menu_calories_id,
-              "problem_zone_id" : this.additionValues.problem_zone_id,
               "life_style_id" : this.additionValues.life_style_id,
               "product_name" : this.SERVICE_INFO.name,
               "price" : this.SERVICE_INFO.price,

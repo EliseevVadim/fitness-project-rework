@@ -18,7 +18,6 @@ class PersonalAccount extends Model
         'user_id',
         'age',
         'life_style_id',
-        'problem_zone_id',
         'training_location_id',
         'menu_calories_id',
     ];
@@ -32,7 +31,6 @@ class PersonalAccount extends Model
         'id' => 'integer',
         'user_id' => 'integer',
         'life_style_id' => 'integer',
-        'problem_zone_id' => 'integer',
         'training_location_id' => 'integer',
         'menu_calories_id' => 'integer',
         'deactivated_at' => 'timestamp',
@@ -47,11 +45,6 @@ class PersonalAccount extends Model
     public function lifeStyle()
     {
         return $this->belongsTo(\App\Models\LifeStyle::class);
-    }
-
-    public function problemZone()
-    {
-        return $this->belongsTo(\App\Models\ProblemZone::class);
     }
 
     public function trainingLocation()

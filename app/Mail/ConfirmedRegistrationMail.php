@@ -29,7 +29,7 @@ class ConfirmedRegistrationMail extends Mailable
     public function build()
     {
         return $this
-            ->subject('Данные для входа в личный кабинет')
+            ->subject('Ссылка на материал выбранной программы')
             ->view('emails.confirmed_registration_mail', ['details' => $this->details]);
     }
 }
