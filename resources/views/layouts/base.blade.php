@@ -31,7 +31,7 @@
                 <ul id="footer-nav" class="footer__nav">
                     <li><a href="#questions">Вопрос-ответ</a></li>
                     <li><a href="#program">Программы</a></li>
-                    <li><a href="#office">Личный кабинет</a></li>
+                    <li><a href="#office">О приложении</a></li>
                     <li><a href="#program">Марафон</a></li>
                 </ul>
                 <div class="footer__social">
