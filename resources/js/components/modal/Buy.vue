@@ -13,6 +13,7 @@
                     class="modal__close"
                     data-dismiss="modal"
                     aria-label="Close"
+                    @click="closeModal"
                 >
                     <svg
                         width="18"
@@ -67,16 +68,19 @@
                             :select="selects[0]"
                             :list="GetLifeStyles.data"
                             v-on:result="result"
+                            ref="life_style_select"
                         ></Myselect>
                         <Myselect
                             :select="selects[1]"
                             :list="trainingLocations"
                             v-on:result="resultForLocation"
+                            ref="training_location_select"
                         ></Myselect>
                         <Myselect
                             :select="selects[2]"
                             :list="GetMenuCalories"
                             v-on:result="result"
+                            ref="menu_calories_select"
                         ></Myselect>
                     </div>
                     <div class="buy__price">Сумма: {{SERVICE_INFO.price}}р.</div>
@@ -204,9 +208,9 @@ export default {
         trainingLocations() {
             if (!this.SERVICE_INFO.is_marathon)
                 return this.GetTrainingLocations;
-            this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 100р.)";
-            this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 100;
-            console.log(this.GetTrainingLocations);
+            if (!this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name.endsWith(" (+ 1300р.)"))
+                this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
+            this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
             return this.GetTrainingLocations;
         }
     },
@@ -287,6 +291,15 @@ export default {
               .catch((error) => {
                   console.log(error.response);
               })
+      },
+      closeModal() {
+        this.$refs.life_style_select.label = "Ваш образ жизни";
+        this.$refs.menu_calories_select.label = "1300-1400";
+        this.$refs.training_location_select.label = "Дома";
+        this.$refs.life_style_select.value = null;
+        this.$refs.menu_calories_select.value = null;
+        this.$refs.training_location_select.value = null;
+        this.$store.dispatch('fetchTrainingLocations');
       }
   },
 };

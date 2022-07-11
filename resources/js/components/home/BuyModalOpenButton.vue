@@ -21,8 +21,8 @@ export default {
                 'extended_stripe_id' : this.extended_stripe_id,
                 'current_stripe_id' : this.stripe_id
             };
-            console.log(serviceInfo);
             this.$store.dispatch('assignServiceInfo', serviceInfo);
+            this.$store.dispatch('fetchTrainingLocations');
         }
     }
 }

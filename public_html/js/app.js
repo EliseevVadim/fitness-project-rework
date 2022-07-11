@@ -3262,8 +3262,8 @@ __webpack_require__.r(__webpack_exports__);
         'extended_stripe_id': this.extended_stripe_id,
         'current_stripe_id': this.stripe_id
       };
-      console.log(serviceInfo);
       this.$store.dispatch('assignServiceInfo', serviceInfo);
+      this.$store.dispatch('fetchTrainingLocations');
     }
   }
 });
@@ -3978,6 +3978,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -4057,9 +4061,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   computed: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['GetLifeStyles'])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['GetMenuCalories'])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['GetTrainingLocations'])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['SERVICE_INFO'])), {}, {
     trainingLocations: function trainingLocations() {
       if (!this.SERVICE_INFO.is_marathon) return this.GetTrainingLocations;
-      this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 100р.)";
-      this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 100;
-      console.log(this.GetTrainingLocations);
+      if (!this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name.endsWith(" (+ 1300р.)")) this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
+      this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
       return this.GetTrainingLocations;
     }
   }),
@@ -4136,6 +4139,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       })["catch"](function (error) {
         console.log(error.response);
       });
+    },
+    closeModal: function closeModal() {
+      this.$refs.life_style_select.label = "Ваш образ жизни";
+      this.$refs.menu_calories_select.label = "1300-1400";
+      this.$refs.training_location_select.label = "Дома";
+      this.$refs.life_style_select.value = null;
+      this.$refs.menu_calories_select.value = null;
+      this.$refs.training_location_select.value = null;
+      this.$store.dispatch('fetchTrainingLocations');
     }
   }
 });
@@ -50531,6 +50543,7 @@ var render = function () {
                   "data-dismiss": "modal",
                   "aria-label": "Close",
                 },
+                on: { click: _vm.closeModal },
               },
               [
                 _c(
@@ -50735,6 +50748,7 @@ var render = function () {
                       { staticClass: "buy-form__row" },
                       [
                         _c("Myselect", {
+                          ref: "life_style_select",
                           attrs: {
                             select: _vm.selects[0],
                             list: _vm.GetLifeStyles.data,
@@ -50743,6 +50757,7 @@ var render = function () {
                         }),
                         _vm._v(" "),
                         _c("Myselect", {
+                          ref: "training_location_select",
                           attrs: {
                             select: _vm.selects[1],
                             list: _vm.trainingLocations,
@@ -50751,6 +50766,7 @@ var render = function () {
                         }),
                         _vm._v(" "),
                         _c("Myselect", {
+                          ref: "menu_calories_select",
                           attrs: {
                             select: _vm.selects[2],
                             list: _vm.GetMenuCalories,
