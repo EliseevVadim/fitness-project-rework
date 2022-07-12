@@ -464,7 +464,7 @@
                                                          transform="rotate(-165 -6.13868 0.861328)" fill="white"/>
                                             </svg>
                                         </div>
-                                        <img class="program__img-first" src="{{ ('images/program2.png') }}" alt="">
+                                        <img class="program__img-first" src="{{ $marathon->is_marathon ? ('images/program2.png') : ('images/program.png')}}" alt="#">
                                         <div class="program__title">
                                             {{$marathon->name}}
                                         </div>
@@ -495,9 +495,9 @@
                                                             fill="white"/>
                                                     </svg>
                                                 </div>
-                                                <p>Вкусное меню с видеорецептами и щепоточкой любви + в подарок меню
-                                                    ещё на<br>30 дней с простыми рецептами. Упрощенное меню отлично
-                                                    подойдёт если у<br>тебя нет времени на приготовление блюд.</p>
+                                                <p>
+                                                    {{$marathon->about_ration}}
+                                                </p>
                                             </li>
                                             <li class="program__item">
                                                 <div class="program__icon">
@@ -521,9 +521,7 @@
                                                     </svg>
                                                 </div>
                                                 <p>
-                                                    Видео-тренировки для дома или зала.
-                                                    Я лично проведу тренировки и покажу технику выполнения каждого
-                                                    упражнения.
+                                                    {{$marathon->about_trainings}}
                                                 </p>
                                             </li>
                                             <li class="program__item">
@@ -542,7 +540,7 @@
                                                     </svg>
                                                 </div>
                                                 <p>
-                                                    Психология стройности. Ты научишься думать как стройный человек.
+                                                    {{$marathon->about_support}}
                                                 </p>
                                             </li>
                                             <li class="program__item">
@@ -567,7 +565,7 @@
                                                     </svg>
                                                 </div>
                                                 <p>
-                                                    Приятные косметические процедуры. Антицеллюлитный чек-лист.
+                                                    {{$marathon->about_procedures}}
                                                 </p>
                                             </li>
                                             <li class="program__item">
@@ -580,13 +578,7 @@
                                                     </svg>
                                                 </div>
                                                 <p>
-                                                    Коллектив девочек и личный дневник с нашими проверками в группе
-                                                    проекта.
-                                                    Также в поддержку входит спец услуга
-                                                    “Волшебный пендаль”. Актуально для тех, кто боится сорваться и
-                                                    не может
-                                                    найти
-                                                    мотивацию.
+                                                    {{$marathon->about_motivation}}
                                                 </p>
                                             </li>
                                         </ul>
