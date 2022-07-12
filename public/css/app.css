@@ -1997,6 +1997,11 @@ footer {
         border-radius: 15px;
     }
 
+    .office__img-slider {
+        position: relative;
+        padding: 26px 0 0;
+    }
+
     .feedback__form {
         max-width: -webkit-fit-content;
         max-width: -moz-fit-content;

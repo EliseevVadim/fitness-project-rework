@@ -94,10 +94,10 @@
                         <span>Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...</span>
                         </div>
                         <div class="row d-flex w-100">
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <button class="button-green" @click="initializeStripePayment">stripe</button>
                             </div>
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <button class="button-green" @click="initializeTinkoffPayment">tinkoff</button>
                             </div>
                         </div>

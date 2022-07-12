@@ -42979,7 +42979,7 @@ var render = function () {
                       _vm._m(1),
                       _vm._v(" "),
                       _c("div", { staticClass: "row d-flex w-100" }, [
-                        _c("div", { staticClass: "col-6" }, [
+                        _c("div", { staticClass: "col-12 col-md-6" }, [
                           _c(
                             "button",
                             {
@@ -42990,7 +42990,7 @@ var render = function () {
                           ),
                         ]),
                         _vm._v(" "),
-                        _c("div", { staticClass: "col-6" }, [
+                        _c("div", { staticClass: "col-12 col-md-6" }, [
                           _c(
                             "button",
                             {
