@@ -739,12 +739,13 @@ nav .head__btn .button {
   padding-top: 75px;
 }
 .office__img-slider .swiper-slide img {
-  height: 500px;
+  height: 352px;
   width: 197.86px;
   max-width: 197.86px;
 }
 .office__img-slider .swiper-slide .office__img-elem {
   min-width: 197.86px;
+  height: 100%;
 }
 .office__img-slider .swiper-slide-prev {
   opacity: 1;
@@ -772,18 +773,19 @@ nav .head__btn .button {
   max-height: 700px;
 }
 .office__img-slider .swiper-slide-active .office__img {
-  height: 600px;
+  height: 420px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 50px;
   margin-right: -39px;
   margin-left: -39px;
   max-width: 236.4px;
+  margin-top: 40px;
 }
 .office__img-slider .swiper-slide-active .office__img img {
   width: 236.4px;
   max-width: 236.4px;
-  height: 600px;
+  height: 420px;
 }
 
 .office__img {
@@ -1783,7 +1785,7 @@ footer {
   .office__img-slider .swiper-slide-prev .office__img,
 .office__img-slider .swiper-slide-next .office__img {
     width: 140px;
-    height: 364px;
+    height: 249px;
     padding-bottom: 50px;
     padding-top: 22px;
     margin-left: -27px;
@@ -1796,6 +1798,8 @@ footer {
 
   .office__img-slider .swiper-slide .office__img-elem {
     min-width: 0;
+    height: 100%;
+    margin: 10px;
   }
 
   .office__img-slider .swiper-slide-prev .office__img {
@@ -1817,8 +1821,9 @@ footer {
   }
   .office__img-slider .swiper-slide-active .office__img {
     width: 165px;
-    height: 410px;
+    height: 293px;
     margin-left: -39px;
+    margin-top: 0px;
   }
   .office__img-slider .swiper-slide-active .office__img img {
     width: 100%;
@@ -1988,6 +1993,7 @@ footer {
   .office__img-slider .swiper-slide .office__img-elem {
     min-width: 0;
     width: 100%;
+    height: 100%;
     border-radius: 15px;
   }
 
@@ -2011,7 +2017,7 @@ footer {
   .office__img-slider .swiper-slide-prev .office__img,
 .office__img-slider .swiper-slide-next .office__img {
     width: 87.06px;
-    height: 220px;
+    height: 155px;
     padding-bottom: 50px;
     padding-top: 40px;
     margin-left: -20px;
@@ -2037,7 +2043,8 @@ footer {
   }
   .office__img-slider .swiper-slide-active .office__img {
     width: 116.74px;
-    height: 295px;
+    height: 208px;
+    margin-top: 10px;
   }
   .office__img-slider .swiper-slide-active .office__img img {
     width: 100%;
