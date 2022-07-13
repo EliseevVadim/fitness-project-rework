@@ -284,28 +284,28 @@
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin11.jpg') }}" alt="#">
+                                    <img src="{{ ('images/scrin/scrin11.JPG') }}" alt="#">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin14.jpg') }}" alt="#">
+                                    <img src="{{ ('images/scrin/scrin14.JPG') }}" alt="#">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin12.jpg') }}" alt="#">
+                                    <img src="{{ ('images/scrin/scrin12.JPG') }}" alt="#">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="office__img">
                                 <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin13.jpg') }}" alt="#">
+                                    <img src="{{ ('images/scrin/scrin13.JPG') }}" alt="#">
                                 </div>
                             </div>
                         </div>
