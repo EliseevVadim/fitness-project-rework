@@ -2063,7 +2063,7 @@ footer {
         width: 177.75px;
         height: 316px;
         margin-top: -33px;
-        margin-left: calc(50% - 114px);
+        margin-left: calc(50% - 119px);
     }
     .office__img-slider .swiper-slide-active .office__img img {
         width: 100%;
@@ -7428,30 +7428,30 @@ svg.radial-progress {
     }
 }
 
-@media only screen and (max-width: 416px) and (min-width: 406px){
-    .office__img-slider .swiper-slide-active .office__img {
-        margin-left: calc(50% - 110px);
+@media only screen and (max-width: 416px) and (min-width: 406px) {
+    .office__img-slider .swiper-slide-prev .office__img {
+        margin-left: -56px;
+    }
+    .office__img-slider .swiper-slide-next .office__img {
+        margin-left: 5px;
     }
 }
 
 @media only screen and (max-width: 430px) and (min-width: 417px){
-    .office__img-slider .swiper-slide-prev .office__img {
-        margin-left: -27px;
+    .office__img-slider .swiper-slide-next .office__img {
+        margin-left: 9px;
     }
-    .office__img-slider .swiper-slide-active .office__img {
-        margin-left: calc(50% - 110px);
+    .office__img-slider .swiper-slide-prev .office__img {
+        margin-left: -57px;
     }
 }
 
 @media only screen and (max-width: 440px) and (min-width: 431px){
-    .office__img-slider .swiper-slide-active .office__img {
-        margin-left: calc(50% - 117px);
-    }
     .office__img-slider .swiper-slide-next .office__img {
-        margin-left: -12px;
+        margin-left: 7px;
     }
     .office__img-slider .swiper-slide-prev .office__img {
-        margin-left: -29px;
+        margin-left: -50px;
     }
 }
 
@@ -7468,26 +7468,23 @@ svg.radial-progress {
     .office__img-slider .swiper-slide-prev .office__img {
         margin-left: -37px;
     }
-    .office__img-slider .swiper-slide-next .office__img {
-        margin-left: 11px;
-    }
 }
 
 @media only screen and (max-width: 480px) and (min-width: 461px){
     .office__img-slider .swiper-slide-next .office__img {
-        margin-left: 11px;
+        margin-left: 0;
     }
 }
 
 @media only screen and (max-width: 500px) and (min-width: 481px) {
     .office__img-slider .swiper-slide-next .office__img {
-        margin-left: 15px;
+        margin-left: 10px;
     }
 }
 
 @media only screen and (max-width: 556px) and (min-width: 500px) {
     .office__img-slider .swiper-slide-next .office__img {
-        margin-left: 31px;
+        margin-left: 25px;
     }
 }
 
