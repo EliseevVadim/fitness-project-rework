@@ -35,10 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true,
         loopAdditionalSlides: 30,
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 0,
         pagination: {
             el: '.swiper-img-pagination',
         },
+        breakpoints: {
+            556: {
+                spaceBetween: 20
+            }
+        }
     });
     let swiperScrinTxt = new Swiper('.office__txt-slider', {
         centeredSlides: true,
