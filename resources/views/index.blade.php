@@ -612,6 +612,17 @@
             <div class="swiper-pagination program-pagination"></div>
         </div>
     </section>
+    <section id="calories-calculator">
+        <div class="container">
+            <h2 class="title-second">
+                Калькулятор калорий
+            </h2>
+            <h4 class="office__caption">
+                Если не знаешь, какую калорийность меню указать в анкете - воспользуйся нашим калькулятором!
+            </h4>
+            <calories-calculator></calories-calculator>
+        </div>
+    </section>
     <section id="questions">
         <div class="container">
             <h2 class="title-second">

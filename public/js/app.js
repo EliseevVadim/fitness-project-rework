@@ -2065,6 +2065,178 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "CaloriesCalculator",
+  data: function data() {
+    return {
+      age: null,
+      weight: null,
+      height: null,
+      sex: 0,
+      formula: 0,
+      activityLevel: 1.375,
+      resultWasCalculated: false,
+      holdingResult: null,
+      gainResult: null,
+      lossResult: null
+    };
+  },
+  methods: {
+    calculateCalories: function calculateCalories() {
+      switch (this.formula) {
+        case 0:
+          switch (this.sex) {
+            case 0:
+              this.holdingResult = this.activityLevel * (10 * this.weight + 6.25 * this.height - 5 * this.age + 5);
+              break;
+
+            case 1:
+              this.holdingResult = this.activityLevel * (10 * this.weight + 6.25 * this.height - 5 * this.age - 161);
+              break;
+
+            default:
+              alert("Проверьте ввод");
+          }
+
+          this.gainResult = Math.floor(this.holdingResult * 115) / 100;
+          this.lossResult = Math.floor(this.holdingResult * 85) / 100;
+          this.holdingResult = Math.floor(this.holdingResult * 100) / 100;
+          break;
+
+        case 1:
+          switch (this.sex) {
+            case 0:
+              this.holdingResult = (66 + 13.7 * this.weight + 5 * this.height - 6.76 * this.age) * this.activityLevel;
+              break;
+
+            case 1:
+              this.holdingResult = (655 + 9.6 * this.weight + 1.8 * this.height - 4.7 * this.age) * this.activityLevel;
+              break;
+
+            default:
+              alert("Проверьте ввод");
+          }
+
+          this.gainResult = Math.floor(this.holdingResult * 115) / 100;
+          this.lossResult = Math.floor(this.holdingResult * 85) / 100;
+          this.holdingResult = Math.floor(this.holdingResult * 100) / 100;
+          break;
+
+        default:
+          alert("Проверьте ввод");
+      }
+
+      this.resultWasCalculated = true;
+    },
+    clearAll: function clearAll() {
+      this.age = null;
+      this.lossResult = null;
+      this.gainResult = null;
+      this.holdingResult = null;
+      this.height = null;
+      this.weight = null;
+      this.sex = 0;
+      this.formula = 0;
+      this.activityLevel = 1.375;
+      this.resultWasCalculated = false;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/Select.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/Select.vue?vue&type=script&lang=js& ***!
@@ -2856,6 +3028,7 @@ Vue.component('Formstep', (__webpack_require__(/*! ./components/modal/Formstep.v
 Vue.component('Buy', (__webpack_require__(/*! ./components/modal/Buy.vue */ "./resources/js/components/modal/Buy.vue")["default"]));
 Vue.component('Login', (__webpack_require__(/*! ./components/modal/Login.vue */ "./resources/js/components/modal/Login.vue")["default"]));
 Vue.component('buy-modal-opener', (__webpack_require__(/*! ./components/home/BuyModalOpenButton.vue */ "./resources/js/components/home/BuyModalOpenButton.vue")["default"]));
+Vue.component('calories-calculator', (__webpack_require__(/*! ./components/general/CaloriesCalculator.vue */ "./resources/js/components/general/CaloriesCalculator.vue")["default"]));
 var app = new Vue({
   el: '#app',
   store: _store__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -42077,6 +42250,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/general/CaloriesCalculator.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/general/CaloriesCalculator.vue ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CaloriesCalculator_vue_vue_type_template_id_57c46b4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true& */ "./resources/js/components/general/CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true&");
+/* harmony import */ var _CaloriesCalculator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CaloriesCalculator.vue?vue&type=script&lang=js& */ "./resources/js/components/general/CaloriesCalculator.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CaloriesCalculator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CaloriesCalculator_vue_vue_type_template_id_57c46b4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CaloriesCalculator_vue_vue_type_template_id_57c46b4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "57c46b4c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/general/CaloriesCalculator.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/general/Select.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/general/Select.vue ***!
@@ -42272,6 +42484,22 @@ component.options.__file = "resources/js/components/modal/Login.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/general/CaloriesCalculator.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/general/CaloriesCalculator.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CaloriesCalculator.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/general/Select.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************!*\
   !*** ./resources/js/components/general/Select.vue?vue&type=script&lang=js& ***!
@@ -42394,6 +42622,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=template&id=7ab65994&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/general/CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/general/CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true& ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_template_id_57c46b4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_template_id_57c46b4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_template_id_57c46b4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true&");
 
 
 /***/ }),
@@ -42529,6 +42774,416 @@ var render = function () {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=template&id=57c46b4c&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "form",
+      {
+        on: {
+          submit: function ($event) {
+            $event.preventDefault()
+            return _vm.calculateCalories.apply(null, arguments)
+          },
+        },
+      },
+      [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "calc-age" } }, [_vm._v("Ваш возраст:")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.age,
+                expression: "age",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              id: "calc-age",
+              placeholder: "Сколько вам лет?",
+              required: "",
+            },
+            domProps: { value: _vm.age },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.age = $event.target.value
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-2" }, [
+          _c("span", [_vm._v("Ваш пол:")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-check" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.sex,
+                  expression: "sex",
+                },
+              ],
+              staticClass: "form-check-input",
+              attrs: {
+                type: "radio",
+                name: "sex",
+                id: "male-option",
+                value: "0",
+                checked: "",
+              },
+              domProps: { checked: _vm._q(_vm.sex, "0") },
+              on: {
+                change: function ($event) {
+                  _vm.sex = "0"
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "form-check-label",
+                attrs: { for: "male-option" },
+              },
+              [_vm._v("\n                    Мужской\n                ")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-check" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.sex,
+                  expression: "sex",
+                },
+              ],
+              staticClass: "form-check-input",
+              attrs: {
+                type: "radio",
+                name: "sex",
+                id: "female-option",
+                value: "1",
+              },
+              domProps: { checked: _vm._q(_vm.sex, "1") },
+              on: {
+                change: function ($event) {
+                  _vm.sex = "1"
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "form-check-label",
+                attrs: { for: "female-option" },
+              },
+              [_vm._v("\n                    Женский\n                ")]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "calc-weight" } }, [_vm._v("Ваш вес:")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.weight,
+                expression: "weight",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              id: "calc-weight",
+              placeholder: "Ваш вес (в кг)",
+              required: "",
+            },
+            domProps: { value: _vm.weight },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.weight = $event.target.value
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "height" } }, [_vm._v("Ваш рост:")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.height,
+                expression: "height",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              id: "height",
+              placeholder: "Ваш рост (в см)",
+              required: "",
+            },
+            domProps: { value: _vm.height },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.height = $event.target.value
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "activity-level" } }, [
+            _vm._v("Степень физической активности:"),
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.activityLevel,
+                  expression: "activityLevel",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { id: "activity-level" },
+              on: {
+                change: function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.activityLevel = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                },
+              },
+            },
+            [
+              _c("option", { attrs: { value: "1.0" } }, [
+                _vm._v("Основной обмен"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.2" } }, [
+                _vm._v("Минимум/отсутствие физической нагрузки"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.375", selected: "" } }, [
+                _vm._v("3 раза в неделю"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.4625" } }, [
+                _vm._v("5 раз в неделю"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.550" } }, [
+                _vm._v("5 раз в неделю (интенсивно)"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.635" } }, [
+                _vm._v("Каждый день"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.725" } }, [
+                _vm._v("Каждый день интенсивно или два раза в день"),
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1.9" } }, [
+                _vm._v("Ежедневная физическая нагрузка+физическая работа"),
+              ]),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-2" }, [
+          _c("span", [_vm._v("Формула:")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-check" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.formula,
+                  expression: "formula",
+                },
+              ],
+              staticClass: "form-check-input",
+              attrs: {
+                type: "radio",
+                name: "calculating-formula",
+                id: "miffline-formula",
+                value: "0",
+                checked: "",
+              },
+              domProps: { checked: _vm._q(_vm.formula, "0") },
+              on: {
+                change: function ($event) {
+                  _vm.formula = "0"
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "form-check-label",
+                attrs: { for: "miffline-formula" },
+              },
+              [
+                _vm._v(
+                  "\n                    Миффлина - Сан Жеора\n                "
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-check" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.formula,
+                  expression: "formula",
+                },
+              ],
+              staticClass: "form-check-input",
+              attrs: {
+                type: "radio",
+                name: "calculating-formula",
+                id: "harris-formula",
+                value: "1",
+              },
+              domProps: { checked: _vm._q(_vm.formula, "1") },
+              on: {
+                change: function ($event) {
+                  _vm.formula = "1"
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "form-check-label",
+                attrs: { for: "harris-formula" },
+              },
+              [
+                _vm._v(
+                  "\n                    Харриса-Бенедикта\n                "
+                ),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row d-flex w-100 justify-content-between" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-md-6 text-center mb-2" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger",
+                attrs: { type: "button" },
+                on: { click: _vm.clearAll },
+              },
+              [_vm._v("Очистить все")]
+            ),
+          ]),
+        ]),
+      ]
+    ),
+    _vm._v(" "),
+    _vm.resultWasCalculated
+      ? _c("div", { staticClass: "row d-flex w-100" }, [
+          _c("div", { staticClass: "col-12" }, [
+            _vm._v("\n            Для поддержания веса необходимо: "),
+            _c("b", [_vm._v(_vm._s(_vm.holdingResult))]),
+            _vm._v(" ккал/день\n        "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12" }, [
+            _vm._v("\n            Для набора веса необходимо: "),
+            _c("b", [_vm._v(_vm._s(_vm.gainResult))]),
+            _vm._v(" ккал/день\n        "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12" }, [
+            _vm._v("\n            Для сброса веса необходимо: "),
+            _c("b", [_vm._v(_vm._s(_vm.lossResult))]),
+            _vm._v(" ккал/день\n        "),
+          ]),
+        ])
+      : _vm._e(),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-md-6 text-center mb-2" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+        [_vm._v("Рассчитать")]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
