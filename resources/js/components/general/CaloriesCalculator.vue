@@ -56,7 +56,7 @@
                     </label>
                 </div>
             </div>
-            <div class="row d-flex w-100 justify-content-between">
+            <div class="row d-flex w-100 justify-content-between m-0">
                 <div class="col-12 col-md-6 text-center mb-2">
                     <button type="submit" class="btn btn-primary">Рассчитать</button>
                 </div>

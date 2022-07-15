@@ -43129,21 +43129,25 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row d-flex w-100 justify-content-between" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-md-6 text-center mb-2" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-danger",
-                attrs: { type: "button" },
-                on: { click: _vm.clearAll },
-              },
-              [_vm._v("Очистить все")]
-            ),
-          ]),
-        ]),
+        _c(
+          "div",
+          { staticClass: "row d-flex w-100 justify-content-between m-0" },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6 text-center mb-2" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  attrs: { type: "button" },
+                  on: { click: _vm.clearAll },
+                },
+                [_vm._v("Очистить все")]
+              ),
+            ]),
+          ]
+        ),
       ]
     ),
     _vm._v(" "),

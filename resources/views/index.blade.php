@@ -101,6 +101,7 @@
                                     <li><a href="#welcome">О проекте</a></li>
                                     <li><a href="#office">О приложении</a></li>
                                     <li><a href="#program">Программы и марафоны</a></li>
+                                    <li><a href="#calories-calculator">Калькулятор калорий</a></li>
                                     <li><a href="#questions">Вопрос-ответ</a></li>
                                     <div id="indicator"></div>
                                 </ul>
