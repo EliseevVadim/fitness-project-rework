@@ -42847,9 +42847,10 @@ var render = function () {
               directives: [
                 {
                   name: "model",
-                  rawName: "v-model",
+                  rawName: "v-model.number",
                   value: _vm.sex,
                   expression: "sex",
+                  modifiers: { number: true },
                 },
               ],
               staticClass: "form-check-input",
@@ -42860,10 +42861,10 @@ var render = function () {
                 value: "0",
                 checked: "",
               },
-              domProps: { checked: _vm._q(_vm.sex, "0") },
+              domProps: { checked: _vm._q(_vm.sex, _vm._n("0")) },
               on: {
                 change: function ($event) {
-                  _vm.sex = "0"
+                  _vm.sex = _vm._n("0")
                 },
               },
             }),
@@ -42883,9 +42884,10 @@ var render = function () {
               directives: [
                 {
                   name: "model",
-                  rawName: "v-model",
+                  rawName: "v-model.number",
                   value: _vm.sex,
                   expression: "sex",
+                  modifiers: { number: true },
                 },
               ],
               staticClass: "form-check-input",
@@ -42895,10 +42897,10 @@ var render = function () {
                 id: "female-option",
                 value: "1",
               },
-              domProps: { checked: _vm._q(_vm.sex, "1") },
+              domProps: { checked: _vm._q(_vm.sex, _vm._n("1")) },
               on: {
                 change: function ($event) {
-                  _vm.sex = "1"
+                  _vm.sex = _vm._n("1")
                 },
               },
             }),
@@ -43054,9 +43056,10 @@ var render = function () {
               directives: [
                 {
                   name: "model",
-                  rawName: "v-model",
+                  rawName: "v-model.number",
                   value: _vm.formula,
                   expression: "formula",
+                  modifiers: { number: true },
                 },
               ],
               staticClass: "form-check-input",
@@ -43067,10 +43070,10 @@ var render = function () {
                 value: "0",
                 checked: "",
               },
-              domProps: { checked: _vm._q(_vm.formula, "0") },
+              domProps: { checked: _vm._q(_vm.formula, _vm._n("0")) },
               on: {
                 change: function ($event) {
-                  _vm.formula = "0"
+                  _vm.formula = _vm._n("0")
                 },
               },
             }),
@@ -43094,9 +43097,10 @@ var render = function () {
               directives: [
                 {
                   name: "model",
-                  rawName: "v-model",
+                  rawName: "v-model.number",
                   value: _vm.formula,
                   expression: "formula",
+                  modifiers: { number: true },
                 },
               ],
               staticClass: "form-check-input",
@@ -43106,10 +43110,10 @@ var render = function () {
                 id: "harris-formula",
                 value: "1",
               },
-              domProps: { checked: _vm._q(_vm.formula, "1") },
+              domProps: { checked: _vm._q(_vm.formula, _vm._n("1")) },
               on: {
                 change: function ($event) {
-                  _vm.formula = "1"
+                  _vm.formula = _vm._n("1")
                 },
               },
             }),

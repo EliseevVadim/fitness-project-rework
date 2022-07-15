@@ -8,13 +8,13 @@
             <div class="mb-2">
                 <span>Ваш пол:</span>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sex" id="male-option" value="0" checked v-model="sex">
+                    <input class="form-check-input" type="radio" name="sex" id="male-option" value="0" checked v-model.number="sex">
                     <label class="form-check-label" for="male-option">
                         Мужской
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sex" id="female-option" value="1" v-model="sex">
+                    <input class="form-check-input" type="radio" name="sex" id="female-option" value="1" v-model.number="sex">
                     <label class="form-check-label" for="female-option">
                         Женский
                     </label>
@@ -44,13 +44,13 @@
             <div class="mb-2">
                 <span>Формула:</span>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="calculating-formula" id="miffline-formula" value="0" checked v-model="formula">
+                    <input class="form-check-input" type="radio" name="calculating-formula" id="miffline-formula" value="0" checked v-model.number="formula">
                     <label class="form-check-label" for="miffline-formula">
                         Миффлина - Сан Жеора
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="calculating-formula" id="harris-formula" value="1" v-model="formula">
+                    <input class="form-check-input" type="radio" name="calculating-formula" id="harris-formula" value="1" v-model.number="formula">
                     <label class="form-check-label" for="harris-formula">
                         Харриса-Бенедикта
                     </label>
