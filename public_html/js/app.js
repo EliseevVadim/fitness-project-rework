@@ -2151,9 +2151,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "CaloriesCalculator",
   data: function data() {
@@ -2216,18 +2213,6 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.resultWasCalculated = true;
-    },
-    clearAll: function clearAll() {
-      this.age = null;
-      this.lossResult = null;
-      this.gainResult = null;
-      this.holdingResult = null;
-      this.height = null;
-      this.weight = null;
-      this.sex = 0;
-      this.formula = 0;
-      this.activityLevel = 1.375;
-      this.resultWasCalculated = false;
     }
   }
 });
@@ -43193,30 +43178,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row d-flex w-100 justify-content-between m-0" },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-12 col-sm-6 col-md-6 text-center mb-2" },
-              [
-                _c(
-                  "button",
-                  {
-                    staticClass:
-                      "button px-4 text-center clear-calculations-button",
-                    attrs: { type: "button" },
-                    on: { click: _vm.clearAll },
-                  },
-                  [_vm._v("Очистить все")]
-                ),
-              ]
-            ),
-          ]
-        ),
+        _vm._m(0),
       ]
     ),
     _vm._v(" "),
@@ -43250,13 +43212,18 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "col-12 col-sm-6 col-md-6 text-center mb-2" },
+      { staticClass: "row d-flex w-100 justify-content-between m-0" },
       [
-        _c(
-          "button",
-          { staticClass: "button px-4 text-center", attrs: { type: "submit" } },
-          [_vm._v("Рассчитать")]
-        ),
+        _c("div", { staticClass: "col-12 text-center mb-2" }, [
+          _c(
+            "button",
+            {
+              staticClass: "button px-4 text-center",
+              attrs: { type: "submit" },
+            },
+            [_vm._v("Рассчитать")]
+          ),
+        ]),
       ]
     )
   },

@@ -54,11 +54,8 @@
                 </div>
             </div>
             <div class="row d-flex w-100 justify-content-between m-0">
-                <div class="col-12 col-sm-6 col-md-6 text-center mb-2">
+                <div class="col-12 text-center mb-2">
                     <button type="submit" class="button px-4 text-center">Рассчитать</button>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 text-center mb-2">
-                    <button type="button" class="button px-4 text-center clear-calculations-button" @click="clearAll">Очистить все</button>
                 </div>
             </div>
         </form>
@@ -130,18 +127,6 @@ export default {
                     alert("Проверьте ввод");
             }
             this.resultWasCalculated = true;
-        },
-        clearAll() {
-            this.age = null;
-            this.lossResult = null;
-            this.gainResult = null;
-            this.holdingResult = null;
-            this.height = null;
-            this.weight = null;
-            this.sex = 0;
-            this.formula = 0;
-            this.activityLevel = 1.375;
-            this.resultWasCalculated = false;
         }
     }
 }
