@@ -8,13 +8,13 @@
             <div class="mb-2">
                 <span>Ваш пол:</span>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sex" id="male-option" value="0" checked v-model.number="sex">
+                    <input class="form-check-input colored-radio" type="radio" name="sex" id="male-option" value="0" checked v-model.number="sex">
                     <label class="form-check-label" for="male-option">
                         Мужской
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sex" id="female-option" value="1" v-model.number="sex">
+                    <input class="form-check-input colored-radio" type="radio" name="sex" id="female-option" value="1" v-model.number="sex">
                     <label class="form-check-label" for="female-option">
                         Женский
                     </label>
@@ -31,37 +31,34 @@
             <div class="form-group">
                 <label for="activity-level">Степень физической активности:</label>
                 <select id="activity-level" class="form-control" v-model="activityLevel">
-                    <option value="1.0">Основной обмен</option>
-                    <option value="1.2">Минимум/отсутствие физической нагрузки</option>
-                    <option value="1.375" selected>3 раза в неделю</option>
-                    <option value="1.4625">5 раз в неделю</option>
-                    <option value="1.550">5 раз в неделю (интенсивно)</option>
-                    <option value="1.635">Каждый день</option>
-                    <option value="1.725">Каждый день интенсивно или два раза в день</option>
-                    <option value="1.9">Ежедневная физическая нагрузка+физическая работа</option>
+                    <option value="1.2">Минимальная (сидячая работа, отсутствие физических нагрузок)</option>
+                    <option value="1.375" selected>Низкая (тренировки не менее 20 мин 1-3 раза в неделю</option>
+                    <option value="1.55">Умеренная (тренировки 30-60 мин 3-4 раза в неделю)</option>
+                    <option value="1.7">Высокая (тренировки 30-60 мин 5-7 раза в неделю; тяжелая физическая работа)</option>
+                    <option value="1.9">Экстремальная (несколько интенсивных тренировок в день 6-7 раз в неделю; очень трудоемкая работа)</option>
                 </select>
             </div>
             <div class="mb-2">
                 <span>Формула:</span>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="calculating-formula" id="miffline-formula" value="0" checked v-model.number="formula">
+                    <input class="form-check-input colored-radio" type="radio" name="calculating-formula" id="miffline-formula" value="0" checked v-model.number="formula">
                     <label class="form-check-label" for="miffline-formula">
                         Миффлина - Сан Жеора
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="calculating-formula" id="harris-formula" value="1" v-model.number="formula">
+                    <input class="form-check-input colored-radio" type="radio" name="calculating-formula" id="harris-formula" value="1" v-model.number="formula">
                     <label class="form-check-label" for="harris-formula">
                         Харриса-Бенедикта
                     </label>
                 </div>
             </div>
             <div class="row d-flex w-100 justify-content-between m-0">
-                <div class="col-12 col-md-6 text-center mb-2">
-                    <button type="submit" class="btn btn-primary">Рассчитать</button>
+                <div class="col-12 col-sm-6 col-md-6 text-center mb-2">
+                    <button type="submit" class="button px-4 text-center">Рассчитать</button>
                 </div>
-                <div class="col-12 col-md-6 text-center mb-2">
-                    <button type="button" class="btn btn-danger" @click="clearAll">Очистить все</button>
+                <div class="col-12 col-sm-6 col-md-6 text-center mb-2">
+                    <button type="button" class="button px-4 text-center clear-calculations-button" @click="clearAll">Очистить все</button>
                 </div>
             </div>
         </form>
@@ -151,5 +148,10 @@ export default {
 </script>
 
 <style scoped>
-
+    .clear-calculations-button {
+        background-color: #ef1556 !important;
+    }
+    .colored-radio {
+        accent-color: #9180ff;
+    }
 </style>
