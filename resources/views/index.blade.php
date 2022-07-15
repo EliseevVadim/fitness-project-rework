@@ -434,6 +434,12 @@
                                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                if (marathon.is_marathon) {
+                                    days -= 3;
+                                    hours -= 6;
+                                    minutes -= 21;
+                                    seconds -= 15;
+                                }
                                 // Output the result in an element with id="demo"
                                 document.getElementById(marathon.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
                                     + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
