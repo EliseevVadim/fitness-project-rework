@@ -424,30 +424,45 @@
                                 countDownDate = now.getTime();
                                 localStorage.setItem('countDownDate', countDownDate);
                             }
-                            let f = setInterval(() => {
-                                // Get today's date and time
-                                var now = new Date().getTime();
-                                // Find the distance between now and the count down date
-                                var distance = countDownDate - now;
-                                // Time calculations for days, hours, minutes and seconds
-                                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                                if (marathon.is_marathon) {
-                                    days -= 3;
-                                    hours -= 6;
-                                    minutes -= 21;
-                                    seconds -= 15;
-                                }
-                                // Output the result in an element with id="demo"
+                            let m = setInterval(() => {
+                                let now = new Date().getTime();
+                                let distance = countDownDate - now;
+                                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
                                 document.getElementById(marathon.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
                                     + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
-                                // If the count down is over, write some text
                                 if (distance < 0) {
                                     localStorage.removeItem('countDownDate');
-                                    clearInterval(f);
+                                    clearInterval(m);
                                     processMarathon(marathon);
+                                }
+                            }, 1000);
+                        }
+                        function processProgram(program) {
+                            let countDownDateForProgram = localStorage.getItem('countDownDateForProgram');
+                            if (countDownDateForProgram === null) {
+                                let now = new Date();
+                                now.setDate(now.getDate() + 3);
+                                now.setHours(now.getHours() + 6);
+                                now.setMinutes(now.getMinutes() + 30);
+                                countDownDateForProgram = now.getTime();
+                                localStorage.setItem('countDownDateForProgram', countDownDateForProgram);
+                            }
+                            let p = setInterval(() => {
+                                let now = new Date().getTime();
+                                let distance = countDownDateForProgram - now;
+                                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                document.getElementById(program.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
+                                    + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+                                if (distance < 0) {
+                                    localStorage.removeItem('countDownDateForProgram');
+                                    clearInterval(p);
+                                    processProgram(program);
                                 }
                             }, 1000);
                         }
@@ -482,7 +497,11 @@
                                         <div id="{{$marathon->id . 'promo_time'}}"
                                              class="program__promo-time"></div>
                                         <script type="application/javascript">
-                                            processMarathon({!! json_encode($marathon) !!});
+                                            @if($marathon->is_marathon)
+                                                processMarathon({!! json_encode($marathon) !!});
+                                            @else
+                                                processProgram({!! json_encode($marathon) !!})
+                                            @endif
                                         </script>
                                     </div>
                                     <div class="program__body">
