@@ -105,11 +105,6 @@
                                     <li><a href="#questions">Вопрос-ответ</a></li>
                                     <div id="indicator"></div>
                                 </ul>
-                                <div class="head__btn">
-                                    <button type="button" class="button" data-toggle="modal" data-target="#login">
-                                        Тест
-                                    </button>
-                                </div>
                                 <div class="head__social">
                                     <a href="https://vk.com/goodiets">
                                         <svg width="31" height="28" viewBox="0 0 31 28" fill="none"
@@ -188,10 +183,6 @@
                     <img src="{{ ('images/first.png') }}" alt="">
                 </div>
                 <div class="first__col">
-                    <button type="button" class="button first__btn white-btn" data-toggle="modal"
-                            data-target="#login">
-                        Тест
-                    </button>
                     <div class="first__social">
                         <a href="https://vk.com/goodiets">
                             <svg width="31" height="28" viewBox="0 0 31 28" fill="none"
@@ -420,7 +411,9 @@
                             let countDownDate = localStorage.getItem('countDownDate');
                             if (countDownDate === null) {
                                 let now = new Date();
-                                now.setDate(now.getDate() + 7)
+                                now.setDate(now.getDate() + 3);
+                                now.setHours(now.getHours() + 6);
+                                now.setMinutes(now.getMinutes() + 30);
                                 countDownDate = now.getTime();
                                 localStorage.setItem('countDownDate', countDownDate);
                             }
@@ -444,9 +437,7 @@
                             let countDownDateForProgram = localStorage.getItem('countDownDateForProgram');
                             if (countDownDateForProgram === null) {
                                 let now = new Date();
-                                now.setDate(now.getDate() + 3);
-                                now.setHours(now.getHours() + 6);
-                                now.setMinutes(now.getMinutes() + 30);
+                                now.setDate(now.getDate() + 7);
                                 countDownDateForProgram = now.getTime();
                                 localStorage.setItem('countDownDateForProgram', countDownDateForProgram);
                             }
