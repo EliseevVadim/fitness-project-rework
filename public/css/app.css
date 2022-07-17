@@ -158,6 +158,11 @@ p:last-child {
     text-align: center;
 }
 
+.feedback-link {
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
 .thanks {
     display: flex;
     align-items: center;
@@ -1198,7 +1203,7 @@ nav .head__btn .button {
     }
 }
 #feedback {
-    padding: 0 0 100px;
+    padding: 0 0 30px;
 }
 
 .feedback__form {
