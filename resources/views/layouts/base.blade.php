@@ -104,8 +104,6 @@
         {{--<!-- Modal  -->--}}
         <formstep></formstep>
         <buy></buy>
-        <login></login>
-        <Register></Register>
         {{--<!-- Modal-end -->--}}
     </div>
 @section('footerScript')

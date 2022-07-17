@@ -79,6 +79,7 @@ class Tinkoff
         $params = array(
             'OrderId'       => $payment['OrderId'],
             'SuccessURL'    => $payment['SuccessURL'],
+            'FailURL'       => $payment['FailURL'],
             'Amount'        => round($payment['Amount'] * $amount_multiplicator),
             'Language'      => $payment['Language'],
             'Description'   => $payment['Description'],

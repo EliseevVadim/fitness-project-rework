@@ -130,6 +130,7 @@ class CheckoutsController extends Controller
         $payment = [
             'OrderId' => random_int(1, 1000000),
             'SuccessURL' => config('app.tinkoff_success_url'),
+            'FailURL' => config('app.tinkoff_fail_url'),
             'Amount' => $userInfo->price,
             'Language' => 'ru',
             'Description' => $userInfo->product_name,
@@ -173,6 +174,7 @@ class CheckoutsController extends Controller
         $payment = [
             'OrderId' => random_int(1, 1000000),
             'SuccessURL' => config('app.tinkoff_success_url_for_diet'),
+            'FailURL' => config('app.tinkoff_fail_url'),
             'Amount' => $menu->menu_price,
             'Language' => 'ru',
             'Description' => $menu->menu_content,
@@ -216,6 +218,7 @@ class CheckoutsController extends Controller
         $payment = [
             'OrderId' => random_int(1, 1000000),
             'SuccessURL' => config('app.tinkoff_success_url_for_training'),
+            'FailURL' => config('app.tinkoff_fail_url'),
             'Amount' => $training->training_price,
             'Language' => 'ru',
             'Description' => $training->name,
@@ -242,7 +245,7 @@ class CheckoutsController extends Controller
 
     public function cancelCheckout()
     {
-        dd("cancel");
+        return view('paymentFailure');
     }
 
     public function finishStripeCheckout()
