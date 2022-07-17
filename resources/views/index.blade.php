@@ -705,7 +705,7 @@
                                         </ul>
                                         <div class="program__price">
 											<span>
-												{{$marathon->discount_price}} <sub> ₽  за 30 дней</sub>
+												{{$marathon->discount_price}} <sub> ₽  за {{$marathon->duration}} дней</sub>
 											</span>
                                             <span class="grey">
                                             {{$marathon->price}} <sub>₽</sub>

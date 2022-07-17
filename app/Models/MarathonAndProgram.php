@@ -19,7 +19,7 @@ class MarathonAndProgram extends Model
         'description',
         'price',
         'discount_price',
-        'finish_date',
+        'duration',
         'menu_id',
         'training_id',
         'about_trainings',

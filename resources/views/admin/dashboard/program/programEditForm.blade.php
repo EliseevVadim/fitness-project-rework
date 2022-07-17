@@ -23,9 +23,9 @@
                             <form class="form-horizontal" action="/admin/program/edit/{{$program->id}}" method="post">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Окончание акции:</label>
+                                    <label class="col-md-3 col-form-label">Продолжительность программы / марафона:</label>
                                     <div class="col-md-9">
-                                        <input required class="form-control" name="finish_date" type="datetime-local" value="{{ date('Y-m-d\TH:i', $program->finish_date) }}">
+                                        <input required class="form-control" name="duration" type="number" value="{{$program->duration}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">

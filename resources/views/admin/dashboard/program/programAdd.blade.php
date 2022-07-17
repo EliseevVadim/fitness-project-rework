@@ -35,9 +35,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Окончание акции:</label>
+                                    <label class="col-md-3 col-form-label">Продолжительность программы / марафона:</label>
                                     <div class="col-md-9">
-                                        <input required class="form-control" name="finish_date" type="datetime-local">
+                                        <input required class="form-control" name="duration" type="number">
                                     </div>
                                 </div>
                                 <div class="form-group row">

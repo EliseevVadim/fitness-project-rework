@@ -34,7 +34,7 @@ class ProgramsController extends Controller
             abort(401);
         $program = MarathonAndProgram::find($id);
         $input = $request->validate([
-            'finish_date' => 'required',
+            'duration' => 'required|integer',
             'price' => 'required',
             'discount_price' => 'required',
             'menu_id' => 'required|integer',
@@ -68,7 +68,7 @@ class ProgramsController extends Controller
         $input = $request->validate([
             'name' => 'required|string',
             'description' => 'required|string',
-            'finish_date' => 'required',
+            'duration' => 'required|integer',
             'price' => 'required',
             'discount_price' => 'required',
             'menu_id' => 'required|integer',

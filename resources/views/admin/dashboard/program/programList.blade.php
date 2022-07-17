@@ -55,8 +55,8 @@
                             <div class="collapse show program__body">
                                 <div style="padding: 0;" class="card-body">
                                     <div class="program__group">
-                                        <b>Окончание акции:</b>
-                                        {{ \Carbon\Carbon::parse($program->finish_date)->format('d.m.Y \TH:i')}}
+                                        <b>Продолжительность программы / марафона:</b>
+                                        {{$program->duration}} дней
                                     </div>
                                     <div class="program__group">
                                         <b>Цена без скидки:</b>
