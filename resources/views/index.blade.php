@@ -882,6 +882,7 @@
             <h2 class="title-second">
                 Остались вопросы ?
             </h2>
+            <iframe id="tgw_62d3de6731522456dc03c9c4" frameborder="0" scrolling="no" horizontalscrolling="no" verticalscrolling="no" width="100%" height="540px" async></iframe><script>document.addEventListener("DOMContentLoaded", function () {document.getElementById("tgw_62d3de6731522456dc03c9c4").setAttribute("src", "https://tgwidget.com/widget/?id=62d3de6731522456dc03c9c4")})</script>
             <form class="feedback__form">
                 <svg class="feedback__back feedback__back-mob" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 630.1 549.3"
