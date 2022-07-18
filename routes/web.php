@@ -124,56 +124,6 @@ Route::prefix('api/personal-account')->group(function () {
     Route::put('/update/{id}', [PersonalAccountController::class,'update']);
     Route::delete('/delete/{id}', [PersonalAccountController::class,'destroy']);
 });
-Route::prefix('api/user-menu')->group(function () {
-    Route::get('/list', [UserMenuController::class,'index']);
-    Route::get('/show/{id}', [UserMenuController::class,'show']);
-    Route::post('/create', [UserMenuController::class,'store']);
-    Route::put('/update/{id}', [UserMenuController::class,'update']);
-    Route::delete('/delete/{id}', [UserMenuController::class,'destroy']);
-});
-Route::prefix('api/food-calendar')->group(function () {
-    Route::get('/list', [FoodCalendarController::class,'index']);
-    Route::get('/show/{id}', [FoodCalendarController::class,'show']);
-    Route::post('/create', [FoodCalendarController::class,'store']);
-    Route::put('/update/{id}', [FoodCalendarController::class,'update']);
-    Route::delete('/delete/{id}', [FoodCalendarController::class,'destroy']);
-});
-Route::prefix('api/training-user')->group(function () {
-    Route::get('/list', [TrainingUserController::class,'index']);
-    Route::get('/show/{id}', [TrainingUserController::class,'show']);
-    Route::post('/create', [TrainingUserController::class,'store']);
-    Route::put('/update/{id}', [TrainingUserController::class,'update']);
-    Route::delete('/delete/{id}', [TrainingUserController::class,'destroy']);
-});
-Route::prefix('api/activity-calendar')->group(function () {
-    Route::get('/list', [ActivityCalendarController::class,'index']);
-    Route::get('/show/{id}', [ActivityCalendarController::class,'show']);
-    Route::post('/create', [ActivityCalendarController::class,'store']);
-    Route::put('/update/{id}', [ActivityCalendarController::class,'update']);
-    Route::delete('/delete/{id}', [ActivityCalendarController::class,'destroy']);
-});
-Route::prefix('api/notification')->group(function () {
-    Route::get('/list', [NotificationController::class,'index']);
-    Route::get('/show/{id}', [NotificationController::class,'show']);
-    Route::post('/create', [NotificationController::class,'store']);
-    Route::put('/update/{id}', [NotificationController::class,'update']);
-    Route::delete('/delete/{id}', [NotificationController::class,'destroy']);
-});
-Route::prefix('api/physics-parameter')->group(function () {
-    Route::get('/list', [PhysicsParametersController::class,'index']);
-    Route::get('/show/{id}', [PhysicsParametersController::class,'show']);
-    Route::post('/create', [PhysicsParametersController::class,'store']);
-    Route::put('/update/{id}', [PhysicsParametersController::class,'update']);
-    Route::delete('/delete/{id}', [PhysicsParametersController::class,'destroy']);
-});
-
-Route::prefix('api/access-history')->group(function(){
-    Route::get('/list', [AccessHistoryController::class,'index']);
-    Route::get('/show/{id}', [AccessHistoryController::class,'show']);
-    Route::post('/create', [AccessHistoryController::class,'store']);
-    Route::put('/update/{id}', [AccessHistoryController::class,'update']);
-    Route::delete('/delete/{id}', [AccessHistoryController::class,'destroy']);
-});
 
 Route::prefix('/initialize-checkout')->group(function () {
     Route::post('/stripe', [CheckoutsController::class, "prepareStripeCheckoutPage"]);

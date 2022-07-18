@@ -22,8 +22,6 @@ use App\Core\Tinkoff;
 
 class CheckoutsController extends Controller
 {
-    private const ADDITIONAL_DAYS = 30;
-
     public function prepareStripeCheckoutPage(Request $request)
     {
         $userInfo = json_decode($request->user_info);
@@ -51,70 +49,6 @@ class CheckoutsController extends Controller
         return view('checkouts.stripe_page', [
             'checkout' => $checkout,
             'userInfo' => $userInfo
-        ]);
-    }
-
-    public function prepareStripeCheckoutPageForDiet(Request $request)
-    {
-        $dietInfo = [
-            'menu_id' => $request->menu_id,
-            'menu_type_id' => $request->menu_type_id,
-        ];
-        Session::put('dietInfo', $dietInfo);
-    }
-
-    public function generateStripeCheckoutPageForDiet()
-    {
-        $dietInfo = (object)Session::get('dietInfo');
-        $user = User::find(Auth::user()->id);
-        if (is_null($dietInfo) || is_null($user))
-            abort(404);
-        $menu = Menu::find($dietInfo->menu_id);
-        $checkout = $user->checkout($menu->stripe_id, [
-            'success_url' => route('finishStripeCheckoutForDiet'),
-            'cancel_url' => route('cancel-checkout')
-        ]);
-        $userInfo = [
-            'name' => $user->name,
-            'email' => $user->email,
-            'product_name' => $menu->menu_content,
-            'price' => $menu->menu_price
-        ];
-        return view('checkouts.stripe_page', [
-            'checkout' => $checkout,
-            'userInfo' => (object)$userInfo
-        ]);
-    }
-
-    public function prepareStripeCheckoutPageForTraining(Request $request)
-    {
-        $trainingInfo = [
-            'training_location_id' => $request->training_location_id,
-            'training_id' => $request->training_id,
-        ];
-        Session::put('trainingInfo', $trainingInfo);
-    }
-
-    public function generateStripeCheckoutPageForTraining()
-    {
-        $trainingInfo = (object)Session::get('trainingInfo');
-        $user = User::find(Auth::user()->id);
-        if (is_null($trainingInfo) || is_null($user))
-            abort(404);
-        $training = Training::find($trainingInfo->training_id);
-        $checkout = $user->checkout($training->stripe_id, [
-            'success_url' => route('finishStripeCheckoutForTraining'),
-            'cancel_url' => route('cancel-checkout')
-        ]);
-        $userInfo = [
-            'name' => $user->name,
-            'email' => $user->email,
-            'product_name' => $training->name . ' тренировка',
-            'price' => $training->training_price
-        ];
-        return view('checkouts.stripe_page', [
-            'checkout' => $checkout,
-            'userInfo' => (object)$userInfo
         ]);
     }
 
@@ -155,122 +89,17 @@ class CheckoutsController extends Controller
         ]);
     }
 
-    public function prepareTinkoffCheckoutForDiet(Request $request)
-    {
-        $user = Auth::user();
-        if (is_null($user))
-            abort(404);
-        $dietInfo = [
-            'menu_id' => $request->menu_id,
-            'menu_type_id' => $request->menu_type_id,
-        ];
-        Session::put('dietInfo', $dietInfo);
-        $tinkoff = new Tinkoff(
-            config('app.tinkoff_api_url'),
-            config('app.tinkoff_terminal'),
-            config('app.tinkoff_secret')
-        );
-        $menu = Menu::find($dietInfo['menu_id']);
-        $payment = [
-            'OrderId' => random_int(1, 1000000),
-            'SuccessURL' => config('app.tinkoff_success_url_for_diet'),
-            'FailURL' => config('app.tinkoff_fail_url'),
-            'Amount' => $menu->menu_price,
-            'Language' => 'ru',
-            'Description' => $menu->menu_content,
-            'Email' => $user->email,
-            'Phone' => '1234567890',
-            'Name' => $user->name,
-            'Taxation' => 'usn_income'
-        ];
-        $item[] = [
-            'Name' => $menu->menu_content,
-            'Price' => $menu->menu_price,
-            'NDS' => 'vat20',
-            'Quantity' => 1
-        ];
-        $paymentUrl = $tinkoff->paymentURL($payment, $item);
-        if (!$paymentUrl)
-            dd($tinkoff->error);
-        $paymentId = $tinkoff->payment_id;
-        Session::put('tinkoff_id_diet', $paymentId);
-        return response()->json([
-            'paymentUrl' => $paymentUrl
-        ]);
-    }
-
-    public function prepareTinkoffCheckoutForTraining(Request $request)
-    {
-        $user = Auth::user();
-        if (is_null($user))
-            abort(404);
-        $trainingInfo = [
-            'training_location_id' => $request->training_location_id,
-            'training_id' => $request->training_id,
-        ];
-        Session::put('trainingInfo', $trainingInfo);
-        $tinkoff = new Tinkoff(
-            config('app.tinkoff_api_url'),
-            config('app.tinkoff_terminal'),
-            config('app.tinkoff_secret')
-        );
-        $training = Training::find($trainingInfo['training_id']);
-        $payment = [
-            'OrderId' => random_int(1, 1000000),
-            'SuccessURL' => config('app.tinkoff_success_url_for_training'),
-            'FailURL' => config('app.tinkoff_fail_url'),
-            'Amount' => $training->training_price,
-            'Language' => 'ru',
-            'Description' => $training->name,
-            'Email' => $user->email,
-            'Phone' => '1234567890',
-            'Name' => $user->name,
-            'Taxation' => 'usn_income'
-        ];
-        $item[] = [
-            'Name' => $training->name,
-            'Price' => $training->training_price,
-            'NDS' => 'vat20',
-            'Quantity' => 1
-        ];
-        $paymentUrl = $tinkoff->paymentURL($payment, $item);
-        if (!$paymentUrl)
-            dd($tinkoff->error);
-        $paymentId = $tinkoff->payment_id;
-        Session::put('tinkoff_id_training', $paymentId);
-        return response()->json([
-            'paymentUrl' => $paymentUrl
-        ]);
-    }
-
-    public function cancelCheckout()
-    {
-        return view('paymentFailure');
-    }
-
     public function finishStripeCheckout()
     {
         $userInfo = Session::get('user_info');
         if (is_null($userInfo))
             abort(404);
         $user = User::where('email', $userInfo->email)->first();
-        $user->delete();
+        $personalAccount = PersonalAccount::where('user_id', $user->id);
+        if (is_null($personalAccount))
+            $user->delete();
         $this->createUserAccount($userInfo);
         return view('thanks');
-    }
-
-    public function finishStripeCheckoutForDiet()
-    {
-        $dietInfo = (object)Session::get('dietInfo');
-        $this->addDietToUser($dietInfo);
-        return redirect()->route('home');
-    }
-
-    public function finishStripeCheckoutForTraining()
-    {
-        $trainingInfo = (object)Session::get('trainingInfo');
-        $this->addTrainingToUser($trainingInfo);
-        return redirect()->route('home');
     }
 
     public function finishTinkoffCheckout()
@@ -283,62 +112,9 @@ class CheckoutsController extends Controller
         return view('thanks');
     }
 
-    public function finishTinkoffCheckoutForDiet()
+    public function cancelCheckout()
     {
-        $paymentId = Session::get('tinkoff_id_diet');
-        $this->checkPaymentState($paymentId);
-        $dietInfo = (object)Session::get('dietInfo');
-        Session::remove('tinkoff_id_diet');
-        $this->addDietToUser($dietInfo);
-        return redirect()->route('home');
-    }
-
-    public function finishTinkoffCheckoutForTraining()
-    {
-        $paymentId = Session::get('tinkoff_id_training');
-        $this->checkPaymentState($paymentId);
-        $trainingInfo = (object)Session::get('trainingInfo');
-        Session::remove('tinkoff_id_training');
-        $this->addTrainingToUser($trainingInfo);
-        return redirect()->route('home');
-    }
-
-    public function addDietToUser($dietInfo)
-    {
-        $user = User::find(Auth::user()->id);
-        if (is_null($dietInfo) || is_null($user))
-            abort(404);
-        $userMenu = UserMenu::create([
-            'user_id' => $user->id,
-            'menu_id' => $dietInfo->menu_id,
-            'menu_type_id' => $dietInfo->menu_type_id
-        ]);
-        FoodCalendar::create([
-            'users_menus_id' => $userMenu->id,
-            'day' => 1,
-            'is_active' => 0
-        ]);
-        $this->addAccessDaysToUser($user);
-        Session::remove('dietInfo');
-    }
-
-    public function addTrainingToUser($trainingInfo)
-    {
-        $user = User::find(Auth::user()->id);
-        if (is_null($trainingInfo) || is_null($user))
-            abort(404);
-        $trainingUser = TrainingUser::create([
-            'user_id' => $user->id,
-            'training_id' => $trainingInfo->training_id,
-            'training_location_id' => $trainingInfo->training_location_id
-        ]);
-        ActivityCalendar::create([
-            'training_user_id' => $trainingUser->id,
-            'day' => 1,
-            'is_active' => 0
-        ]);
-        $this->addAccessDaysToUser($user);
-        Session::remove('trainingInfo');
+        return view('paymentFailure');
     }
 
     public function createUserAccount($userInfo)
@@ -349,11 +125,14 @@ class CheckoutsController extends Controller
         if (is_null($programContent))
             abort(404);
         $password = Str::random(12);
-        $user = User::create([
-            'name' => $userInfo->name,
-            'email' => $userInfo->email,
-            'password' => Hash::make($password)
-        ]);
+        $user = User::where('email', $userInfo->email)->first();
+        if (is_null($user)) {
+            $user = User::create([
+                'name' => $userInfo->name,
+                'email' => $userInfo->email,
+                'password' => Hash::make($password)
+            ]);
+        }
         (new AuthorizationMailer())->sendAuthorizationMessage($user->email, $programContent->name, $programContent->google_drive_link);
         $personalAccount = PersonalAccount::create([
             'user_id' => $user->id,
@@ -375,12 +154,5 @@ class CheckoutsController extends Controller
         $status = $tinkoff->getState($paymentId);
         if ($status != "CONFIRMED")
             abort(404);
-    }
-
-    private function addAccessDaysToUser($user)
-    {
-        $accessHistory = AccessHistory::where('user_id', $user->id)->first();
-        $accessHistory->deactivation_date = $accessHistory->deactivation_date->addDays(self::ADDITIONAL_DAYS);
-        $accessHistory->save();
     }
 }

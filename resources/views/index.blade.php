@@ -883,7 +883,11 @@
             <div class="d-flex justify-content-center p-0 mt-4">
 <!--                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                 <div class="elfsight-app-eef14eb4-acc4-4d26-8158-e0d1a429ead5"></div>-->
-                <img src="{{ ('images/scrin/scrin001.png') }}" alt="#" class="widget-image">
+                <div class="widget-image-wrapper">
+                    <a href="https://t.me/goodietshelp">
+                        <img src="{{ ('images/scrin/scrin001.png') }}" class="widget-image" alt="#">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
