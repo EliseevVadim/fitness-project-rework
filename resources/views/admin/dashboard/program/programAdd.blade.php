@@ -52,28 +52,6 @@
                                         <input required class="form-control" name="discount_price" type="number">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputState">Меню:</label>
-                                        <select id="inputState" class="form-control" name="menu_id">
-                                            @foreach($menus as $menu)
-                                                <option value="{{$menu->id}}">
-                                                    {{$menu->menu_content}}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputState">Тренировка:</label>
-                                        <select id="inputState" class="form-control" name="training_id">
-                                            @foreach($trainings as $training)
-                                                <option value="{{$training->id}}">
-                                                    {{$training->name}}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputState">Выберите тип услуги:</label>
                                     <select id="inputState" class="form-control" name="is_marathon">

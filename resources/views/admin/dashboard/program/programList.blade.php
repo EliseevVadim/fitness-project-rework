@@ -68,14 +68,6 @@
                                     </div>
                                     </div>
                                     <div class="program__group">
-                                        <b>Меню:</b>
-                                        {{$program->menu->menu_content}}
-                                    </div>
-                                    <div class="program__group">
-                                        <b>Тренировка:</b>
-                                        {{$program->training->name}}
-                                    </div>
-                                    <div class="program__group">
                                         <b>Id в Stripe:</b>
                                         {{$program->stripe_id}}
                                     </div>

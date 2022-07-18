@@ -2309,15 +2309,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "BuyModalOpenButton",
-  props: ["name", "price", "stripe_id", "menu_id", "training_id", "is_marathon", "extended_stripe_id"],
+  props: ["name", "price", "stripe_id", "is_marathon", "extended_stripe_id"],
   methods: {
     passData: function passData() {
       var serviceInfo = {
         'name': this.name,
         'price': this.price,
         'stripe_id': this.stripe_id,
-        'menu_id': this.menu_id,
-        'training_id': this.training_id,
         'is_marathon': this.is_marathon,
         'old_price': this.price,
         'extended_stripe_id': this.extended_stripe_id,
@@ -2587,9 +2585,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         "life_style_id": this.additionValues.life_style_id,
         "product_name": this.SERVICE_INFO.name,
         "price": this.SERVICE_INFO.price,
-        "stripe_id": this.SERVICE_INFO.current_stripe_id,
-        "menu_id": this.SERVICE_INFO.menu_id,
-        "training_id": this.SERVICE_INFO.training_id
+        "stripe_id": this.SERVICE_INFO.current_stripe_id
       };
       var formData = new FormData();
       formData.append('user_info', JSON.stringify(user));
@@ -2612,9 +2608,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         "life_style_id": this.additionValues.life_style_id,
         "product_name": this.SERVICE_INFO.name,
         "price": this.SERVICE_INFO.price,
-        "stripe_id": this.SERVICE_INFO.current_stripe_id,
-        "menu_id": this.SERVICE_INFO.menu_id,
-        "training_id": this.SERVICE_INFO.training_id
+        "stripe_id": this.SERVICE_INFO.current_stripe_id
       };
       var formData = new FormData();
       formData.append('user_info', JSON.stringify(user));
@@ -3979,8 +3973,6 @@ __webpack_require__.r(__webpack_exports__);
       'name': null,
       'price': null,
       'stripe_id': null,
-      'menu_id': null,
-      'training_id': null,
       'old_price': null,
       'is_marathon': false,
       'extended_stripe_id': null,

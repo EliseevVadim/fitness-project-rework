@@ -251,9 +251,7 @@ export default {
             "life_style_id" : this.additionValues.life_style_id,
             "product_name" : this.SERVICE_INFO.name,
             "price" : this.SERVICE_INFO.price,
-            "stripe_id" : this.SERVICE_INFO.current_stripe_id,
-            "menu_id" : this.SERVICE_INFO.menu_id,
-            "training_id" : this.SERVICE_INFO.training_id
+            "stripe_id" : this.SERVICE_INFO.current_stripe_id
         }
         let formData = new FormData();
         formData.append('user_info', JSON.stringify(user));
@@ -278,9 +276,7 @@ export default {
               "life_style_id" : this.additionValues.life_style_id,
               "product_name" : this.SERVICE_INFO.name,
               "price" : this.SERVICE_INFO.price,
-              "stripe_id" : this.SERVICE_INFO.current_stripe_id,
-              "menu_id" : this.SERVICE_INFO.menu_id,
-              "training_id" : this.SERVICE_INFO.training_id
+              "stripe_id" : this.SERVICE_INFO.current_stripe_id
           }
           let formData = new FormData();
           formData.append('user_info', JSON.stringify(user));

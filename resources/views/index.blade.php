@@ -718,8 +718,6 @@
                                             :name="'{{$marathon->name}}'"
                                             :price="{{$marathon->discount_price}}"
                                             :stripe_id="'{{$marathon->stripe_id}}'"
-                                            :menu_id="{{$marathon->menu_id}}"
-                                            :training_id="{{$marathon->training_id}}"
                                             :is_marathon="{{$marathon->is_marathon === 1 ? "true" : "false"}}"
                                             :extended_stripe_id="'{{$marathon->extended_stripe_id}}'">
                                         </buy-modal-opener>
@@ -883,6 +881,8 @@
                 Остались вопросы ?
             </h2>
             <div class="d-flex justify-content-center p-0 mt-4">
+<!--                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-eef14eb4-acc4-4d26-8158-e0d1a429ead5"></div>-->
                 <img src="{{ ('images/scrin/scrin001.png') }}" alt="#" class="widget-image">
             </div>
         </div>

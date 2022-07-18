@@ -20,8 +20,6 @@ class MarathonAndProgram extends Model
         'price',
         'discount_price',
         'duration',
-        'menu_id',
-        'training_id',
         'about_trainings',
         'about_ration',
         'about_procedures',
@@ -39,16 +37,5 @@ class MarathonAndProgram extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'finish_date' => 'timestamp',
     ];
-
-    public function menu()
-    {
-        return $this->belongsTo(Menu::class);
-    }
-
-    public function training()
-    {
-        return $this->belongsTo(Training::class);
-    }
 }

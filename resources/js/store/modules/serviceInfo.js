@@ -4,8 +4,6 @@ export default {
             'name' : null,
             'price' : null,
             'stripe_id' : null,
-            'menu_id' : null,
-            'training_id' : null,
             'old_price' : null,
             'is_marathon' : false,
             'extended_stripe_id' : null,
