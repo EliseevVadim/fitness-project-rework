@@ -176,7 +176,6 @@ p:last-child {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
-    box-shadow: 0px 10px 20px rgb(0 0 0 / 20%);
 }
 
 .thanks {
@@ -2045,7 +2044,6 @@ footer {
     }
 
     .office__img-slider {
-        /*max-width: 320px;*/
         width: 100%;
         max-width: 100%;
     }
@@ -2062,7 +2060,7 @@ footer {
         /*margin-left: -63px;*/
     }
     .office__img-slider .swiper-slide-next .office__img {
-        margin-left: 1px;
+        margin-left: -1px;
     }
 
     .office__img-slider .swiper-slide-prev .office__img img,
