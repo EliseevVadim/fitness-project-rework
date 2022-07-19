@@ -2535,7 +2535,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         value: "Дома"
       }, {
         id: "menu_calories_id",
-        label: "Желаемая каллорийность меню: ",
+        label: "Желаемая калорийность меню: ",
         value: "1300-1400"
       }]
     };
@@ -2992,22 +2992,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   $(document).ready(function () {
     $("#nav").on("click", "a", function (event) {
-      event.preventDefault();
-      var id = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({
-        scrollTop: top
-      }, 1500);
-      $('.overlay').removeClass('show');
-      $('nav').removeClass('show');
-      $('body').removeClass('overflow');
+      var id = $(this).attr('href');
+
+      try {
+        var top = $(id).offset().top;
+        event.preventDefault();
+        $('body,html').animate({
+          scrollTop: top
+        }, 1500);
+        $('.overlay').removeClass('show');
+        $('nav').removeClass('show');
+        $('body').removeClass('overflow');
+      } catch (_unused) {}
     });
   }); //плавный скролл
 
   $("body").on("click", "a[href^=\"#\"]", function (event) {
     event.preventDefault();
-    var id = $(this).attr('href'),
-        top = $(id).offset().top;
+    var id = $(this).attr('href').substring(1);
+    var top = document.getElementById(id).offsetTop;
     $('body,html').animate({
       scrollTop: top
     }, 1500);

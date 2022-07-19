@@ -82,20 +82,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     $(document).ready(function () {
         $("#nav").on("click", "a", function (event) {
-            event.preventDefault();
-            var id = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 1500);
-            $('.overlay').removeClass('show');
-            $('nav').removeClass('show');
-            $('body').removeClass('overflow');
+            let id = $(this).attr('href');
+            try {
+                let top = $(id).offset().top;
+                event.preventDefault();
+                $('body,html').animate({scrollTop: top}, 1500);
+                $('.overlay').removeClass('show');
+                $('nav').removeClass('show');
+                $('body').removeClass('overflow');
+            }
+            catch {}
         });
     });
     //плавный скролл
     $("body").on("click", "a[href^=\"#\"]", function (event) {
         event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
+        let id = $(this).attr('href').substring(1);
+        let top = document.getElementById(id).offsetTop;
         $('body,html').animate({scrollTop: top}, 1500);
     });
 
