@@ -206,12 +206,15 @@ export default {
         ...mapGetters(['GetTrainingLocations']),
         ...mapGetters(['SERVICE_INFO']),
         trainingLocations() {
-            if (!this.SERVICE_INFO.is_marathon)
+            try {
+                if (!this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name.endsWith(" (+ 1300р.)"))
+                    this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
+                this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
                 return this.GetTrainingLocations;
-            if (!this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name.endsWith(" (+ 1300р.)"))
-                this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
-            this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
-            return this.GetTrainingLocations;
+            }
+            catch (e) {
+                return [];
+            }
         }
     },
   methods: {

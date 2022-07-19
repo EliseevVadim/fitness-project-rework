@@ -2542,10 +2542,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   computed: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['GetLifeStyles'])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['GetMenuCalories'])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['GetTrainingLocations'])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['SERVICE_INFO'])), {}, {
     trainingLocations: function trainingLocations() {
-      if (!this.SERVICE_INFO.is_marathon) return this.GetTrainingLocations;
-      if (!this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name.endsWith(" (+ 1300р.)")) this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
-      this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
-      return this.GetTrainingLocations;
+      try {
+        if (!this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name.endsWith(" (+ 1300р.)")) this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
+        this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
+        return this.GetTrainingLocations;
+      } catch (e) {
+        return [];
+      }
     }
   }),
   methods: {
