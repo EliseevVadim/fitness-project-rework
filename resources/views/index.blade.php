@@ -885,7 +885,7 @@
                 <div class="elfsight-app-eef14eb4-acc4-4d26-8158-e0d1a429ead5"></div>-->
                 <div class="widget-image-wrapper">
                     <a href="https://t.me/goodietshelp">
-                        <img src="{{ ('images/scrin/scrin002.png') }}" class="widget-image" alt="#">
+                        <img src="{{ ('images/scrin/scrin007.jpg') }}" class="widget-image" alt="#">
                     </a>
                 </div>
             </div>
