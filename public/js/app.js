@@ -2447,23 +2447,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2568,35 +2551,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
 
       this.additionValues[id] = item.id;
-    },
-    prev: function prev() {
-      this.activeStep--;
-    },
-    next: function next() {
-      this.activeStep++;
-    },
-    initializeStripePayment: function initializeStripePayment() {
-      var user = {
-        "name": this.users[0].value,
-        "age": this.users[1].value,
-        "email": this.users[2].value,
-        "weight": this.users[3].value,
-        "tall": this.users[4].value,
-        "required_weight": this.users[5].value,
-        "training_location_id": this.additionValues.training_location_id,
-        "menu_calories_id": this.additionValues.menu_calories_id,
-        "life_style_id": this.additionValues.life_style_id,
-        "product_name": this.SERVICE_INFO.name,
-        "price": this.SERVICE_INFO.price,
-        "stripe_id": this.SERVICE_INFO.current_stripe_id
-      };
-      var formData = new FormData();
-      formData.append('user_info', JSON.stringify(user));
-      axios.post('/initialize-checkout/stripe', formData).then(function () {
-        window.location.href = '/open-checkout/stripe';
-      })["catch"](function (error) {
-        console.log(error.response);
-      });
     },
     initializeTinkoffPayment: function initializeTinkoffPayment() {
       var user = {
@@ -42286,7 +42240,10 @@ var render = function () {
                     on: {
                       submit: function ($event) {
                         $event.preventDefault()
-                        return _vm.next.apply(null, arguments)
+                        return _vm.initializeTinkoffPayment.apply(
+                          null,
+                          arguments
+                        )
                       },
                     },
                   },
@@ -42483,49 +42440,7 @@ var render = function () {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _vm.activeStep === 2
-              ? _c("div", [
-                  _c(
-                    "div",
-                    { staticClass: "buy-form__loading d-flex flex-column" },
-                    [
-                      _vm._m(1),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row d-flex w-100" }, [
-                        _c("div", { staticClass: "col-12 col-md-6" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "button-green",
-                              on: { click: _vm.initializeStripePayment },
-                            },
-                            [_vm._v("stripe")]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-12 col-md-6" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "button-green",
-                              on: { click: _vm.initializeTinkoffPayment },
-                            },
-                            [_vm._v("tinkoff")]
-                          ),
-                        ]),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    { staticClass: "button-back", on: { click: _vm.prev } },
-                    [_vm._v("Назад")]
-                  ),
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm._m(2),
+            _vm._m(1),
           ]),
         ]
       ),
@@ -42540,18 +42455,6 @@ var staticRenderFns = [
     return _c("p", { staticClass: "buy-head__prg" }, [
       _c("b", [
         _vm._v("ВАЖНО! Внимательно вводите ваш электронный адрес без ошибок."),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row d-flex w-100" }, [
-      _c("span", [
-        _vm._v(
-          "Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате..."
-        ),
       ]),
     ])
   },

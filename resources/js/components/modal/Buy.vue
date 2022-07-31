@@ -47,7 +47,7 @@
                     Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении
                     суток после оплаты - используйте ее для начала Ваших тренировок!
                 </div>
-                <form class="buy-form" v-if="activeStep === 1" @submit.prevent="next">
+                <form class="buy-form" v-if="activeStep === 1" @submit.prevent="initializeTinkoffPayment">
                     <div class="buy-form__row buy-form__row-three">
                         <div class="buy__group" v-for="(info, index) in users" :key="index">
                             <label :for="info.id" class="buy__label">
@@ -88,27 +88,10 @@
                         ОПЛАТИТЬ И ЗАРЕГИСТРИРОВАТЬСЯ
                     </button>
                 </form>
-                <div  v-if="activeStep === 2">
-                    <div class="buy-form__loading d-flex flex-column">
-                        <div class="row d-flex w-100">
-                        <span>Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...</span>
-                        </div>
-                        <div class="row d-flex w-100">
-                            <div class="col-12 col-md-6">
-                                <button class="button-green" @click="initializeStripePayment">stripe</button>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <button class="button-green" @click="initializeTinkoffPayment">tinkoff</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="button-back" @click="prev">Назад</button>
-                </div>
                 <div class="buy-form__prg">
                     Нажимая “Оплатить и зарегестрироваться”, я принимаю условия
                     <span>Политики обработки персональных данный и условия Оферты </span>
                 </div>
-
             </div>
         </div>
     </div>
@@ -235,37 +218,6 @@ export default {
         }
         this.additionValues[id] = item.id;
     },
-    prev() {
-      this.activeStep--;
-    },
-    next() {
-      this.activeStep++;
-    },
-      initializeStripePayment() {
-        let user = {
-            "name" : this.users[0].value,
-            "age" : this.users[1].value,
-            "email" : this.users[2].value,
-            "weight" : this.users[3].value,
-            "tall" : this.users[4].value,
-            "required_weight" : this.users[5].value,
-            "training_location_id" : this.additionValues.training_location_id,
-            "menu_calories_id" : this.additionValues.menu_calories_id,
-            "life_style_id" : this.additionValues.life_style_id,
-            "product_name" : this.SERVICE_INFO.name,
-            "price" : this.SERVICE_INFO.price,
-            "stripe_id" : this.SERVICE_INFO.current_stripe_id
-        }
-        let formData = new FormData();
-        formData.append('user_info', JSON.stringify(user));
-        axios.post('/initialize-checkout/stripe', formData)
-          .then(() => {
-              window.location.href = '/open-checkout/stripe';
-          })
-          .catch((error) => {
-              console.log(error.response);
-          })
-      },
       initializeTinkoffPayment() {
           let user = {
               "name" : this.users[0].value,
