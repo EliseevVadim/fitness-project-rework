@@ -14,10 +14,12 @@
     <main class="main thanks">
         <section class="thanks__section" id="thanks">
             <h2 class="thanks__title title">
-                спасибо за вашу заявку!
+                спасибо за заявку!
             </h2>
             <div class="thanks__caption title__caption">
-                ССЫЛКА НА ВЕСЬ МАТЕРИАЛ ОТПРАВЛЕНА НА УКАЗАННУЮ ПОЧТУ!
+                ССЫЛКА НА ВЕСЬ МАТЕРИАЛ ОТПРАВЛЕНА НА УКАЗАННУЮ ПОЧТУ!<br><br>
+                Если письмо долго не приходит, проверь папку "СПАМ"! Если и там нет, напиши нам в
+                <a class="chat__link" href="https://t.me/goodietshelp">ЧАТ</a> и мы решим эту проблему!
             </div>
         </section>
     </main>

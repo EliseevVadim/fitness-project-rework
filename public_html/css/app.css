@@ -143,6 +143,12 @@ p:last-child {
     flex: 0 0 auto;
 }
 
+.chat__link {
+    color: #9180f6;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
 .videotube-modal-overlay {
     color: #fff;
     display: none;

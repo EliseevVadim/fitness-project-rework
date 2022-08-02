@@ -17,8 +17,9 @@
                 При оплате произошла ошибка!
             </h2>
             <div class="thanks__caption title__caption">
-                Попробуйте снова
+                Попробуй снова, или напиши нам в <a class="chat__link" href="https://t.me/goodietshelp">ЧАТ</a> и мы решим эту проблему!
             </div>
+            <br>
             <div class="footer__link">
                 <a href="/">
                     На главную
