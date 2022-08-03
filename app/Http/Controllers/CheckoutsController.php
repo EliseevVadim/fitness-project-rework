@@ -16,6 +16,7 @@ use App\Models\UserMenu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 use App\Core\Tinkoff;
@@ -65,6 +66,7 @@ class CheckoutsController extends Controller
             'OrderId' => random_int(1, 1000000),
             'SuccessURL' => config('app.tinkoff_success_url'),
             'FailURL' => config('app.tinkoff_fail_url'),
+            'NotificationURL' => config('app.tinkoff_notification_url'),
             'Amount' => $userInfo->price,
             'Language' => 'ru',
             'Description' => $userInfo->product_name,
@@ -104,12 +106,21 @@ class CheckoutsController extends Controller
 
     public function finishTinkoffCheckout()
     {
-        $paymentId = Session::get('tinkoff_id');
-        $this->checkPaymentState($paymentId);
-        $userInfo = Session::get('user_info');
-        Session::remove('tinkoff_id');
-        $this->createUserAccount($userInfo);
+        if (!Session::get('service_was_given'))
+            $this->provideServiceToUser();
         return view('thanks');
+    }
+
+    public function processTinkoffCheckout(Request $request)
+    {
+        Log::info('posted');
+        Log::info(json_encode($request));
+        $input = $request->all();
+        if ($input['Status'] != 'CONFIRMED')
+            return response('OK', 200);
+        Session::put('service_was_given', true);
+        $this->provideServiceToUser();
+        return response('OK', 200);
     }
 
     public function cancelCheckout()
@@ -142,6 +153,7 @@ class CheckoutsController extends Controller
             'menu_calories_id' => $userInfo->menu_calories_id
         ]);
         Session::remove('user_info');
+        Session::remove('service_was_given');
     }
 
     private function checkPaymentState($paymentId)
@@ -154,5 +166,14 @@ class CheckoutsController extends Controller
         $status = $tinkoff->getState($paymentId);
         if ($status != "CONFIRMED")
             abort(404);
+    }
+
+    private function provideServiceToUser()
+    {
+        $paymentId = Session::get('tinkoff_id');
+        $this->checkPaymentState($paymentId);
+        $userInfo = Session::get('user_info');
+        Session::remove('tinkoff_id');
+        $this->createUserAccount($userInfo);
     }
 }

@@ -34,6 +34,7 @@ return [
     'tinkoff_success_url_for_diet' => env('TINKOFF_SUCCESS_URL_FOR_DIET'),
     'tinkoff_success_url_for_training' => env('TINKOFF_SUCCESS_URL_FOR_TRAINING'),
     'tinkoff_fail_url' => env('TINKOFF_FAIL_URL'),
+    'tinkoff_notification_url' => env('TINKOFF_NOTIFICATION_URL'),
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

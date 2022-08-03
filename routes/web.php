@@ -25,14 +25,6 @@ use App\Http\Controllers\AccessHistoryController;
 #endregion
 
 Route::get("/", [MainPageController::class,'index'])->name('main');
-Route::view("/diet","diet")->middleware('auth');
-Route::view("/workout","workout")->middleware('auth');
-Route::view("/plugin","plugin")->middleware('auth');
-Route::view("/question", "question")->middleware('auth')->name('question');
-Route::view("/article","article")->middleware('auth');
-Route::get("/article/{id}", [ArticleController::class,'index']);
-Route::post("/searchQuestions", [ArticleController::class,'searchQuestions'])->middleware('auth')->name('search');
-Route::get("/search", [ArticleController::class,'search'])->middleware('auth');
 
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, "openAdminDashboard"])->name('adminMain');
@@ -140,10 +132,6 @@ Route::prefix('/open-checkout')->group(function () {
     Route::get('/stripe-for-training', [CheckoutsController::class, "generateStripeCheckoutPageForTraining"]);
 });
 
-Route::get('/finish-checkout', [CheckoutsController::class, "finishStripeCheckout"])->name('checkout-finish');
 Route::get('/cancel-checkout', [CheckoutsController::class, "cancelCheckout"])->name('cancel-checkout');
 Route::get('/finish-tinkoff-checkout', [CheckoutsController::class, "finishTinkoffCheckout"]);
-Route::get('/finish-stripe-checkout-for-diet', [CheckoutsController::class, "finishStripeCheckoutForDiet"])->name('finishStripeCheckoutForDiet');
-Route::get('/finish-tinkoff-checkout-diet', [CheckoutsController::class, "finishTinkoffCheckoutForDiet"])->name('finishTinkoffCheckoutForDiet');
-Route::get('/finish-stripe-checkout-for-training', [CheckoutsController::class, "finishStripeCheckoutForTraining"])->name('finishStripeCheckoutForTraining');
-Route::get('/finish-tinkoff-checkout-training', [CheckoutsController::class, "finishTinkoffCheckoutForTraining"])->name('finishTinkoffCheckoutForTraining');
+Route::post('/process-tinkoff-checkout', [CheckoutsController::class, "processTinkoffCheckout"]);
