@@ -57,6 +57,8 @@ class CheckoutsController extends Controller
     {
         $userInfo = json_decode($request->user_info);
         Session::put('user_info', $userInfo);
+        Log::info("Получаем данные");
+        Log::info(json_encode(Session::get('user_info')));
         $tinkoff = new Tinkoff(
             config('app.tinkoff_api_url'),
             config('app.tinkoff_terminal'),
@@ -166,12 +168,15 @@ class CheckoutsController extends Controller
             config('app.tinkoff_secret')
         );
         $status = $tinkoff->getState($paymentId);
+        Log::info($status);
         if ($status != "CONFIRMED")
             abort(404);
     }
 
     private function provideServiceToUser()
     {
+        Log::info('Предоставляем услугу');
+        Log::info(json_encode(Session::get('user_info')));
         $paymentId = Session::get('tinkoff_id');
         $this->checkPaymentState($paymentId);
         $userInfo = Session::get('user_info');
