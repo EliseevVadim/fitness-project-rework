@@ -114,10 +114,11 @@ class CheckoutsController extends Controller
     public function processTinkoffCheckout(Request $request)
     {
         Log::info('posted');
-        Log::info(json_encode($request));
-        $input = $request->all();
-        if ($input['Status'] != 'CONFIRMED')
+        Log::info(json_encode($request->all()));
+        if ($request->status != 'CONFIRMED') {
+            Log::info($request->status);
             return response('OK', 200);
+        }
         Session::put('service_was_given', true);
         $this->provideServiceToUser();
         return response('OK', 200);
