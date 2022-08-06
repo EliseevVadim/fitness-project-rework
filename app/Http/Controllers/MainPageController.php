@@ -12,7 +12,6 @@ class MainPageController extends Controller
 {
     function index(Request $request)
     {
-        Log::info('logging works');
         $main_welcome = MainPage::where('name','=','main_welcome')->first();
         $address_us_if = MainPage::where('name','=','address_us_if')->first();
 
