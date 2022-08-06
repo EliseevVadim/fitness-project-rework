@@ -115,8 +115,8 @@ class CheckoutsController extends Controller
     {
         Log::info('posted');
         Log::info(json_encode($request->all()));
-        if ($request->status != 'CONFIRMED') {
-            Log::info($request->status);
+        if ($request->Status != 'CONFIRMED') {
+            Log::info($request->Status);
             return response('OK', 200);
         }
         Session::put('service_was_given', true);
