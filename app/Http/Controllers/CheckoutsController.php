@@ -145,6 +145,7 @@ class CheckoutsController extends Controller
             ]);
         }
         (new AuthorizationMailer())->sendAuthorizationMessage($user->email, $programContent->name, $programContent->google_drive_link);
+        Log::info('Письмо оправлено на почту: ' . $user->email);
         $personalAccount = PersonalAccount::create([
             'user_id' => $user->id,
             'age' => $userInfo->age,

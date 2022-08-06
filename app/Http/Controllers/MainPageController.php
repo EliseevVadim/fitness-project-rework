@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\MainPage;
 use App\Models\MarathonAndProgram;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class MainPageController extends Controller
 {
     function index(Request $request)
     {
+        Log::info('logging works');
         $main_welcome = MainPage::where('name','=','main_welcome')->first();
         $address_us_if = MainPage::where('name','=','address_us_if')->first();
 
