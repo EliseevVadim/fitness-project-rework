@@ -13,6 +13,7 @@ use App\Models\Training;
 use App\Models\TrainingUser;
 use App\Models\User;
 use App\Models\UserMenu;
+use http\Cookie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -56,6 +57,22 @@ class CheckoutsController extends Controller
     public function prepareTinkoffCheckout(Request $request)
     {
         $userInfo = json_decode($request->user_info);
+        $password = Str::random(12);
+        $user = User::where('email', $userInfo->email)->first();
+        if (is_null($user)) {
+            $user = User::create([
+                'name' => $userInfo->name,
+                'email' => $userInfo->email,
+                'password' => Hash::make($password)
+            ]);
+        }
+        $personalAccount = PersonalAccount::create([
+            'user_id' => $user->id,
+            'age' => $userInfo->age,
+            'life_style_id' => $userInfo->life_style_id,
+            'training_location_id' => $userInfo->training_location_id,
+            'menu_calories_id' => $userInfo->menu_calories_id
+        ]);
         Session::put('user_info', $userInfo);
         Log::info("Получаем данные");
         Log::info(json_encode(Session::get('user_info')));
@@ -75,6 +92,8 @@ class CheckoutsController extends Controller
             'Email' => $userInfo->email,
             'Phone' => '1234567890',
             'Name' => $userInfo->name,
+            'LocationId' => $userInfo->training_location_id,
+            'MenuId' => $userInfo->menu_calories_id,
             'Taxation' => 'usn_income'
         ];
         $item[] = [
@@ -117,6 +136,8 @@ class CheckoutsController extends Controller
     {
         Log::info('posted');
         Log::info(json_encode($request->all()));
+        Log::info('читаем инфу');
+        Log::info(json_encode($request->DATA));
         if ($request->Status != 'CONFIRMED') {
             Log::info($request->Status);
             return response('OK', 200);
