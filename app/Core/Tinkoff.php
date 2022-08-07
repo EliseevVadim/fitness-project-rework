@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+use Illuminate\Support\Facades\Log;
+
 class Tinkoff
 {
     private $acquiring_url;
@@ -102,7 +104,7 @@ class Tinkoff
         if( $this->sendRequest($this->url_init, $params) ){
             return $this->payment_url;
         }
-
+        Log::info(json_encode($params));
         return FALSE;
     }
 
