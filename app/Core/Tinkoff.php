@@ -98,7 +98,7 @@ class Tinkoff
                 'Items'     => $payment['Items'],
             ],
         );
-
+        Log::info(json_encode($params));
         if( $this->sendRequest($this->url_init, $params) ){
             return $this->payment_url;
         }
