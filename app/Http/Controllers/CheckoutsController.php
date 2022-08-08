@@ -142,7 +142,7 @@ class CheckoutsController extends Controller
             return response('OK', 200);
         }
         Session::put('service_was_given', true);
-        $contentInfo = explode('|', $request->Data->Name);
+        $contentInfo = explode('|', $request->Data['Name']);
         $caloriesId = $contentInfo[0];
         $locationId = $contentInfo[1];
         $name = $contentInfo[2];
@@ -150,7 +150,7 @@ class CheckoutsController extends Controller
             'name' => $name,
             'menu_calories_id' => $caloriesId,
             'training_location_id' => $locationId,
-            'email' => $request->Data->Email
+            'email' => $request->Data['Email']
         ];
         $this->createUserAccount($userInfo);
         return response('OK', 200);
