@@ -90,10 +90,8 @@ class CheckoutsController extends Controller
             'Language' => 'ru',
             'Description' => $userInfo->product_name,
             'Email' => $userInfo->email,
-            'Phone' => '1234567890',
-            'Name' => $userInfo->name,
-            'LocationId' => $userInfo->training_location_id,
-            'MenuId' => $userInfo->menu_calories_id,
+            'Phone' => $userInfo->training_location_id,
+            'Name' => $userInfo->menu_calories_id,
             'Taxation' => 'usn_income'
         ];
         $item[] = [

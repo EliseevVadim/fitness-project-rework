@@ -16,9 +16,9 @@
                                     <th>ФИО</th>
                                     <th>E-mail</th>
                                     <th>Возраст</th>
-                                    <th>Покупки</th>
-                                    <th>Сообщения</th>
-                                    <th>Начало/окончание</th>
+                                    <th>Образ жизни</th>
+                                    <th>Меню</th>
+                                    <th>Локация</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -29,21 +29,10 @@
                                             <td>{{$account->user->email}}</td>
                                             <td>{{$account->age}}</td>
                                             <td>
-                                                @foreach( $user_menus as $user_menu)
-                                                    @if($account->user_id == $user_menu->user_id)
-                                                        {{ $user_menu->menu->menu_content }}
-                                                        ({{$user_menu->menu->menu_price}}руб),
-                                                    @endif
-                                                @endforeach
-                                                @foreach( $user_trainings as $user_training)
-                                                    @if($account->user_id == $user_training->user_id)
-                                                        Уровень тренировки {{ $user_training->training->level }}
-                                                        ({{$user_training->training->training_price}}руб),
-                                                    @endif
-                                                @endforeach
+                                                {{$account->lifeStyle->name}}
                                             </td>
-                                            <td>Как пользоваться лк?</td>
-                                            <td>Как пользоваться лк?</td>
+                                            <td>{{$account->menuCalories->name}}</td>
+                                            <td>{{$account->trainingLocation->name}}</td>
                                         </tr>
                                     @endforeach
                                 @endisset

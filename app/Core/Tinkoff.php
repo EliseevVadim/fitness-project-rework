@@ -89,9 +89,7 @@ class Tinkoff
             'DATA' => [
                 'Email'     => $payment['Email'],
                 'Phone'     => $payment['Phone'],
-                'Name'      => $payment['Name'],
-                'Location'  => $payment['LocationId'],
-                'Menu'      => $payment['MenuId']
+                'Name'      => $payment['Name']
             ],
             'Receipt' => [
                 'Email'     => $payment['Email'],
