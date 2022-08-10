@@ -387,7 +387,7 @@
                                 </svg>
                             </div>
                             <h4 class="office__subtitle">
-                                КОНТРОЛЬ и МоТИВАЦИЯ
+                                КОНТРОЛЬ и МОТИВАЦИЯ
                             </h4>
                             <p class="office__txt">
                                 Коллектив девочек и личный дневник это отдельная наша гордость! Мы лично общаемся с
@@ -711,9 +711,11 @@
                                             {{$marathon->price}} <sub>₽</sub>
 											</span>
                                         </div>
-                                        <div class="program__start">
-                                            <span>СТАРТ</span> в понедельник!
-                                        </div>
+                                        @if($marathon->is_marathon)
+                                            <div class="program__start">
+                                                <span>СТАРТ</span> в понедельник!
+                                            </div>
+                                        @endif
                                         <buy-modal-opener
                                             :name="'{{$marathon->name}}'"
                                             :price="{{$marathon->discount_price}}"
