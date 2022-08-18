@@ -2924,7 +2924,7 @@ document.addEventListener("DOMContentLoaded", function () {
     direction: "vertical",
     slidesPerView: 3
   });
-  swiperScrinTxt.controller.control = swiperScrinImg;
+  swiperScrinTxt.disable();
   swiperScrinImg.controller.control = swiperScrinTxt;
   var program__slider = new Swiper(".program__slider", {
     slidesPerView: 1,

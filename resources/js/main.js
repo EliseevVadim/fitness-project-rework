@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 3,
     });
 
-    swiperScrinTxt.controller.control = swiperScrinImg;
+    swiperScrinTxt.disable();
     swiperScrinImg.controller.control = swiperScrinTxt;
 
     var program__slider = new Swiper(".program__slider", {
