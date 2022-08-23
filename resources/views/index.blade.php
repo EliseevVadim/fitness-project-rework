@@ -262,13 +262,13 @@
     <section id="office">
         <div class="container">
             <h3 class="title-caption">
-                Как это работает
+                Что ты получаешь?
             </h3>
             <h2 class="title-second">
                 О программе и марафоне
             </h2>
             <h4 class="office__caption">
-                Здесь собрано всё необходимое для достижения идеального тела!
+                Здесь ты обретёшь свой новый образ жизни! Здесь собрано всё необходимое для достижения идеального тела!
             </h4>
             <div class="office__block">
                 <div class="office__img-slider">
