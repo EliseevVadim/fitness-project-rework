@@ -1732,7 +1732,7 @@ footer {
 
     .questions-accordion {
         max-width: 100%;
-        margin-top: 36px;
+        margin-top: 0;
     }
 
     .questions-accordion__head {
@@ -2047,7 +2047,7 @@ footer {
     }
 
     #office .title-second {
-        margin: 10px 0 15px;
+        margin: 10px 0 0;
     }
 
     .office__img-slider {
@@ -2275,7 +2275,7 @@ footer {
     }
 
     .merit__block .title-second {
-        margin-bottom: 93px;
+        margin-bottom: 65px;
     }
 
     .merit__list {
