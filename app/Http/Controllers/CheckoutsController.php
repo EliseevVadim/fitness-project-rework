@@ -57,7 +57,6 @@ class CheckoutsController extends Controller
     public function prepareTinkoffCheckout(Request $request)
     {
         $userInfo = json_decode($request->user_info);
-        //Log::info($request->user_info);
         $password = Str::random(12);
         $user = User::where('email', $userInfo->email)->first();
         if (is_null($user)) {
@@ -75,8 +74,6 @@ class CheckoutsController extends Controller
             'menu_calories_id' => $userInfo->menu_calories_id
         ]);
         Session::put('user_info', $userInfo);
-        //Log::info("Получаем данные");
-        //Log::info(json_encode(Session::get('user_info')));
         $tinkoff = new Tinkoff(
             config('app.tinkoff_api_url'),
             config('app.tinkoff_terminal'),
@@ -98,7 +95,7 @@ class CheckoutsController extends Controller
         $item[] = [
             'Name' => $userInfo->product_name,
             'Price' => $userInfo->price,
-            'NDS' => 'vat20',
+            'NDS' => 'none',
             'Quantity' => 1
         ];
         $paymentUrl = $tinkoff->paymentURL($payment, $item);
@@ -133,10 +130,6 @@ class CheckoutsController extends Controller
 
     public function processTinkoffCheckout(Request $request)
     {
-        /*Log::info('posted');
-        Log::info(json_encode($request->all()));
-        Log::info('читаем инфу');
-        Log::info(json_encode($request->Data));*/
         if ($request->Status != 'CONFIRMED') {
             //Log::info($request->Status);
             return response('OK', 200);
@@ -169,7 +162,6 @@ class CheckoutsController extends Controller
         if (is_null($programContent))
             abort(404);
         (new AuthorizationMailer())->sendAuthorizationMessage($userInfo->email, $programContent->name, $programContent->google_drive_link);
-        //Log::info('Письмо оправлено на почту: ' . $userInfo->email);
         Session::remove('user_info');
         Session::remove('service_was_given');
     }
@@ -189,8 +181,6 @@ class CheckoutsController extends Controller
 
     private function provideServiceToUser()
     {
-        //Log::info('Предоставляем услугу');
-        //Log::info(json_encode(Session::get('user_info')));
         $paymentId = Session::get('tinkoff_id');
         $this->checkPaymentState($paymentId);
         $userInfo = Session::get('user_info');
