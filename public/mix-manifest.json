@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/admin/admin-app.js": "/js/admin/admin-app.js",
+    "/js/supplierBase.js": "/js/supplierBase.js",
     "/js/admin/menu-create.js": "/js/admin/menu-create.js",
     "/js/admin/menu-edit.js": "/js/admin/menu-edit.js",
     "/js/admin/media.js": "/js/admin/media.js",
@@ -270,5 +271,6 @@
     "/public_html/js/app.js.LICENSE.txt": "/public_html/js/app.js.LICENSE.txt",
     "/public_html/js/main.js": "/public_html/js/main.js",
     "/public_html/js/modal-box.min.js": "/public_html/js/modal-box.min.js",
+    "/public_html/js/supplierBase.js": "/public_html/js/supplierBase.js",
     "/public_html/js/videotube.min.js": "/public_html/js/videotube.min.js"
 }

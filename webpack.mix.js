@@ -30,8 +30,10 @@ mix.sass('resources/sass/admin-sass/style.scss', 'public/css/admin');
 
 
 mix.sass('resources/sass/supplierBase/main.scss', 'public/css/supplierBase.css');
+mix.js('resources/js/supplierBase.js', 'public/js/supplierBase.js')
 mix.copy('resources/js/modal-box.min.js', 'public/js/modal-box.min.js');
 mix.copy('resources/sass/modal-box.min.css', 'public/css/modal-box.min.css');
+// mix.copy('public/mix-manifest.json', 'public_html/mix-manifest.json');
 
 //************** SCRIPTS ******************
 // general scripts
