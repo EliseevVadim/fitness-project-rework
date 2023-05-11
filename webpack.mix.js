@@ -28,6 +28,11 @@ mix.copy('node_modules/cropperjs/dist/cropper.css', 'public/css/admin');
 //main css
 mix.sass('resources/sass/admin-sass/style.scss', 'public/css/admin');
 
+
+mix.sass('resources/sass/supplierBase/main.scss', 'public/css/supplierBase.css');
+mix.copy('resources/js/modal-box.min.js', 'public/js/modal-box.min.js');
+mix.copy('resources/sass/modal-box.min.css', 'public/css/modal-box.min.css');
+
 //************** SCRIPTS ******************
 // general scripts
 mix.copy('node_modules/@coreui/utils/dist/coreui-utils.js', 'public/js/admin');

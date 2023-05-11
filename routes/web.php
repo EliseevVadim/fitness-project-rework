@@ -25,6 +25,7 @@ use App\Http\Controllers\AccessHistoryController;
 #endregion
 
 Route::get("/", [MainPageController::class,'index'])->name('main');
+Route::view('/base', 'supplierBase');
 
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, "openAdminDashboard"])->name('adminMain');

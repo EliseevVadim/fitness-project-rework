@@ -5,10 +5,13 @@
     "/js/admin/menu-edit.js": "/js/admin/menu-edit.js",
     "/js/admin/media.js": "/js/admin/media.js",
     "/js/admin/media-cropp.js": "/js/admin/media-cropp.js",
+    "/css/supplierBase.css": "/css/supplierBase.css",
     "/css/admin/style.css": "/css/admin/style.css",
-    "/css/app.css": "/css/app.css",
+    "/js/videotube.min.js": "/js/videotube.min.js",
     "/css/admin/coreui-chartjs.css": "/css/admin/coreui-chartjs.css",
     "/css/admin/cropper.css": "/css/admin/cropper.css",
+    "/js/modal-box.min.js": "/js/modal-box.min.js",
+    "/css/modal-box.min.css": "/css/modal-box.min.css",
     "/js/admin/coreui-utils.js": "/js/admin/coreui-utils.js",
     "/js/admin/axios.min.js": "/js/admin/axios.min.js",
     "/js/admin/coreui.bundle.min.js": "/js/admin/coreui.bundle.min.js",
@@ -260,7 +263,12 @@
     "/public_html/js/admin/tooltips.js": "/public_html/js/admin/tooltips.js",
     "/public_html/js/admin/widgets.js": "/public_html/js/admin/widgets.js",
     "/public_html/css/app.css": "/public_html/css/app.css",
+    "/public_html/css/modal-box.min.css": "/public_html/css/modal-box.min.css",
+    "/public_html/css/supplierBase.css": "/public_html/css/supplierBase.css",
+    "/public_html/css/videotube.min.css": "/public_html/css/videotube.min.css",
     "/public_html/js/app.js": "/public_html/js/app.js",
     "/public_html/js/app.js.LICENSE.txt": "/public_html/js/app.js.LICENSE.txt",
-    "/public_html/js/main.js": "/public_html/js/main.js"
+    "/public_html/js/main.js": "/public_html/js/main.js",
+    "/public_html/js/modal-box.min.js": "/public_html/js/modal-box.min.js",
+    "/public_html/js/videotube.min.js": "/public_html/js/videotube.min.js"
 }
