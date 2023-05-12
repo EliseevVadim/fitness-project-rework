@@ -28,12 +28,13 @@ mix.copy('node_modules/cropperjs/dist/cropper.css', 'public/css/admin');
 //main css
 mix.sass('resources/sass/admin-sass/style.scss', 'public/css/admin');
 
+mix.sass('resources/sass/base.scss', 'public/css/app.css');
 
 mix.sass('resources/sass/supplierBase/main.scss', 'public/css/supplierBase.css');
 mix.js('resources/js/supplierBase.js', 'public/js/supplierBase.js')
 mix.copy('resources/js/modal-box.min.js', 'public/js/modal-box.min.js');
 mix.copy('resources/sass/modal-box.min.css', 'public/css/modal-box.min.css');
-// mix.copy('public/mix-manifest.json', 'public_html/mix-manifest.json');
+mix.copy('public_html/mix-manifest.json', 'public/mix-manifest.json');
 
 //************** SCRIPTS ******************
 // general scripts
