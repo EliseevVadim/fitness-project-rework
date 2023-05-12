@@ -124,7 +124,8 @@
             crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{ asset('js/modal-box.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+{{--    <script src="{{ asset('js/app.js') }}"></script>--}}
+    <script src="{{ asset('js/supplierBase.js') }}"></script>
 @show
 </body>
 </html>
