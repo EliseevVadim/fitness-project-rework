@@ -441,6 +441,7 @@ button {
   margin-left: auto;
 }
 .base-main-card__head {
+  background-image: url("../images/base-program-back.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -488,6 +489,7 @@ button {
 .base-main__parallelogram {
   width: 60.6rem;
   height: 38.5rem;
+  background-image: url("../images/parallelogram.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -575,6 +577,7 @@ button {
   padding: 3.4rem 3rem;
 }
 .base-usefulness__wrap {
+  background-image: url("../images/base-usefulness_back.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -683,6 +686,7 @@ button {
   justify-content: space-between;
 }
 .base-program-head {
+  background-image: url("../images/base-program-back.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

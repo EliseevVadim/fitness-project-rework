@@ -90,7 +90,7 @@
             margin-left: auto;
 
             &__head {
-                //background-image: url('{{ asset('images/base-program-back.png') }}');
+                background-image: url("../images/base-program-back.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -149,7 +149,7 @@
         &__parallelogram {
             width: 60.6rem;
             height: 38.5rem;
-            //background-image: url('{{ asset(' images/parallelogram.svg ') }}');
+            background-image: url("../images/parallelogram.svg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -262,7 +262,7 @@
 
     &-usefulness {
         &__wrap {
-            //background-image: url('{{ asset('images/base-usefulness_back.png') }}');
+            background-image: url("../images/base-usefulness_back.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -404,7 +404,7 @@
         }
 
         &-head {
-            //background-image: url('{{ asset(' images/base-program-back.png ') }}');
+            background-image: url("../images/base-program-back.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
