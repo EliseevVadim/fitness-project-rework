@@ -12,21 +12,26 @@
   &__burger {
     display: none;
     position: relative;
-    width: 16px;
-    height: 8px;
+    width: 29px;
+    height: 17px;
     z-index: 47;
     flex-direction: column;
     justify-content: space-between;
 
     &:before,
+    &:after,
     &-line {
       content: "";
       display: block;
-      height: 2px;
+      height: 3px;
       width: 100%;
-      border-radius: 2px;
+      border-radius: 20%;
       transition: 0.5s;
-      background: #FFFFFF;
+      background: #AF00CB;
+    }
+
+    &:after {
+      width: 18px;
     }
 
     &:hover {
@@ -37,13 +42,6 @@
   &__row {
     display: flex;
     justify-content: space-between;
-  }
-
-  &-logo {
-    &__svg {
-      width: 100%;
-      height: auto;
-    }
   }
 
   &-nav {
@@ -64,6 +62,10 @@
         color: #AF00CB;
       }
     }
+
+    &-mob {
+      display: none;
+    }
   }
 }
 
@@ -71,46 +73,11 @@
 @media only screen and (max-width: $medium-tablet) {
   .header {
     z-index: 999;
-    padding: 2rem 0;
-    font-family: 'Manrope';
-    font-weight: 800;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-
-    &__row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &-logo {
-      height: 2.4rem;
-      width: 10.1rem;
-    }
-
-    &__link {
-      &_mob {
-        width: 17.4rem;
-        margin-top: 2rem;
-
-        &_bg-n {
-          margin: 0 1.8rem 0 auto;
-          width: 1.6rem;
-          height: 1.6rem;
-          background: none;
-        }
-
-        &_img {
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      span {
-        display: none;
-      }
-    }
+    padding: 4rem 0;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+    color: #AF00CB;
 
     &__burger {
       display: flex;
@@ -122,49 +89,67 @@
       top: 0;
       left: 0;
       height: 100vh;
-      width: 100%;
-      padding: 8.4rem 4rem;
+      width: 70%;
+      min-width: 32rem;
+      padding: 10rem 3rem 6rem 2.4rem;
       overflow-y: auto;
       transform: translateX(-100%);
-      background: rgba(58, 58, 60, 0.6);
-      backdrop-filter: blur(10px);
+      background: #FFFFFF;
+      box-shadow: 1.2rem 1.0rem 2.4rem rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(1.6rem);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
+      &-mob {
+        display: block;
+        width: 100%;
+
+        &__link {
+          width: 100%;
+          max-width: 20.8rem;
+          height: 5.0rem;
+          box-shadow: 0px 1.0rem 3.2rem -3px rgba(0, 0, 0, 0.26);
+          border-radius: 2.8rem;
+          font-size: 1.8rem;
+          margin: 5rem auto 8rem;
+        }
+
+        &-social {
+          &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -.9rem;
+          }
+
+          &__link {
+            padding: 0 .9rem;
+          }
+
+          &__svg {
+            max-width: 2.5rem;
+            height: auto;
+          }
+        }
+      }
+
       &__list {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: flex-start;
       }
 
       &__item {
-        margin: 0 0 2rem;
+        padding: 2.2rem 0 2.8rem;
         overflow: hidden;
         box-sizing: border-box;
-        min-height: 3.9rem;
+        min-height: 7rem;
+        border-bottom: 1px solid rgba(175, 0, 203, 0.25);
+        width: 100%;
 
-        &_mob {
-          display: flex;
-          height: 100%;
-        }
-      }
-
-      &-foot {
-        &__links {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-        }
-
-        &__link {
-          color: #FFFFFF;
-          padding: 0;
-
-          &:last-child {
-            border-left: none;
-            margin-top: 1rem;
-          }
+        &:last-child {
+          border-bottom: none;
         }
       }
     }
@@ -172,16 +157,18 @@
     &.show {
       .header {
         &__burger {
-          height: 15px;
-          width: 15px;
-          position: relative;
+          height: 23px;
+          width: 23px;
+          position: absolute;
+          left: 2.4rem;
 
           &:before,
           &:after,
           &-line {
             top: .8rem;
-            width: 19px;
+            width: 29px;
             position: absolute;
+            border-radius: 3px;
           }
 
           &:before, &:after {
@@ -189,7 +176,7 @@
           }
 
           &-line {
-            right: -4px;
+            right: -6px;
             transform: rotateZ(-45deg);
             margin: 0;
           }
@@ -203,24 +190,6 @@
               animation: 1.5s slideUp ease forwards .2s;
               transform: translateY(100%);
               display: flex;
-              text-align: right;
-            }
-
-            &:last-child {
-              a {
-                animation: 1.5s slideUp ease forwards .3s;
-              }
-            }
-          }
-
-          &-foot {
-            &__link {
-              animation: 1.5s slideUp ease forwards .4s;
-              transform: translateY(100%);
-
-              &:last-child {
-                animation: 1.5s slideUp ease forwards .5s;
-              }
             }
           }
         }

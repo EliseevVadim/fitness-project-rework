@@ -1,6 +1,4 @@
-
 .bg-wg-modal {
-    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     position: fixed;
     top: 0;
@@ -12,9 +10,7 @@
 
 .bg-wg-modal .wg-modal {
     display: block;
-    /*width: 80%;*/
     position: relative;
-    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: .4s;
     animation-name: animatetop;
@@ -75,6 +71,31 @@
     left: 0;
     right: 0;
     padding: 20px
+}
+
+.wg-content .wg-modal-close {
+    display: none;
+}
+
+.wg-modal-close {
+    display: block;
+}
+
+@media only screen and (max-width: 375px) {
+    .wg-modal .wg-modal-close {
+        width: 1rem;
+        height: 1rem;
+        right: 2.8rem;
+        top: 2.8rem;
+    }
+
+    .wg-modal-close__svg {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 @-webkit-keyframes animatetop {

@@ -15,6 +15,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slideDown {
   from {
     transform: translateY(100%);
@@ -25,6 +26,27 @@
     opacity: 1;
   }
 }
+@keyframes slideDown2 {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDown1 {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
 @keyframes slideL {
   from {
     transform: translateX(-100%);
@@ -35,6 +57,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slideR {
   from {
     transform: translateX(100%);
@@ -47,17 +70,37 @@
 }
 
 @keyframes example1 {
-  0%   { opacity: 1; }
-  25%  { opacity: 0.75; }
-  50%  { opacity: 0.5; }
-  75%  { opacity: 0.25; }
-  100% { opacity: 0; }
+  0% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(75%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  75% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes example2 {
-  0%   { opacity: 0; }
-  25%  { opacity: 0.25; }
-  50%  { opacity: 0.5; }
-  75%  { opacity: 0.75; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }

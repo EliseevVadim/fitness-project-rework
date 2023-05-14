@@ -268,7 +268,7 @@
                                     <div class="base-program-footer__price">
                                         5 000 ₽ <small class="base-program-footer__small">только 3 дня</small>
                                     </div>
-                                    <button class="base-program-footer__btn base-order-open-modal">
+                                    <button class="base-program-footer__btn base-order-open-modal-family">
                                         Купить
                                     </button>
                                 </div>
@@ -424,7 +424,7 @@
                                     <div class="base-program-footer__price">
                                         5 000 ₽ <small class="base-program-footer__small">только 3 дня</small>
                                     </div>
-                                    <button class="base-program-footer__btn base-order-open-modal">
+                                    <button class="base-program-footer__btn base-order-open-modal-business">
                                         Купить
                                     </button>
                                 </div>
@@ -575,23 +575,23 @@
             </a>
         </div>
     </section>
-    <section id="base-info-economy" class="base-info base-info-economy">
+    <section id="base-info-economy" class="base-info-economy base-info">
         <div class="container">
-            <div class="base-info__wrap base-info-economy__wrap">
-                <h2 class="base-info__title base-info__title_small">
+            <div class="base-info-economy__wrap base-info__wrap">
+                <h2 class="base-info-economy__title base-info__title base-info__title_small">
                     НАЧНИТЕ ЭКОНОМИТЬ УЖЕ СЕЙЧАС!
                 </h2>
-                <div class="base-info__text">
+                <div class="base-info-economy__text  base-info__text">
                     С нашей базой поставщиков, Вы сможете заказывать множество качественных товаров по самым
                     <strong>приятным ценам!</strong>
                 </div>
-                <button class="base-info__btn base-order-open-modal">
+                <a href="#base-program" class="base-info-economy__link base-info__link link">
                     Купить БАЗУ
-                </button>
+                </a>
             </div>
         </div>
     </section>
-    <div id="base-order" class="base-order">
+    <div id="base-order-family" class="base-order-family base-order">
         <h3 class="base-order__title">
             ВАШ ЗАКАЗ
         </h3>
@@ -615,7 +615,7 @@
                 <label class="base-order__label">Введите ваш Email</label>
                 <input type="text" class="base-order__input" placeholder="Email">
             </div>
-            <button class="base-order__btn base-order-ready-open-modal" type="button">
+            <button class="base-order__btn base-order-ready-open-modal-family" type="button">
                 ОПЛАТИТЬ
             </button>
         </form>
@@ -624,13 +624,73 @@
                 персональных данный и условия Оферты</a>
         </small>
     </div>
-    <div id="base-order-ready" class="base-order base-order-ready">
+    <div id="base-order-ready-family" class="base-order-ready-family base-order base-order-ready">
         <h3 class="base-order__title">
             ВАШ ЗАКАЗ
         </h3>
         <div class="base-order-price">
             <b class="base-order-price__text">
                 Семейная база
+            </b>
+            <small class="base-order-price__price">
+                5 000 р.
+            </small>
+        </div>
+        <h5 class="base-order__subtitle">
+            Внимательно вводите ваш электронный адрес без ошибок.
+        </h5>
+        <div class="base-order__caption">
+            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
+            оплаты.
+        </div>
+        <div class="base-order__banner">
+            Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...
+        </div>
+        <small class="base-order__small">
+            Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
+                персональных данный и условия Оферты</a>
+        </small>
+    </div>
+    <div id="base-order-business" class="base-order-business base-order">
+        <h3 class="base-order__title">
+            ВАШ ЗАКАЗ
+        </h3>
+        <div class="base-order-price">
+            <b class="base-order-price__text">
+                Бизнес база
+            </b>
+            <small class="base-order-price__price">
+                5 000 р.
+            </small>
+        </div>
+        <h5 class="base-order__subtitle">
+            Внимательно вводите ваш электронный адрес без ошибок.
+        </h5>
+        <div class="base-order__caption">
+            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
+            оплаты.
+        </div>
+        <form class="base-order__form" action="">
+            <div class="base-order__group">
+                <label class="base-order__label">Введите ваш Email</label>
+                <input type="text" class="base-order__input" placeholder="Email">
+            </div>
+            <button class="base-order__btn base-order-ready-open-modal-business" type="button">
+                ОПЛАТИТЬ
+            </button>
+        </form>
+        <small class="base-order__small">
+            Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
+                персональных данный и условия Оферты</a>
+        </small>
+    </div>
+    <div id="base-order-ready-business" class="base-order-ready-business base-order base-order-ready">
+        <h3 class="base-order__title">
+            ВАШ ЗАКАЗ
+        </h3>
+        <div class="base-order-price">
+            <b class="base-order-price__text">
+                Бизнес база
             </b>
             <small class="base-order-price__price">
                 5 000 р.
