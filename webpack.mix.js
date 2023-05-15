@@ -28,7 +28,7 @@ mix.copy('node_modules/cropperjs/dist/cropper.css', 'public/css/admin');
 //main css
 mix.sass('resources/sass/admin-sass/style.scss', 'public/css/admin');
 
-mix.sass('resources/sass/base.scss', 'public/css/app.css');
+// mix.sass('resources/sass/base.scss', 'public/css/app.css');
 
 mix.sass('resources/sass/supplierBase/main.scss', 'public/css/supplierBase.css');
 mix.js('resources/js/supplierBase.js', 'public/js/supplierBase.js')

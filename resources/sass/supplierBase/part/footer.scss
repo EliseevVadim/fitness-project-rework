@@ -18,7 +18,7 @@
   }
 
   &__social {
-
+    max-width: 3.6rem;
   }
 
   &__link {
@@ -33,23 +33,43 @@
 
 @media only screen and (max-width: $medium-tablet) {
   .footer {
-  }
-}
+    padding: 2rem 0 2.4rem;
 
-@media only screen and (max-width: $small-tablet) {
-  .footer {
-
-  }
-}
-
-@media only screen and (max-width: $large-mobile) {
-  .footer {
-
+    &__social {
+      display: block;
+      max-width: 2.5rem;
+    }
   }
 }
 
 @media only screen and (max-width: $small-mobile) {
   .footer {
+    padding: 0;
 
+    &__row {
+      margin: 0;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1px solid #AF00CB;
+      padding: 2rem 0 2.4rem;
+    }
+
+    &__list {
+      margin: 0 -1.5rem 2rem;
+      justify-content: center;
+    }
+
+    &__item {
+      padding: 0 1.5rem;
+    }
+
+    &__social {
+      max-width: 3.6rem;
+    }
+
+    &__link {
+      font-size: 1.6rem;
+      line-height: 2.0rem;
+    }
   }
 }

@@ -1,14 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+    //прелоудер
+    window.onload = function () {
+        window.setTimeout(function () {
+            document.querySelector(".loader").style.display = "none";
+            document.body.classList.remove('overflow');
+        }, 500);
+    }
 
     //бургер меню
     $('.header__burger, .overlay').click(function () {
         $('.header').toggleClass('show');
-        $(".wrapper").toggleClass('overflow');
+        $("html").toggleClass('overflow');
     });
-    $("#nav").on("click", ".nav__link", function (event) {
+    $("#nav").on("click", ".nav-close", function (event) {
         $('.header').removeClass('show');
-        $(".wrapper").removeClass('overflow');
+        $("html").removeClass('overflow');
     });
 
     //плавный скролл
@@ -21,9 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //слайдеры
     var swiper = new Swiper(".base-program__swiper", {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        autoHeight: false,
+        slidesPerView: 1,
+        spaceBetween: 80,
+        autoHeight: true,
+        breakpoints: {
+            998: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            }
+        }
     });
 
     //аккардион
@@ -39,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     //модалки
-    var baseOrder = $("#base-order").wgModal();
+    var baseOrderBusiness = $("#base-order-business").wgModal();
     $(document).ready(function () {
-        $("#base-order").wgModal({
-            triggerElement: '.base-order-open-modal',
+        $("#base-order-business").wgModal({
+            triggerElement: '.base-order-open-modal-business',
             closeButton: true,
             onBeforeOpen: function (e) {
                 $('html').addClass('overflow');
@@ -53,12 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     $(document).ready(function () {
-        $("#base-order-ready").wgModal({
-            triggerElement: '.base-order-ready-open-modal',
+        $("#base-order-ready-business").wgModal({
+            triggerElement: '.base-order-ready-open-modal-business',
             closeButton: true,
             onBeforeOpen: function (e) {
                 $('html').addClass('overflow');
-                baseOrder.closeModal();
+                baseOrderBusiness.closeModal();
             },
             onBeforeClose: function (e) {
                 $('html').removeClass('overflow');
@@ -66,5 +78,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    var baseOrderFamily = $("#base-order-family").wgModal();
+    $(document).ready(function () {
+        $("#base-order-family").wgModal({
+            triggerElement: '.base-order-open-modal-family',
+            closeButton: true,
+            onBeforeOpen: function (e) {
+                $('html').addClass('overflow');
+            },
+            onBeforeClose: function (e) {
+                $('html').removeClass('overflow');
+            },
+        });
+    });
+    $(document).ready(function () {
+        $("#base-order-ready-family").wgModal({
+            triggerElement: '.base-order-ready-open-modal-family',
+            closeButton: true,
+            onBeforeOpen: function (e) {
+                $('html').addClass('overflow');
+                baseOrderFamily.closeModal();
+            },
+            onBeforeClose: function (e) {
+                $('html').removeClass('overflow');
+            },
+        });
+    });
 })
 
