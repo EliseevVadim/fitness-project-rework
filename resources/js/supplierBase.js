@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //слайдеры
     var swiper = new Swiper(".base-program__swiper", {
         slidesPerView: 1,
-        spaceBetween: 80,
-        autoHeight: true,
+        spaceBetween: 20,
+        // autoHeight: true,
         breakpoints: {
             998: {
                 slidesPerView: 2,

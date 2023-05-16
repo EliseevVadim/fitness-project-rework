@@ -266,7 +266,7 @@
                                         7 000 ₽
                                     </div>
                                     <div class="base-program-footer__price">
-                                        5 000 ₽ <small class="base-program-footer__small">только 3 дня</small>
+                                        5 000 ₽
                                     </div>
                                     <button class="base-program-footer__btn base-order-open-modal-family">
                                         Купить
@@ -422,7 +422,7 @@
                                         7 000 ₽
                                     </div>
                                     <div class="base-program-footer__price">
-                                        5 000 ₽ <small class="base-program-footer__small">только 3 дня</small>
+                                        5 000 ₽
                                     </div>
                                     <button class="base-program-footer__btn base-order-open-modal-business">
                                         Купить
@@ -568,11 +568,38 @@
             <h2 class="base-telegram__title">
                 ОСТАЛИСЬ ВОПРОСЫ?
             </h2>
-            <a href="" class="base-telegram__link">
-                <img class="object-fit"
-                     src="{{ ('images/base-telegram.png') }}"
-                     alt="#">
-            </a>
+            <div class="base-telegram__wrap">
+                <div class="base-telegram-head">
+                    <img class="base-telegram-head__img" src="{{ ('images/base-telegram-head__img.png') }}" alt="#">
+                    <div class="base-telegram-head__text">
+                        <div class="base-telegram-head__name">
+                            Любовь и Алексей
+                        </div>
+                        <div class="base-telegram-head__online">
+                            сейчас в сети
+                        </div>
+                    </div>
+                </div>
+                <div class="base-telegram-body">
+                    <div class="base-telegram-body__text">
+                        <div class="base-telegram-body__name">
+                            Любовь и Алексей
+                        </div>
+                        <p>
+                            Привет, остались вопросы<br>
+                            или нужна помощь?
+                        </p>
+                        <p>
+                            Пишите нам в чат!
+                        </p>
+                    </div>
+                </div>
+                <div class="base-telegram-foot">
+                    <a href="" class="base-telegram-foot__link link">
+                        Начать чат
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     <section id="base-info-economy" class="base-info-economy base-info">
