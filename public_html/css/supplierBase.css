@@ -516,7 +516,7 @@ button, .link {
 }
 @media only screen and (max-width: 580px) {
   html {
-    font-size: 1.724137931vw;
+    font-size: 2.380952381vw;
   }
 
   .container {
@@ -531,7 +531,12 @@ button, .link {
   h2 {
     font-size: 1.7rem;
     line-height: 2.1rem;
-    text-shadow: 1.3rem 0px 3rem rgba(0, 0, 0, 0.9);
+    text-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  }
+}
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 2.6666666667vw;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -864,9 +869,12 @@ button, .link {
 .base-program__swiper {
   overflow: visible;
 }
-@media only screen and (min-width: 998px) {
-  .base-program__slide {
-    height: 100% !important;
+.base-program__slide {
+  height: auto;
+}
+@media only screen and (max-width: 998px) {
+  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(2), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(3), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(4), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(5) {
+    display: none;
   }
 }
 .base-program__content {
@@ -894,8 +902,8 @@ button, .link {
 .base-program-head__img {
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 40.5rem;
+  right: -5rem;
+  width: 45.5rem;
   height: auto;
 }
 .base-program-head__img_group {
@@ -922,11 +930,8 @@ button, .link {
   height: auto;
 }
 .base-program-head__timer {
-  background: #FFFFFF;
-  border-radius: 1rem;
-  padding: 3px 1.2rem;
   text-align: center;
-  color: #AF00CB;
+  color: #FFFFFF;
   font-size: 1.4rem;
   line-height: 1.7rem;
   font-weight: 500;
@@ -936,8 +941,15 @@ button, .link {
   margin: auto 0 2.8rem;
 }
 .base-program-head__time {
+  color: #AF00CB;
   font-weight: 800;
   margin-top: 3px;
+  font-size: 1.6rem;
+  line-height: 110%;
+  background: #ffffff;
+  box-shadow: 0 3rem 5.2rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  padding: 1rem 2.5rem;
 }
 .base-program-head__title {
   font-weight: 900;
@@ -1009,10 +1021,6 @@ button, .link {
   text-decoration: line-through;
   margin-bottom: 1.4rem;
 }
-.base-program-footer__small {
-  font-size: 2.8rem;
-  line-height: 4.3rem;
-}
 .base-program-footer__btn {
   margin: 4rem 0 3rem;
 }
@@ -1061,17 +1069,97 @@ button, .link {
   line-height: 180%;
 }
 .base-telegram {
-  padding: 18rem 0 6rem;
+  padding: 18rem 0 12rem;
 }
 .base-telegram__title {
   text-align: center;
 }
-.base-telegram__link {
+.base-telegram__wrap {
   max-width: 71rem;
   width: 100%;
-  display: block;
   border-radius: 3rem;
   margin: 4rem auto 0;
+  overflow: hidden;
+  box-shadow: 0px 3rem 5.2rem rgba(0, 0, 0, 0.2);
+  background: #FFFFFF;
+}
+.base-telegram-head {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem 1rem;
+  background-image: url("../images/base-program-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.base-telegram-head__img {
+  width: 6.2rem;
+  height: 6.2rem;
+  margin-right: 2rem;
+}
+.base-telegram-head__text {
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  color: #FFFFFF;
+}
+.base-telegram-head__online {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 3px;
+}
+.base-telegram-body {
+  background-image: url("../images/base-telegram-body__back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 2.6rem 3.3rem 7.9rem;
+}
+.base-telegram-body__name {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #AF00CB;
+  margin-bottom: 0.9rem;
+  position: relative;
+}
+.base-telegram-body__text {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 3rem 3.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 3rem 2rem 4.2rem;
+  width: 46rem;
+}
+.base-telegram-body__text p {
+  margin-bottom: 1.2rem;
+}
+.base-telegram-body__text p:last-child {
+  margin-bottom: 0;
+}
+.base-telegram-body__text:before {
+  content: url("../images/icons/triangle.svg");
+  width: 4.5rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 0;
+  left: -2.3rem;
+}
+.base-telegram-foot {
+  padding: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.base-telegram-foot__link {
+  max-width: 26.7rem;
+  height: 4.6rem;
+  box-shadow: 0px 3rem 5.2rem rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
 }
 .base-order {
   max-width: 77.2rem;
@@ -1282,7 +1370,7 @@ button, .link {
     display: none;
   }
   .base-telegram {
-    padding: 6rem 0 0;
+    padding: 6rem 0;
   }
   .base-info {
     font-size: 2.2rem;
@@ -1463,30 +1551,43 @@ button, .link {
     bottom: -1rem;
     transform: rotate(-27.47deg);
   }
+  .base-usefulness__content {
+    box-shadow: 0px 3rem 3.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 2.6rem;
+  }
   .base-program {
-    padding: 11rem 0 6rem;
+    padding: 6rem 0;
+  }
+  .base-program__swiper {
+    width: 95%;
   }
   .base-program__title {
     margin-bottom: 3rem;
   }
   .base-program-head {
-    min-height: 19rem;
+    min-height: 16rem;
     padding: 1.6rem 1.8rem;
   }
   .base-program-head__img {
-    width: 25.8rem;
+    width: 25rem;
+    right: -3.5rem;
   }
   .base-program-head__img_base {
-    width: 38rem;
-    right: -12rem;
+    width: 30.5rem;
+    right: -10rem;
   }
   .base-program-head__img_money_img {
-    width: 25rem;
+    width: 20rem;
   }
   .base-program-head__timer {
     font-size: 1rem;
     line-height: 1.2rem;
     margin-bottom: 1rem;
+  }
+  .base-program-head__time {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
   }
   .base-program-head__title {
     font-size: 3.4rem;
@@ -1518,9 +1619,6 @@ button, .link {
     font-size: 2.2rem;
     margin-bottom: 1rem;
   }
-  .base-program-footer__small {
-    font-size: 2.4rem;
-  }
   .base-program-footer__btn {
     margin: 3rem 0 4rem;
     max-width: 26.7rem;
@@ -1536,30 +1634,37 @@ button, .link {
     font-size: 1.2rem;
     padding-top: 1rem;
   }
-  .base-telegram__link {
-    margin-top: 0.5rem;
+  .base-telegram__wrap {
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+  .base-telegram-body {
+    padding: 2.6rem 2.8rem 8.5rem;
+  }
+  .base-telegram-body__name {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .base-telegram-body__text {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 1.7rem 2rem;
+    width: 28rem;
+  }
+  .base-telegram-body__text:before {
+    left: -1.3rem;
+  }
+  .base-telegram-body__text p {
+    margin-bottom: 1rem;
+  }
+  .base-telegram-body__text p:last-child {
+    margin-bottom: 0;
+  }
+  .base-telegram-foot {
+    padding: 1.1rem;
   }
   .base-order {
-    max-width: 50rem;
     padding: 4.9rem 2.6rem;
-  }
-}
-@media only screen and (max-width: 375px) {
-  .base-program-head {
-    min-height: 16rem;
-  }
-  .base-program-head__img {
-    width: 22rem;
-    right: -2rem;
-  }
-  .base-program-head__img_base {
-    width: 30.5rem;
-    right: -10rem;
-  }
-  .base-program-head__img_money_img {
-    width: 20rem;
-  }
-  .base-order {
     max-width: 32.3rem;
   }
   .base-order__title {
@@ -1662,7 +1767,7 @@ button, .link {
     max-width: 2.5rem;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 580px) {
   .footer {
     padding: 0;
   }
