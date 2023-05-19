@@ -1491,6 +1491,11 @@ button, .link {
     position: absolute;
     top: 14rem;
     left: -3rem;
+    font-size: 1.4rem;
+    padding: 4.5rem 0 0 5.5rem;
+  }
+  .base-main__parallelogram p {
+    max-width: 21rem;
   }
   .base-main-card {
     margin-top: 3.2rem;
