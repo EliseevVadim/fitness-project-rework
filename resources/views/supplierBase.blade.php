@@ -262,13 +262,16 @@
                                     </p>
                                 </div>
                                 <div class="base-program-footer">
-                                    <div class="base-program-footer__price base-program-footer__price_discount">
-                                        7 000 ₽
+                                    <div class="base-program-footer-price">
+                                        <div
+                                            class="base-program-footer-price__price base-program-footer-price__price_discount">
+                                            7 000 ₽
+                                        </div>
+                                        <div class="base-program-footer-price__price">
+                                            5 000 ₽
+                                        </div>
                                     </div>
-                                    <div class="base-program-footer__price">
-                                        5 000 ₽
-                                    </div>
-                                    <button class="base-program-footer__btn base-order-open-modal-family">
+                                    <button class="base-program-footer__btn base-order-open-modal-business">
                                         Купить
                                     </button>
                                 </div>
@@ -401,6 +404,15 @@
                                     <li class="base-program-body__item">
                                         <div class="base-program-body__icon">
                                             <img class="base-program-body__svg"
+                                                 src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
+                                        </div>
+                                        <div class="base-program-body__text">
+                                            Гайд по выходу на <b>WILDBERRIES</b> и <b>OZON;</b>
+                                        </div>
+                                    </li>
+                                    <li class="base-program-body__item">
+                                        <div class="base-program-body__icon">
+                                            <img class="base-program-body__svg"
                                                  src="{{ ('images/icons/tabler_message-2-star.svg') }}" alt="#">
                                         </div>
                                         <div class="base-program-body__text">
@@ -418,11 +430,14 @@
                                     </p>
                                 </div>
                                 <div class="base-program-footer">
-                                    <div class="base-program-footer__price base-program-footer__price_discount">
-                                        7 000 ₽
-                                    </div>
-                                    <div class="base-program-footer__price">
-                                        5 000 ₽
+                                    <div class="base-program-footer-price">
+                                        <div
+                                            class="base-program-footer-price__price base-program-footer-price__price_discount">
+                                            7 000 ₽
+                                        </div>
+                                        <div class="base-program-footer-price__price">
+                                            5 000 ₽
+                                        </div>
                                     </div>
                                     <button class="base-program-footer__btn base-order-open-modal-business">
                                         Купить

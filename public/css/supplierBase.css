@@ -872,9 +872,15 @@ button, .link {
 .base-program__slide {
   height: auto;
 }
+.base-program__slide:nth-child(2) .base-program-body__item:nth-child(11) {
+  display: none;
+}
 @media only screen and (max-width: 998px) {
-  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(2), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(3), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(4), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(5) {
+  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(6), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(9), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(10) {
     display: none;
+  }
+  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(11) {
+    display: grid;
   }
 }
 .base-program__content {
@@ -962,7 +968,7 @@ button, .link {
   z-index: 2;
 }
 .base-program-body {
-  padding: 3.7rem 3.7rem 0;
+  padding: 2rem 3.7rem 0;
   margin-bottom: auto;
   display: flex;
   flex-direction: column;
@@ -972,7 +978,7 @@ button, .link {
 .base-program-body__item {
   display: grid;
   grid-template-columns: 2.8rem 1fr;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
   align-items: center;
 }
 .base-program-body__item:last-child {
@@ -1000,7 +1006,7 @@ button, .link {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 130.4%;
-  padding: 2.5rem 0;
+  padding: 1.8rem 0;
 }
 .base-program-body__texts b {
   font-weight: 800;
@@ -1010,19 +1016,24 @@ button, .link {
   flex-direction: column;
   align-items: center;
 }
-.base-program-footer__price {
+.base-program-footer-price {
+  display: flex;
+  align-items: flex-end;
+}
+.base-program-footer-price__price {
   font-weight: 700;
   font-size: 4rem;
-  line-height: 164.4%;
+  line-height: 100%;
   color: #464646;
+  margin: 0 0.8rem;
 }
-.base-program-footer__price_discount {
+.base-program-footer-price__price_discount {
   color: #C4C4C4;
   text-decoration: line-through;
-  margin-bottom: 1.4rem;
 }
 .base-program-footer__btn {
-  margin: 4rem 0 3rem;
+  margin: 2rem 0 3rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 }
 .base-questions__row {
   display: grid;
@@ -1464,25 +1475,28 @@ button, .link {
   .base-main__img_Lyuba {
     width: 39.4rem;
     transform: rotate(4.75deg);
-    bottom: 10rem;
+    bottom: 9rem;
     left: auto;
-    right: -8.6rem;
+    right: -10.3rem;
   }
   .base-main__title {
     width: 100%;
   }
   .base-main__caption {
-    margin-bottom: 20rem;
+    margin-bottom: 25rem;
     max-width: 100%;
   }
   .base-main__parallelogram {
     margin: 0;
     position: absolute;
-    bottom: 22rem;
-    left: -2.5rem;
+    top: 14rem;
+    left: -3rem;
   }
   .base-main-card {
     margin-top: 3.2rem;
+  }
+  .base-main__list {
+    display: none;
   }
   .base-info {
     padding: 5.2rem 0;
@@ -1602,7 +1616,7 @@ button, .link {
   }
   .base-program-body__texts {
     font-size: 1.4rem;
-    padding: 3rem 0 2rem;
+    padding: 1rem 0;
   }
   .base-program-body__svg {
     max-width: 1.8rem;
@@ -1612,15 +1626,14 @@ button, .link {
     flex-direction: column;
     align-items: center;
   }
-  .base-program-footer__price {
+  .base-program-footer-price__price {
     font-size: 2.8rem;
   }
-  .base-program-footer__price_discount {
+  .base-program-footer-price__price_discount {
     font-size: 2.2rem;
-    margin-bottom: 1rem;
   }
   .base-program-footer__btn {
-    margin: 3rem 0 4rem;
+    margin: 2rem 0;
     max-width: 26.7rem;
   }
   .base-questions-accordion__item {
