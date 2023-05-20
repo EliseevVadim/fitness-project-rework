@@ -1148,7 +1148,8 @@
             &__parallelogram {
                 margin: 0;
                 position: absolute;
-                top: 16rem;
+                bottom: 23rem;
+                top: auto;
                 left: -3rem;
                 font-size: 1.4rem;
                 padding: 4.5rem 0 0 5.5rem;
@@ -1499,12 +1500,12 @@
         }
     }
 
-    @media only screen and (max-width: $medium-mobile) {
-        &-main {
-            &__parallelogram {
-                top: 14rem;
-            }
-        }
-    }
+    //@media only screen and (max-width: $medium-mobile) {
+    //    &-main {
+    //        &__parallelogram {
+    //            top: 14rem;
+    //        }
+    //    }
+    //}
 }
 
