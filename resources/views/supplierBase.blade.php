@@ -271,7 +271,7 @@
                                             5 000 ₽
                                         </div>
                                     </div>
-                                    <button class="base-program-footer__btn base-order-open-modal-business">
+                                    <button class="base-program-footer__btn base-order-open-modal-family">
                                         Купить
                                     </button>
                                 </div>
@@ -407,7 +407,8 @@
                                                  src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
                                         </div>
                                         <div class="base-program-body__text">
-                                            Гайд по выходу на <b>WILDBERRIES</b> и <b>OZON;</b>
+                                            Гайды по <b>ДРОПШИППИНГУ</b>, по созданию <b>ОНЛАЙН - МАГАЗИНА</b>, по
+                                            выходу на <b>WILDBERRIES</b> и <b>OZON;</b>
                                         </div>
                                     </li>
                                     <li class="base-program-body__item">
@@ -420,7 +421,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="base-program-body__texts">
+                                <div class="base-program-body__texts base-program-body__texts_small-mob">
                                     <p>
                                         <b>ГЛАВНЫЙ ПЛЮС!</b> Обладатели Бизнес Базы бесплатно получат рекламу в
                                         наших
