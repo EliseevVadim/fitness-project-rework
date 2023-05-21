@@ -876,7 +876,7 @@ button, .link {
   display: none;
 }
 @media only screen and (max-width: 998px) {
-  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(6), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(9), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(10) {
+  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(6), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(7), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(8), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(9), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(10) {
     display: none;
   }
   .base-program__slide:nth-child(2) .base-program-body__item:nth-child(11) {
@@ -1582,11 +1582,11 @@ button, .link {
     width: 95%;
   }
   .base-program__title {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .base-program-head {
-    min-height: 16rem;
-    padding: 1.6rem 1.8rem;
+    min-height: 14rem;
+    padding: 1.5rem 1.8rem;
   }
   .base-program-head__img {
     width: 25rem;
@@ -1623,6 +1623,9 @@ button, .link {
   .base-program-body__texts {
     font-size: 1.4rem;
     padding: 1rem 0;
+  }
+  .base-program-body__texts_small-mob {
+    line-height: 105%;
   }
   .base-program-body__svg {
     max-width: 1.8rem;
