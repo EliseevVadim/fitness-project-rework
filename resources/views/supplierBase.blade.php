@@ -332,7 +332,7 @@
                                                  alt="#">
                                         </div>
                                         <div class="base-program-body__text">
-                                            Поставщики из <b>КЫРГЫСТАНА;</b>
+                                            Поставщики из <b>КЫРГЫЗСТАНА;</b>
                                         </div>
                                     </li>
                                     <li class="base-program-body__item">
