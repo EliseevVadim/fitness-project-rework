@@ -4,6 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutsController;
 use App\Http\Controllers\ProgramContentsController;
 use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\SupplierBasesController;
+use App\Http\Controllers\SupplierBaseTypesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +44,22 @@ Route::prefix('/admin')->group(function () {
         Route::get('/edit/{id}', [ProgramContentsController::class, "openProgramContentEditingPage"]);
         Route::post('/edit/{id}', [ProgramContentsController::class, "editProgramContent"])->name('editProgramContent');
         Route::delete('/remove/{id}', [ProgramContentsController::class, "deleteProgramContent"]);
+    });
+    Route::prefix('/supplier-base-types')->group(function () {
+        Route::get('/', [SupplierBaseTypesController::class, "showAll"])->name('showAllSupplierBaseTypes');
+        Route::get('/add', [SupplierBaseTypesController::class, "openAddingForm"]);
+        Route::post('/add', [SupplierBaseTypesController::class, "addSupplierBaseType"])->name('addSupplierBaseType');
+        Route::get('/edit/{id}', [SupplierBaseTypesController::class, "openSupplierBaseTypeEditingPage"]);
+        Route::post('/edit/{id}', [SupplierBaseTypesController::class, "editSupplierBaseType"])->name('editSupplierBaseType');
+        Route::delete('/remove/{id}', [SupplierBaseTypesController::class, "deleteSupplierBaseType"]);
+    });
+    Route::prefix('/supplier-bases')->group(function () {
+        Route::get('/', [SupplierBasesController::class, "showAll"])->name('showAllSupplierBases');
+        Route::get('/add', [SupplierBasesController::class, "openAddingForm"]);
+        Route::post('/add', [SupplierBasesController::class, "addSupplierBase"])->name('addSupplierBase');
+        Route::get('/edit/{id}', [SupplierBasesController::class, "openSupplierBaseEditingPage"]);
+        Route::post('/edit/{id}', [SupplierBasesController::class, "editSupplierBase"])->name('editSupplierBase');
+        Route::delete('/remove/{id}', [SupplierBasesController::class, "deleteSupplierBase"]);
     });
     Route::prefix('/menu')->group(function () {  // word: "icons" - not working as part of adress
         Route::get('/', [MenuController::class,'adminMenus'])->name('menu');

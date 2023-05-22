@@ -101,6 +101,18 @@ if (!function_exists('renderDropdown')) {
             Вопросы
         </a>
     </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="/admin/supplier-base-types">
+            <i class="c-sidebar-nav-icon"></i>
+            Типы баз
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="/admin/supplier-bases">
+            <i class="c-sidebar-nav-icon"></i>
+            Базы
+        </a>
+    </li>
 </ul>
 <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
         data-class="c-sidebar-minimized"></button>
