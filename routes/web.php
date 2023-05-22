@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutsController;
 use App\Http\Controllers\ProgramContentsController;
 use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\SupplierBasePageController;
 use App\Http\Controllers\SupplierBasesController;
 use App\Http\Controllers\SupplierBaseTypesController;
 use Illuminate\Http\Request;
@@ -27,7 +28,7 @@ use App\Http\Controllers\AccessHistoryController;
 #endregion
 
 Route::get("/", [MainPageController::class,'index'])->name('main');
-Route::view('/base', 'supplierBase');
+Route::get('/base', [SupplierBasePageController::class, 'index'])->name('supplierBase');
 
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, "openAdminDashboard"])->name('adminMain');
