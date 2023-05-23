@@ -872,14 +872,14 @@ button, .link {
 .base-program__slide {
   height: auto;
 }
-.base-program__slide:nth-child(2) .base-program-body__item:nth-child(11) {
+.base-program__slide #supplierBase2 .base-program-body__item:nth-child(11) {
   display: none;
 }
 @media only screen and (max-width: 998px) {
-  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(6), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(7), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(8), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(9), .base-program__slide:nth-child(2) .base-program-body__item:nth-child(10) {
+  .base-program__slide #supplierBase2 .base-program-body__item:nth-child(6), .base-program__slide #supplierBase2 .base-program-body__item:nth-child(7), .base-program__slide #supplierBase2 .base-program-body__item:nth-child(8), .base-program__slide #supplierBase2 .base-program-body__item:nth-child(9), .base-program__slide #supplierBase2 .base-program-body__item:nth-child(10) {
     display: none;
   }
-  .base-program__slide:nth-child(2) .base-program-body__item:nth-child(11) {
+  .base-program__slide #supplierBase2 .base-program-body__item:nth-child(11) {
     display: grid;
   }
 }
@@ -966,6 +966,7 @@ button, .link {
   text-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 2;
+  max-width: 50%;
 }
 .base-program-body {
   padding: 2rem 3.7rem 0;

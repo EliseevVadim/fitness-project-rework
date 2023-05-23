@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
     $(this).toggleClass("active").next('.base-questions-accordion__body').not(':animated').slideToggle();
   }); //модалки
 
-  var baseOrderBusiness = $("#base-order-business").wgModal();
+  var baseOrder1 = $("#base-order-1").wgModal();
   $(document).ready(function () {
-    $("#base-order-business").wgModal({
-      triggerElement: '.base-order-open-modal-business',
+    $("#base-order-1").wgModal({
+      triggerElement: '.base-order-open-modal-1',
       closeButton: true,
       onBeforeOpen: function onBeforeOpen(e) {
         $('html').addClass('overflow');
@@ -63,22 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   $(document).ready(function () {
-    $("#base-order-ready-business").wgModal({
-      triggerElement: '.base-order-ready-open-modal-business',
+    $("#base-order-ready-1").wgModal({
+      triggerElement: '.base-order-ready-open-modal-1',
       closeButton: true,
       onBeforeOpen: function onBeforeOpen(e) {
         $('html').addClass('overflow');
-        baseOrderBusiness.closeModal();
+        baseOrder1.closeModal();
       },
       onBeforeClose: function onBeforeClose(e) {
         $('html').removeClass('overflow');
       }
     });
   });
-  var baseOrderFamily = $("#base-order-family").wgModal();
+  var baseOrder2 = $("#base-order-2").wgModal();
   $(document).ready(function () {
-    $("#base-order-family").wgModal({
-      triggerElement: '.base-order-open-modal-family',
+    $("#base-order-2").wgModal({
+      triggerElement: '.base-order-open-modal-2',
       closeButton: true,
       onBeforeOpen: function onBeforeOpen(e) {
         $('html').addClass('overflow');
@@ -89,12 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   $(document).ready(function () {
-    $("#base-order-ready-family").wgModal({
-      triggerElement: '.base-order-ready-open-modal-family',
+    $("#base-order-ready-2").wgModal({
+      triggerElement: '.base-order-ready-open-modal-2',
       closeButton: true,
       onBeforeOpen: function onBeforeOpen(e) {
         $('html').addClass('overflow');
-        baseOrderFamily.closeModal();
+        baseOrder2.closeModal();
       },
       onBeforeClose: function onBeforeClose(e) {
         $('html').removeClass('overflow');
