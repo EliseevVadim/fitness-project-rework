@@ -39,7 +39,8 @@
                         Неверный формат
                     </small>
                 </div>
-                <button class="base-order__btn base-order-ready-open-modal">
+                <button class="base-order__btn base-order-ready-open-modal"
+                        :class="'base-order-ready-open-modal-' + supplierBase.base_type_id">
                     ОПЛАТИТЬ
                 </button>
             </form>
@@ -84,6 +85,7 @@
 <script>
 import {validationMixin} from 'vuelidate';
 import {required, email} from 'vuelidate/lib/validators';
+import axios from "axios";
 
 export default {
     name: "supplierBase_BuyModal",
