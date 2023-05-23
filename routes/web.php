@@ -29,7 +29,6 @@ use App\Http\Controllers\AccessHistoryController;
 
 Route::get("/", [MainPageController::class,'index'])->name('main');
 Route::get('/base', [SupplierBasePageController::class, 'index'])->name('supplierBase');
-Route::post('/supplier-base-submit', [SupplierBasePageController::class, 'supplierBaseSubmit'])->name('supplierBaseSubmit');
 
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, "openAdminDashboard"])->name('adminMain');

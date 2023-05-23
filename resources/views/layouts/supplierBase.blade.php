@@ -23,7 +23,7 @@
     </head>
 @show
 <body class="overflow">
-<div class="wrapper">
+<div id="app" class="wrapper">
     @section('header')
         <header class="header">
             <div class="container">
