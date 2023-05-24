@@ -2194,7 +2194,7 @@ __webpack_require__.r(__webpack_exports__);
       if (!this.$v.$invalid) {
         axios__WEBPACK_IMPORTED_MODULE_0___default().post('/initialize-checkout/tinkoff-for-base', {
           email: this.email,
-          id: this.supplierBase.base_type_id
+          id: this.supplierBase.id
         }, {
           headers: {
             "Content-Type": "application/json",
@@ -5283,8 +5283,8 @@ var render = function () {
       "div",
       {
         staticClass: "base-order",
-        class: "base-order-" + _vm.supplierBase.base_type_id,
-        attrs: { id: "base-order-" + _vm.supplierBase.base_type_id },
+        class: "base-order-" + _vm.supplierBase.id,
+        attrs: { id: "base-order-" + _vm.supplierBase.id },
       },
       [
         _c("h3", { staticClass: "base-order__title" }, [
@@ -5370,22 +5370,18 @@ var render = function () {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.supplierBase.base_type_id,
-                    expression: "supplierBase.base_type_id",
+                    value: _vm.supplierBase.id,
+                    expression: "supplierBase.id",
                   },
                 ],
                 attrs: { type: "hidden" },
-                domProps: { value: _vm.supplierBase.base_type_id },
+                domProps: { value: _vm.supplierBase.id },
                 on: {
                   input: function ($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(
-                      _vm.supplierBase,
-                      "base_type_id",
-                      $event.target.value
-                    )
+                    _vm.$set(_vm.supplierBase, "id", $event.target.value)
                   },
                 },
               }),
@@ -5428,8 +5424,8 @@ var render = function () {
       "div",
       {
         staticClass: "base-order-ready base-order",
-        class: "base-order-ready-" + _vm.supplierBase.base_type_id,
-        attrs: { id: "base-order-ready-" + _vm.supplierBase.base_type_id },
+        class: "base-order-ready-" + _vm.supplierBase.id,
+        attrs: { id: "base-order-ready-" + _vm.supplierBase.id },
       },
       [
         _c("h3", { staticClass: "base-order__title" }, [

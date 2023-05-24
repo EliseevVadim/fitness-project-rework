@@ -31,10 +31,12 @@ return [
     'tinkoff_terminal' => env('TINKOFF_TERMINAL'),
     'tinkoff_secret' => env('TINKOFF_SECRET'),
     'tinkoff_success_url' => env('TINKOFF_SUCCESS_URL'),
+    'tinkoff_success_url_for_base' => env('TINKOFF_SUCCESS_URL_FOR_BASE'),
     'tinkoff_success_url_for_diet' => env('TINKOFF_SUCCESS_URL_FOR_DIET'),
     'tinkoff_success_url_for_training' => env('TINKOFF_SUCCESS_URL_FOR_TRAINING'),
     'tinkoff_fail_url' => env('TINKOFF_FAIL_URL'),
     'tinkoff_notification_url' => env('TINKOFF_NOTIFICATION_URL'),
+    'tinkoff_notification_url_for_base' => env('TINKOFF_NOTIFICATION_URL_FOR_BASE'),
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
