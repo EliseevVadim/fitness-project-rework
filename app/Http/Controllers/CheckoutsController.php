@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Core\AuthorizationMailer;
+use App\Core\SupplierBaseMailer;
 use App\Models\AccessHistory;
 use App\Models\ActivityCalendar;
 use App\Models\FoodCalendar;
 use App\Models\Menu;
 use App\Models\PersonalAccount;
 use App\Models\ProgramContent;
+use App\Models\SupplierBase;
 use App\Models\Training;
 use App\Models\TrainingUser;
 use App\Models\User;
@@ -108,6 +110,50 @@ class CheckoutsController extends Controller
         ]);
     }
 
+    public function prepareTinkoffCheckoutForBase(Request $request)
+    {
+        $email = $request->email;
+        $id = $request->id;
+        $supplierBase = SupplierBase::find($id);
+        $userData = (object)[
+            'email' => $request->email,
+            'id' => $request->id
+        ];
+        Session::put('user_data', $userData);
+        $tinkoff = new Tinkoff(
+            config('app.tinkoff_api_url'),
+            config('app.tinkoff_terminal'),
+            config('app.tinkoff_secret')
+        );
+        $payment = [
+            'OrderId' => random_int(1, 1000000),
+            'SuccessURL' => config('app.tinkoff_success_url_for_base'),
+            'FailURL' => config('app.tinkoff_fail_url'),
+            'NotificationURL' => config('app.tinkoff_notification_url_for_base'),
+            'Amount' => $supplierBase->discount_price,
+            'Language' => 'ru',
+            'Description' => $supplierBase->name,
+            'Email' => $email,
+            'Name' => $id,
+            'Phone' => '1234567890',
+            'Taxation' => 'usn_income'
+        ];
+        $item[] = [
+            'Name' => $supplierBase->name,
+            'Price' => $supplierBase->discount_price,
+            'NDS' => 'none',
+            'Quantity' => 1
+        ];
+        $paymentUrl = $tinkoff->paymentURL($payment, $item);
+        if (!$paymentUrl)
+            dd($tinkoff->error);
+        $paymentId = $tinkoff->payment_id;
+        Session::put('tinkoff_id', $paymentId);
+        return response()->json([
+            'paymentUrl' => $paymentUrl
+        ]);
+    }
+
     public function finishStripeCheckout()
     {
         $userInfo = Session::get('user_info');
@@ -125,6 +171,14 @@ class CheckoutsController extends Controller
     {
         if (!Session::get('service_was_given'))
             $this->provideServiceToUser();
+        return view('thanks');
+    }
+
+    public function finishTinkoffCheckoutForBase()
+    {
+        if (!Session::get('base_was_sent'))
+            $this->sendBaseToUserBySession();
+        Session::remove('base_was_sent');
         return view('thanks');
     }
 
@@ -146,6 +200,15 @@ class CheckoutsController extends Controller
             'email' => $request->Data['Email']
         ];
         $this->createUserAccount($userInfo);
+        return response('OK', 200);
+    }
+
+    public function processTinkoffCheckoutForBase(Request $request)
+    {
+        if ($request->Status != 'CONFIRMED')
+            return response('OK', 200);
+        $this->sendBaseToUser($request->Email, $request->Data['Name']);
+        Session::put('base_was_sent');
         return response('OK', 200);
     }
 
@@ -186,5 +249,20 @@ class CheckoutsController extends Controller
         $userInfo = Session::get('user_info');
         Session::remove('tinkoff_id');
         $this->createUserAccount($userInfo);
+    }
+
+    private function sendBaseToUserBySession()
+    {
+        $userData = Session::get('user_data');
+        $this->sendBaseToUser($userData->email, $userData->id);
+    }
+
+    private function sendBaseToUser($email, $id)
+    {
+        $paymentId = Session::get('tinkoff_id');
+        $this->checkPaymentState($paymentId);
+        $supplierBase = SupplierBase::find($id);
+        (new SupplierBaseMailer())->sendSupplierBase($email, $supplierBase->name, $supplierBase->content_link);
+        Session::remove('tinkoff_id');
     }
 }

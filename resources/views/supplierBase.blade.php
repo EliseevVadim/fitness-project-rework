@@ -157,296 +157,329 @@
             <h2 class="base-program__title">
                 КАКИЕ ЕСТЬ БАЗЫ?
             </h2>
+            @foreach($supplierBases as $supplierBase)
+                <supplier-base-buy-modal :supplier-base="{{ json_encode($supplierBase) }}"></supplier-base-buy-modal>
+            @endforeach
             <div class="base-program__swiper swiper">
                 <div class="swiper-wrapper">
-                    <div class="base-program__slide swiper-slide">
-                        <div class="base-program__content">
-                            <div class="base-program-head">
-                                <div class="base-program-head__timer">
-                                    <div class="base-program-head__description">
-                                        Окончание акции
-                                    </div>
-                                    <div class="base-program-head__time">
-                                        23 : 43 : 22
-                                    </div>
-                                </div>
-                                <h2 class="base-program-head__title">
-                                    БАЗА <br> СЕМЕЙНАЯ
-                                </h2>
-                                <img class="base-program-head__img"
-                                     src="{{ ('images/base-program-head__img.png') }}"
-                                     alt="#">
-                            </div>
-                            <div class="base-program-body">
-                                <ul class="base-program-body__list">
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/icon-park-outline_clothes-windbreaker.svg') }}"
-                                                 alt="#">
+                    <script type="application/javascript">
+                        function startTimer1(duration) {
+                            var timer = duration, hours, minutes, seconds;
+                            setInterval(function () {
+                                hours = parseInt(timer / 3600, 10);
+                                minutes = parseInt((timer - hours * 3600) / 60, 10);
+                                seconds = parseInt(timer % 60, 10);
+
+                                hours = hours < 10 ? "0" + hours : hours;
+                                minutes = minutes < 10 ? "0" + minutes : minutes;
+                                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                                document.getElementById("supplierBase_time" + 1).innerHTML =
+                                    hours + ":" + minutes + ":" + seconds;
+
+                                if (--timer < 0) {
+                                    timer = duration;
+                                }
+                            }, 1000);
+                        }
+
+                        startTimer1(7200); // Запускаем таймер на два часа
+                        function startTimer2(duration) {
+                            var timer = duration, hours, minutes, seconds;
+                            setInterval(function () {
+                                hours = parseInt(timer / 3600, 10);
+                                minutes = parseInt((timer - hours * 3600) / 60, 10);
+                                seconds = parseInt(timer % 60, 10);
+
+                                hours = hours < 10 ? "0" + hours : hours;
+                                minutes = minutes < 10 ? "0" + minutes : minutes;
+                                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                                document.getElementById("supplierBase_time" + 2).innerHTML =
+                                    hours + ":" + minutes + ":" + seconds;
+
+                                if (--timer < 0) {
+                                    timer = duration;
+                                }
+                            }, 1000);
+                        }
+
+                        startTimer2(25200); // Запускаем таймер на семь часов
+                    </script>
+                    @foreach($supplierBases as $supplierBase)
+                        <div class="base-program__slide swiper-slide">
+                            <div id="{{'supplierBase' . $supplierBase->base_type_id}}" class="base-program__content">
+                                <div class="base-program-head">
+                                    <div class="base-program-head__timer">
+                                        <div class="base-program-head__description">
+                                            Окончание акции
                                         </div>
-                                        <div class="base-program-body__text">
-                                            Женская/мужская одежда, белье, обувь, сумки
-                                            и аксессуары;
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/icon-park-outline_lipstick.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Косметика, уходовые средства и оригинальная парфюмерия;
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/tabler_horse-toy.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Одежда для детей и игрушки;
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/maki_garden-centre.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Товары для дома, дачи и сада;
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/icon-park-outline_sport.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Товары для спорта, туризма и охоты;
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/bi_car-front.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Товары для авто и гаража;
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/fluent-emoji-high-contrast_strawberry.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Товары для взрослых (18+);
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/mdi_basket-fill.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Зоотовары, канцелярия, товары для беременных и многое другое!
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="base-program-body__texts">
-                                    <p>
-                                        + Вы получаете доступ в наши чаты, где более 30000 человек ежедневно делятся
-                                        своими полезными находками!
-                                    </p>
-                                </div>
-                                <div class="base-program-footer">
-                                    <div class="base-program-footer-price">
-                                        <div
-                                            class="base-program-footer-price__price base-program-footer-price__price_discount">
-                                            7 000 ₽
-                                        </div>
-                                        <div class="base-program-footer-price__price">
-                                            5 000 ₽
+                                        <div class="base-program-head__time">
+                                            <div id="{{'supplierBase_time' . $supplierBase->base_type_id}}"></div>
                                         </div>
                                     </div>
-                                    <button class="base-program-footer__btn base-order-open-modal-family">
-                                        Купить
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="base-program__slide swiper-slide">
-                        <div class="base-program__content">
-                            <div class="base-program-head">
-                                <div class="base-program-head__timer">
-                                    <div class="base-program-head__description">
-                                        Окончание акции
-                                    </div>
-                                    <div class="base-program-head__time">
-                                        23 : 43 : 22
-                                    </div>
-                                </div>
-                                <h2 class="base-program-head__title">
-                                    бизнес <br>
-                                    база
-                                </h2>
-                                <div class="base-program-head__img_group">
-                                    <img class="base-program-head__img_base"
-                                         src="{{ ('images/base-program-head__img2.png') }}"
-                                         alt="#">
-                                    <div class="base-program-head__img_money">
-                                        <img class="base-program-head__img_money_img"
-                                             src="{{ ('images/money.png') }}"
+                                    <h2 class="base-program-head__title">
+                                        {{$supplierBase->name}}
+                                    </h2>
+                                    @if ($supplierBase->base_type_id == 1)
+                                        <img class="base-program-head__img"
+                                             src="{{ ('images/base-program-head__img.png') }}"
                                              alt="#">
-                                    </div>
+                                    @elseif ($supplierBase->base_type_id == 2)
+                                        <div class="base-program-head__img_group">
+                                            <img class="base-program-head__img_base"
+                                                 src="{{ ('images/base-program-head__img2.png') }}"
+                                                 alt="#">
+                                            <div class="base-program-head__img_money">
+                                                <img class="base-program-head__img_money_img"
+                                                     src="{{ ('images/money.png') }}"
+                                                     alt="#">
+                                            </div>
+                                        </div>
+                                    @endif
                                 </div>
-                            </div>
-                            <div class="base-program-body">
-                                <ul class="base-program-body__list">
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg" src="{{ ('images/icons/russia.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Поставщики из <b>РОССИИ;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/emojione-monotone_flag-for-turkey.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Поставщики из <b>ТУРЦИИ;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/emojione-monotone_flag-for-kyrgyzstan.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Поставщики из <b>КЫРГЫЗСТАНА;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/emojione-monotone_flag-for-belarus.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Поставщики из <b>БЕЛАРУСИ;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/emojione-monotone_flag-for-china.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Поставщики из <b>КИТАЯ;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/fluent-emoji-high-contrast_world-map.svg') }}"
-                                                 alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Поставщики из <b>СНГ;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Гайд по <b>ДРОПШИППИНГУ;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Гайд по созданию <b>ОНЛАЙН - МАГАЗИНА;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Гайд по выходу на <b>WILDBERRIES;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Гайд по выходу на <b>OZON;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/carbon_document-multiple-01.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Гайды по <b>ДРОПШИППИНГУ</b>, по созданию <b>ОНЛАЙН - МАГАЗИНА</b>, по
-                                            выходу на <b>WILDBERRIES</b> и <b>OZON;</b>
-                                        </div>
-                                    </li>
-                                    <li class="base-program-body__item">
-                                        <div class="base-program-body__icon">
-                                            <img class="base-program-body__svg"
-                                                 src="{{ ('images/icons/tabler_message-2-star.svg') }}" alt="#">
-                                        </div>
-                                        <div class="base-program-body__text">
-                                            Полезные товарные <b>ЧАТЫ;</b>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="base-program-body__texts base-program-body__texts_small-mob">
-                                    <p>
-                                        <b>ГЛАВНЫЙ ПЛЮС!</b> Обладатели Бизнес Базы бесплатно получат рекламу в
-                                        наших
-                                        проектах! Эта реклама стоит
-                                        в несколько раз дороже самой базы и полностью окупает вложения! Бизнес база
-                                        отлично подойдет для тех, кто хочет зарабатывать большие деньги!
-                                    </p>
-                                </div>
-                                <div class="base-program-footer">
-                                    <div class="base-program-footer-price">
-                                        <div
-                                            class="base-program-footer-price__price base-program-footer-price__price_discount">
-                                            7 000 ₽
-                                        </div>
-                                        <div class="base-program-footer-price__price">
-                                            5 000 ₽
-                                        </div>
+                                <div class="base-program-body">
+                                    <ul class="base-program-body__list">
+                                        @if ($supplierBase->base_type_id == 1)
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/icon-park-outline_clothes-windbreaker.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Женская/мужская одежда, белье, обувь, сумки
+                                                    и аксессуары;
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/icon-park-outline_lipstick.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Косметика, уходовые средства и оригинальная парфюмерия;
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/tabler_horse-toy.svg') }}" alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Одежда для детей и игрушки;
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/maki_garden-centre.svg') }}" alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Товары для дома, дачи и сада;
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/icon-park-outline_sport.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Товары для спорта, туризма и охоты;
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/bi_car-front.svg') }}" alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Товары для авто и гаража;
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/fluent-emoji-high-contrast_strawberry.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Товары для взрослых (18+);
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/mdi_basket-fill.svg') }}" alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Зоотовары, канцелярия, товары для беременных и многое другое!
+                                                </div>
+                                            </li>
+                                        @elseif ($supplierBase->base_type_id == 2)
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/russia.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Поставщики из <b>РОССИИ;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/emojione-monotone_flag-for-turkey.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Поставщики из <b>ТУРЦИИ;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/emojione-monotone_flag-for-kyrgyzstan.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Поставщики из <b>КЫРГЫЗСТАНА;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/emojione-monotone_flag-for-belarus.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Поставщики из <b>БЕЛАРУСИ;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/emojione-monotone_flag-for-china.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Поставщики из <b>КИТАЯ;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/fluent-emoji-high-contrast_world-map.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Поставщики из <b>СНГ;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/carbon_document-multiple-01.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Гайд по <b>ДРОПШИППИНГУ;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/carbon_document-multiple-01.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Гайд по созданию <b>ОНЛАЙН - МАГАЗИНА;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/carbon_document-multiple-01.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Гайд по выходу на <b>WILDBERRIES;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/carbon_document-multiple-01.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Гайд по выходу на <b>OZON;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/carbon_document-multiple-01.svg') }}"
+                                                         alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Гайды по <b>ДРОПШИППИНГУ</b>, по созданию <b>ОНЛАЙН - МАГАЗИНА</b>,
+                                                    по
+                                                    выходу на <b>WILDBERRIES</b> и <b>OZON;</b>
+                                                </div>
+                                            </li>
+                                            <li class="base-program-body__item">
+                                                <div class="base-program-body__icon">
+                                                    <img class="base-program-body__svg"
+                                                         src="{{ ('images/icons/tabler_message-2-star.svg') }}" alt="#">
+                                                </div>
+                                                <div class="base-program-body__text">
+                                                    Полезные товарные <b>ЧАТЫ;</b>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                    <div
+                                        class="base-program-body__texts  @if ($supplierBase->base_type_id == 2) base-program-body__texts_small-mob @endif">
+                                        @if ($supplierBase->base_type_id == 1)
+                                            <p>
+                                                + Вы получаете доступ в наши чаты, где более 30000 человек ежедневно
+                                                делятся
+                                                своими полезными находками!
+                                            </p>
+                                        @elseif ($supplierBase->base_type_id == 2)
+                                            <p>
+                                                <b>ГЛАВНЫЙ ПЛЮС!</b> Обладатели Бизнес Базы бесплатно получат рекламу в
+                                                наших
+                                                проектах! Эта реклама стоит
+                                                в несколько раз дороже самой базы и полностью окупает вложения! Бизнес
+                                                база
+                                                отлично подойдет для тех, кто хочет зарабатывать большие деньги!
+                                            </p>
+                                        @endif
                                     </div>
-                                    <button class="base-program-footer__btn base-order-open-modal-business">
-                                        Купить
-                                    </button>
+                                    <div class="base-program-footer">
+                                        <div class="base-program-footer-price">
+                                            <div
+                                                class="base-program-footer-price__price base-program-footer-price__price_discount">
+                                                {{$supplierBase->price}} ₽
+                                            </div>
+                                            <div class="base-program-footer-price__price">
+                                                {{$supplierBase->discount_price}} ₽
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="base-program-footer__btn {{'base-order-open-modal-' . $supplierBase->base_type_id}}">
+                                            Купить
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -634,124 +667,4 @@
             </div>
         </div>
     </section>
-    <div id="base-order-family" class="base-order-family base-order">
-        <h3 class="base-order__title">
-            ВАШ ЗАКАЗ
-        </h3>
-        <div class="base-order-price">
-            <b class="base-order-price__text">
-                Семейная база
-            </b>
-            <small class="base-order-price__price">
-                5 000 р.
-            </small>
-        </div>
-        <h5 class="base-order__subtitle">
-            Внимательно вводите ваш электронный адрес без ошибок.
-        </h5>
-        <div class="base-order__caption">
-            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
-            оплаты.
-        </div>
-        <form class="base-order__form" action="">
-            <div class="base-order__group">
-                <label class="base-order__label">Введите ваш Email</label>
-                <input type="text" class="base-order__input" placeholder="Email">
-            </div>
-            <button class="base-order__btn base-order-ready-open-modal-family" type="button">
-                ОПЛАТИТЬ
-            </button>
-        </form>
-        <small class="base-order__small">
-            Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
-                персональных данный и условия Оферты</a>
-        </small>
-    </div>
-    <div id="base-order-ready-family" class="base-order-ready-family base-order base-order-ready">
-        <h3 class="base-order__title">
-            ВАШ ЗАКАЗ
-        </h3>
-        <div class="base-order-price">
-            <b class="base-order-price__text">
-                Семейная база
-            </b>
-            <small class="base-order-price__price">
-                5 000 р.
-            </small>
-        </div>
-        <h5 class="base-order__subtitle">
-            Внимательно вводите ваш электронный адрес без ошибок.
-        </h5>
-        <div class="base-order__caption">
-            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
-            оплаты.
-        </div>
-        <div class="base-order__banner">
-            Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...
-        </div>
-        <small class="base-order__small">
-            Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
-                персональных данный и условия Оферты</a>
-        </small>
-    </div>
-    <div id="base-order-business" class="base-order-business base-order">
-        <h3 class="base-order__title">
-            ВАШ ЗАКАЗ
-        </h3>
-        <div class="base-order-price">
-            <b class="base-order-price__text">
-                Бизнес база
-            </b>
-            <small class="base-order-price__price">
-                5 000 р.
-            </small>
-        </div>
-        <h5 class="base-order__subtitle">
-            Внимательно вводите ваш электронный адрес без ошибок.
-        </h5>
-        <div class="base-order__caption">
-            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
-            оплаты.
-        </div>
-        <form class="base-order__form" action="">
-            <div class="base-order__group">
-                <label class="base-order__label">Введите ваш Email</label>
-                <input type="text" class="base-order__input" placeholder="Email">
-            </div>
-            <button class="base-order__btn base-order-ready-open-modal-business" type="button">
-                ОПЛАТИТЬ
-            </button>
-        </form>
-        <small class="base-order__small">
-            Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
-                персональных данный и условия Оферты</a>
-        </small>
-    </div>
-    <div id="base-order-ready-business" class="base-order-ready-business base-order base-order-ready">
-        <h3 class="base-order__title">
-            ВАШ ЗАКАЗ
-        </h3>
-        <div class="base-order-price">
-            <b class="base-order-price__text">
-                Бизнес база
-            </b>
-            <small class="base-order-price__price">
-                5 000 р.
-            </small>
-        </div>
-        <h5 class="base-order__subtitle">
-            Внимательно вводите ваш электронный адрес без ошибок.
-        </h5>
-        <div class="base-order__caption">
-            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
-            оплаты.
-        </div>
-        <div class="base-order__banner">
-            Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...
-        </div>
-        <small class="base-order__small">
-            Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
-                персональных данный и условия Оферты</a>
-        </small>
-    </div>
 @endsection

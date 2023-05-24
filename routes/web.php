@@ -144,6 +144,7 @@ Route::prefix('/initialize-checkout')->group(function () {
     Route::post('/tinkoff', [CheckoutsController::class, "prepareTinkoffCheckout"]);
     Route::post('/tinkoff-for-diet', [CheckoutsController::class, "prepareTinkoffCheckoutForDiet"]);
     Route::post('/tinkoff-for-training', [CheckoutsController::class, "prepareTinkoffCheckoutForTraining"]);
+    Route::post('/tinkoff-for-base', [CheckoutsController::class, "prepareTinkoffCheckoutForBase"]);
 });
 
 Route::prefix('/open-checkout')->group(function () {
@@ -154,4 +155,6 @@ Route::prefix('/open-checkout')->group(function () {
 
 Route::get('/cancel-checkout', [CheckoutsController::class, "cancelCheckout"])->name('cancel-checkout');
 Route::get('/finish-tinkoff-checkout', [CheckoutsController::class, "finishTinkoffCheckout"]);
+Route::get('/finish-tinkoff-checkout-for-base', [CheckoutsController::class, "finishTinkoffCheckoutForBase"]);
 Route::post('/process-tinkoff-checkout', [CheckoutsController::class, "processTinkoffCheckout"]);
+Route::post('/process-tinkoff-checkout-for-base', [CheckoutsController::class, "processTinkoffCheckoutForBase"]);
