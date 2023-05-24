@@ -207,7 +207,7 @@ class CheckoutsController extends Controller
     {
         if ($request->Status != 'CONFIRMED')
             return response('OK', 200);
-        $this->sendBaseToUser($request->Email, $request->Data['Name']);
+        $this->sendBaseToUser($request->Data['Email'], $request->Data['Name']);
         Session::put('base_was_sent');
         return response('OK', 200);
     }
