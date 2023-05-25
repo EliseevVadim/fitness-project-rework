@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div :id="'base-order-' + supplierBase.base_type_id"
-             :class="'base-order-' + supplierBase.base_type_id"
+        <div :id="'base-order-' + supplierBase.id"
+             :class="'base-order-' + supplierBase.id"
              class="base-order"
         >
             <h3 class="base-order__title">
@@ -31,7 +31,7 @@
                            v-model="$v.email.$model"
                            :class="{'form-group_error': ($v.email.$dirty && !$v.email.required) || ($v.email.$dirty && !$v.email.email)}"
                     >
-                    <input type="hidden" v-model="supplierBase.base_type_id">
+                    <input type="hidden" v-model="supplierBase.id">
                     <small v-if="$v.email.$dirty && !$v.email.required">
                         Поле не должно быть пустым
                     </small>
@@ -49,8 +49,8 @@
                 персональных данный и условия Оферты</a>
             </small>
         </div>
-        <div :id="'base-order-ready-' + supplierBase.base_type_id"
-             :class="'base-order-ready-' + supplierBase.base_type_id"
+        <div :id="'base-order-ready-' + supplierBase.id"
+             :class="'base-order-ready-' + supplierBase.id"
              class="base-order-ready base-order"
         >
             <h3 class="base-order__title">
@@ -113,7 +113,7 @@ export default {
                     .post('/initialize-checkout/tinkoff-for-base',
                         {
                             email: this.email,
-                            id: this.supplierBase.base_type_id
+                            id: this.supplierBase.id
                         },
                         {
                             headers: {
