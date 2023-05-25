@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.onload = function () {
         window.setTimeout(function () {
             document.querySelector(".loader").style.display = "none";
-            document.body.classList.remove('overflow');
+            document.body.classList.remove('overflow_body');
         }, 500);
     }
 

@@ -22,7 +22,7 @@
         <link rel="icon" href="images/logo.svg" type="image/x-icon">
     </head>
 @show
-<body class="overflow">
+<body class="overflow_body">
 <div id="app" class="wrapper">
     @section('header')
         <header class="header">
@@ -201,18 +201,18 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="" class="footer__link">
+                    <a href="https://drive.google.com/drive/folders/1-JSoiF_RaGaQh7dnFXihzfnf4oZERUls" target="_blank" class="footer__link">
                         Договор оферты
                     </a>
                 </div>
             </div>
         </footer>
     @show
-    <div class="loader">
-        <div class="loader__dot"></div>
-        <div class="loader__dot"></div>
-        <div class="loader__dot"></div>
-    </div>
+</div>
+<div class="loader">
+    <div class="loader__dot"></div>
+    <div class="loader__dot"></div>
+    <div class="loader__dot"></div>
 </div>
 @section('footerScript')
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"

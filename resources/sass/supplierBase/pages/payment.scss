@@ -1,0 +1,44 @@
+.base {
+    &-payment {
+        &__section {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 5rem;
+            line-height: 150%;
+        }
+
+        &-text {
+            font-size: 2.5rem;
+            line-height: 110%;
+            margin: 3rem 0;
+            text-align: center;
+            max-width: 93rem;
+
+            &__link {
+                color: #AF00CB;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__link {
+
+        }
+    }
+}
