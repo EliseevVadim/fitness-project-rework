@@ -176,8 +176,11 @@ class CheckoutsController extends Controller
 
     public function finishTinkoffCheckoutForBase()
     {
-        if (!Session::get('base_was_sent'))
+        if (!Session::get('base_was_sent')) {
+            if (!Session::get('user_data'))
+                abort(409);
             $this->sendBaseToUserBySession();
+        }
         Session::remove('base_was_sent');
         return view('supplierBaseThanks');
     }
