@@ -128,7 +128,7 @@ class CheckoutsController extends Controller
         $payment = [
             'OrderId' => random_int(1, 1000000),
             'SuccessURL' => config('app.tinkoff_success_url_for_base'),
-            'FailURL' => config('app.tinkoff_fail_url'),
+            'FailURL' => config('app.tinkoff_fail_url_for_base'),
             'NotificationURL' => config('app.tinkoff_notification_url_for_base'),
             'Amount' => $supplierBase->discount_price,
             'Language' => 'ru',
@@ -179,7 +179,7 @@ class CheckoutsController extends Controller
         if (!Session::get('base_was_sent'))
             $this->sendBaseToUserBySession();
         Session::remove('base_was_sent');
-        return view('thanks');
+        return view('supplierBaseThanks');
     }
 
     public function processTinkoffCheckout(Request $request)
@@ -262,7 +262,7 @@ class CheckoutsController extends Controller
         $paymentId = Session::get('tinkoff_id');
         $this->checkPaymentState($paymentId);
         $supplierBase = SupplierBase::find($id);
-        (new SupplierBaseMailer())->sendSupplierBase($email, $supplierBase->name, $supplierBase->content_link);
+        (new SupplierBaseMailer())->sendSupplierBase($email, $supplierBase->base_type_id, $supplierBase->content_link);
         Session::remove('tinkoff_id');
     }
 }
