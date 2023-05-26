@@ -176,12 +176,8 @@ class CheckoutsController extends Controller
 
     public function finishTinkoffCheckoutForBase()
     {
-        if (!Session::get('base_was_sent')) {
-            if (!Session::get('user_data'))
-                abort(409);
+        if (!Session::get('base_was_sent'))
             $this->sendBaseToUserBySession();
-        }
-        Session::remove('base_was_sent');
         return view('supplierBaseThanks');
     }
 
@@ -256,16 +252,18 @@ class CheckoutsController extends Controller
 
     private function sendBaseToUserBySession()
     {
+        $paymentId = Session::get('tinkoff_id');
+        $this->checkPaymentState($paymentId);
         $userData = Session::get('user_data');
+        Session::remove('tinkoff_id');
         $this->sendBaseToUser($userData->email, $userData->id);
     }
 
     private function sendBaseToUser($email, $id)
     {
-        $paymentId = Session::get('tinkoff_id');
-        $this->checkPaymentState($paymentId);
         $supplierBase = SupplierBase::find($id);
         (new SupplierBaseMailer())->sendSupplierBase($email, $supplierBase->base_type_id, $supplierBase->content_link);
-        Session::remove('tinkoff_id');
+        Session::remove('user_data');
+        Session::remove('base_was_sent');
     }
 }
