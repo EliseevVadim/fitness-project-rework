@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        '/process-tinkoff-checkout'
+        '/process-tinkoff-checkout',
+        '/process-tinkoff-checkout-for-base'
     ];
 }

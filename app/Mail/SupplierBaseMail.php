@@ -30,8 +30,18 @@ class SupplierBaseMail extends Mailable
      */
     public function build()
     {
-        return $this
-            ->subject('Ссылка на материал выбранной базы')
-            ->view('emails.confirmed_registration_mail', ['details' => $this->details]);
+        switch ($this->details['baseTypeId'])
+        {
+            case 1:
+                return $this
+                    ->subject('Ссылка на материал выбранной базы')
+                    ->view('emails.supplierBaseFamily', ['details' => $this->details]);
+            case 2:
+                return $this
+                    ->subject('Ссылка на материал выбранной базы')
+                    ->view('emails.supplierBaseBusiness', ['details' => $this->details]);
+            default:
+                abort(409);
+        }
     }
 }

@@ -497,12 +497,12 @@
                                                             <td align="center"
                                                                 style="padding:0;Margin:0;padding-left:20px;padding-right:20px">
                                                                 <!--[if mso]><a
-                                                                    href="https://drive.google.com/drive/folders/1--HPdUvWJG8syI-HrTtMfIh3fw4P9t0g"
+                                                                    href="{{$details['link']}}"
                                                                     target="_blank" hidden>
                                                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
                                                                              xmlns:w="urn:schemas-microsoft-com:office:word"
                                                                              esdevVmlButton
-                                                                             href="https://drive.google.com/drive/folders/1--HPdUvWJG8syI-HrTtMfIh3fw4P9t0g"
+                                                                             href="{{$details['link']}}"
                                                                              style="height:54px; v-text-anchor:middle; width:498px"
                                                                              arcsize="50%" stroke="f"
                                                                              fillcolor="#af00cb">
@@ -516,7 +516,7 @@
                                                                 <![endif]--><!--[if !mso]><!-- --><span
                                                                     class="msohide es-button-border"
                                                                     style="border-style:solid;border-color:#2CB543;background:#af00cb;border-width:0px;display:block;border-radius:100px;width:auto;mso-hide:all"><a
-                                                                        href="https://drive.google.com/drive/folders/1--HPdUvWJG8syI-HrTtMfIh3fw4P9t0g"
+                                                                        href="{{$details['link']}}"
                                                                         class="es-button es-button-1 msohide"
                                                                         target="_blank"
                                                                         style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:20px;display:block;background:#af00cb;border-radius:100px;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;font-weight:bold;font-style:normal;line-height:24px;width:auto;text-align:center;padding:15px 5px;mso-padding-alt:0;mso-border-alt:10px solid #FFC300;mso-hide:all">Перейти</a></span>

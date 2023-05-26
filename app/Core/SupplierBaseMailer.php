@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Mail;
 
 class SupplierBaseMailer
 {
-    public function sendSupplierBase($email, $name, $link)
+    public function sendSupplierBase($email, $baseTypeId, $link)
     {
         $details = [
-            'link' => $link
+            'link' => $link,
+            'baseTypeId' => $baseTypeId
         ];
         Mail::to($email)->send(new SupplierBaseMail($details));
     }
