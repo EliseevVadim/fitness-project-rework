@@ -426,7 +426,7 @@
                                                         <tr>
                                                             <td align="center" style="padding:0;Margin:0;font-size:0px">
                                                                 <img class="adapt-img"
-                                                                     src="{{ ('images/supplierBaseBusiness.png') }}"
+                                                                     src="https://koawyw.stripocdn.email/content/guids/CABINET_7f31b3fb03d8bd17ca3a7d845e1a275d117c472edbc647bfd6f2abea8f7904fb/images/supplierbasebusiness.png"
                                                                      alt
                                                                      style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
                                                                      width="130"></td>

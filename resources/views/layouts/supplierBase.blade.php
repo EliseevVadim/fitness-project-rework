@@ -115,7 +115,7 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="https://t.me/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="22" height="21"
                                                  viewBox="0 0 22 21" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +134,7 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://t.me/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="19" height="21"
                                                  viewBox="0 0 19 21" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -187,14 +187,14 @@
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="https://t.me/goodiets" target="_blank" class="footer__social">
+                            <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-tik-tok.svg') }}"
                                      alt="#">
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="footer__social">
+                            <a href="https://t.me/goodiets" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-telegram.svg') }}"
                                      alt="#">
