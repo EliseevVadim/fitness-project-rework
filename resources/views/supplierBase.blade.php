@@ -655,7 +655,7 @@
                     </div>
                 </div>
                 <div class="base-telegram-foot">
-                    <a href="" class="base-telegram-foot__link link">
+                    <a href="https://t.me/AlexLiubov" target="_blank" class="base-telegram-foot__link link">
                         Начать чат
                     </a>
                 </div>

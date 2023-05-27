@@ -61,7 +61,7 @@
                                 </a>
                                 <ul class="header-nav-mob-social__list">
                                     <li class="header-nav-mob-social__item">
-                                        <a href="" class="header-nav-mob-social__link nav-close">
+                                        <a  href="https://instagram.com/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="20" height="20"
                                                  viewBox="0 0 20 20" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://vk.com/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="26" height="24"
                                                  viewBox="0 0 26 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +104,7 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://www.youtube.com/c/Goodiet" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="26" height="18"
                                                  viewBox="0 0 26 18" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://t.me/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="22" height="21"
                                                  viewBox="0 0 22 21" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +134,7 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="19" height="21"
                                                  viewBox="0 0 19 21" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -166,35 +166,35 @@
                 <div class="footer__row">
                     <ul class="footer__list">
                         <li class="footer__item">
-                            <a href="" class="footer__social">
+                            <a href="https://vk.com/goodiets" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-vk.svg') }}"
                                      alt="#">
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__social">
+                            <a href="https://instagram.com/goodiets" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-inst.svg') }}"
                                      alt="#">
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__social">
+                            <a href="https://www.youtube.com/c/Goodiet" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-youtube.svg') }}"
                                      alt="#">
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__social">
+                            <a href="https://t.me/goodiets" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-tik-tok.svg') }}"
                                      alt="#">
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__social">
+                            <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="footer__social">
                                 <img class="object-fit"
                                      src="{{ ('images/icons/base-telegram.svg') }}"
                                      alt="#">

@@ -71,6 +71,7 @@
 
             h1 {
                 font-size: 28px !important;
+                line-height: 38px !important;
                 text-align: center !important
             }
 
@@ -137,10 +138,6 @@
 
             .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img {
                 display: inline !important
-            }
-
-            .es-button-border {
-                display: inline-block !important
             }
 
             a.es-button, button.es-button {
@@ -429,7 +426,7 @@
                                                         <tr>
                                                             <td align="center" style="padding:0;Margin:0;font-size:0px">
                                                                 <img class="adapt-img"
-                                                                     src="https://koawyw.stripocdn.email/content/guids/CABINET_7f31b3fb03d8bd17ca3a7d845e1a275d117c472edbc647bfd6f2abea8f7904fb/images/sema.png"
+                                                                     src="{{ ('images/supplierBaseFamily.png') }}"
                                                                      alt
                                                                      style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
                                                                      width="130"></td>
