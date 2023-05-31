@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     //бургер меню
     $('.header__burger, .overlay').click(function () {
         $('.header').toggleClass('show');
-        $("html").toggleClass('overflow');
+        $('body').toggleClass('overflow');
     });
     $("#nav").on("click", ".nav-close", function (event) {
         $('.header').removeClass('show');
-        $("html").removeClass('overflow');
+        $('body').removeClass('overflow');
     });
 
     //плавный скролл
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
             triggerElement: '.base-order-open-modal-1',
             closeButton: true,
             onBeforeOpen: function (e) {
-                $('html').addClass('overflow');
+                $('body').addClass('overflow');
             },
             onBeforeClose: function (e) {
-                $('html').removeClass('overflow');
+                $('body').removeClass('overflow');
             },
         });
     });
@@ -69,11 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
             triggerElement: '.base-order-ready-open-modal-1',
             closeButton: true,
             onBeforeOpen: function (e) {
-                $('html').addClass('overflow');
+                $('body').addClass('overflow');
                 baseOrder1.closeModal();
             },
             onBeforeClose: function (e) {
-                $('html').removeClass('overflow');
+                $('body').removeClass('overflow');
             },
         });
     });
@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
             triggerElement: '.base-order-open-modal-2',
             closeButton: true,
             onBeforeOpen: function (e) {
-                $('html').addClass('overflow');
+                $('body').addClass('overflow');
             },
             onBeforeClose: function (e) {
-                $('html').removeClass('overflow');
+                $('body').removeClass('overflow');
             },
         });
     });
@@ -96,11 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
             triggerElement: '.base-order-ready-open-modal-2',
             closeButton: true,
             onBeforeOpen: function (e) {
-                $('html').addClass('overflow');
+                $('body').addClass('overflow');
                 baseOrder2.closeModal();
             },
             onBeforeClose: function (e) {
-                $('html').removeClass('overflow');
+                $('body').removeClass('overflow');
             },
         });
     });

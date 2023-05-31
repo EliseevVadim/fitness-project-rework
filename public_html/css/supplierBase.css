@@ -368,10 +368,23 @@ body {
   color: #464646;
   background: #FFFFFF;
   position: relative;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .overflow {
-  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
 }
 .overflow:before {
   content: "";
@@ -398,13 +411,6 @@ body {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  overflow-x: hidden;
 }
 
 main {
