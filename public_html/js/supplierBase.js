@@ -21003,12 +21003,12 @@ document.addEventListener("DOMContentLoaded", function () {
     $('body').removeClass('overflow');
   }); //плавный скролл
 
-  $("body").on("click", "a[href^=\"#\"]", function (event) {
+  $(document).on("click", "a[href^=\"#\"]", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
         top = $(id).offset().top;
     $('body,html').animate({
-      scrollTop: top
+      scrollTop: Math.abs(top)
     }, 1500);
   }); //слайдеры
 

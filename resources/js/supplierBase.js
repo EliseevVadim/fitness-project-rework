@@ -18,12 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //плавный скролл
-    $("body").on("click", "a[href^=\"#\"]", function (event) {
+    $(document).on("click", "a[href^=\"#\"]", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({scrollTop: Math.abs(top)}, 1500);
     });
+
 
     //слайдеры
     var swiper = new Swiper(".base-program__swiper", {
