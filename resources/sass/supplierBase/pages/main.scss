@@ -1005,6 +1005,21 @@
             }
         }
 
+        &-program {
+            .swiper-wrapper {
+                flex-direction: column;
+            }
+
+            &__slide {
+                width: 100% !important;
+                margin-bottom: 7rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
         &-questions {
             &__row {
                 grid-template-columns: 1fr;
@@ -1279,8 +1294,11 @@
         &-program {
             padding: 6rem 0;
 
-            &__swiper {
-                width: 95%;
+            &__slide {
+                margin-bottom: 4rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
 
             &__title {

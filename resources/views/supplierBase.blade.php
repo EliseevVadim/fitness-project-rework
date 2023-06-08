@@ -531,6 +531,37 @@
                         </li>
                         <li class="base-questions-accordion__item">
                             <div class="base-questions-accordion__head">
+                                Можно ли покупать у поставщиков товары поштучно?
+                                <img class="base-questions-accordion__svg"
+                                     src="{{ ('images/icons/base-questions-accordion-arrow.svg') }}"
+                                     alt="#">
+                            </div>
+                            <div class="base-questions-accordion__body">
+                                <p>
+                                    Конечно, большая часть поставщиков отправляют товары по одной единице.
+                                </p>
+                                <p>
+                                    Нет никакой необходимости закупать вещи оптом!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="base-questions-accordion__item">
+                            <div class="base-questions-accordion__head">
+                                Как осуществляется доставка вещей из базы?
+                                <img class="base-questions-accordion__svg"
+                                     src="{{ ('images/icons/base-questions-accordion-arrow.svg') }}"
+                                     alt="#">
+                            </div>
+                            <div class="base-questions-accordion__body">
+                                <p>
+                                    У каждого поставщика свои условия доставки. Этот вопрос нужно задать непосредственно
+                                    поставщику перед заказом. Он обязательно расскажет как доставляет товар, а Вы
+                                    сможете выбрать максимально удобный и подходящий для Вас способ!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="base-questions-accordion__item">
+                            <div class="base-questions-accordion__head">
                                 Что входит в Бизнес базу кроме базы поставщиков?
                                 <img class="base-questions-accordion__svg"
                                      src="{{ ('images/icons/base-questions-accordion-arrow.svg') }}"

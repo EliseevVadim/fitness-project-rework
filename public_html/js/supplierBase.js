@@ -21013,7 +21013,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }); //слайдеры
 
   var swiper = new Swiper(".base-program__swiper", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 20,
     // autoHeight: true,
     breakpoints: {

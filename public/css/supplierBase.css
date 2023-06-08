@@ -1612,6 +1612,16 @@ button, .link {
   .base-usefulness__item:nth-child(2) {
     grid-row-start: 2;
   }
+  .base-program .swiper-wrapper {
+    flex-direction: column;
+  }
+  .base-program__slide {
+    width: 100% !important;
+    margin-bottom: 7rem;
+  }
+  .base-program__slide:last-child {
+    margin-bottom: 0;
+  }
   .base-questions__row {
     grid-template-columns: 1fr;
   }
@@ -1816,8 +1826,11 @@ button, .link {
   .base-program {
     padding: 6rem 0;
   }
-  .base-program__swiper {
-    width: 95%;
+  .base-program__slide {
+    margin-bottom: 4rem;
+  }
+  .base-program__slide:last-child {
+    margin-bottom: 0;
   }
   .base-program__title {
     margin-bottom: 4rem;
