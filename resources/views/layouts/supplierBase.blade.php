@@ -31,7 +31,7 @@
                     <nav class="header-nav" id="nav">
                         <ul class="header-nav__list">
                             <li class="header-nav__item">
-                                <a href="#base-main" class="header-nav__link nav__link nav-close">
+                                <a href="https://goodiets.com" class="header-nav__link nav__link nav-close">
                                     Главная
                                 </a>
                             </li>

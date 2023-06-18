@@ -1,41 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /*var swiperProgram = new Swiper(".program__slider", {
-        spaceBetween: 100,
-        slidesPerView: 2,
-        allowSlidePrev: true
-    });*/
-    // var swiperDiet = new Swiper(".calendar__slider-account", {
-    //     spaceBetween: 0,
-    //     slidesPerView: 1,
-    //     navigation: {
-    //         nextEl: ".swiper-button-next",
-    //         prevEl: ".swiper-button-prev",
-    //     },
-    // });
-    var swiperDiet = new Swiper(".calendar__slider-diet", {
-        spaceBetween: 0,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-    /*var swiperWorkout = new Swiper(".calendar__slider-workout", {
-        spaceBetween: 0,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: ".swiper-button-next.workout-swiper",
-            prevEl: ".swiper-button-prev.workout-swiper",
-        },
-    });*/
-    let swiperScrinImg = new Swiper('.office__img-slider', {
+    let officeSlider = new Swiper('.office__slider', {
         centeredSlides: true,
-        roundLengths: true,
-        loop: true,
-        loopAdditionalSlides: 30,
         slidesPerView: 3,
-        spaceBetween: 0,
+        spaceBetween: 10,
+        autoHeight: true,
+        keyboard: true,
+        loop: true,
+        //initialSlide: 1,
         pagination: {
             el: '.swiper-img-pagination',
         },
@@ -45,18 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-    let swiperScrinTxt = new Swiper('.office__txt-slider', {
-        centeredSlides: true,
-        roundLengths: true,
-        loop: true,
-        loopAdditionalSlides: 30,
-        spaceBetween: 16,
-        direction: "vertical",
-        slidesPerView: 3,
-    });
 
-    swiperScrinTxt.disable();
-    swiperScrinImg.controller.control = swiperScrinTxt;
+    var swiperDiet = new Swiper(".calendar__slider-diet", {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
     var program__slider = new Swiper(".program__slider", {
         slidesPerView: 1,

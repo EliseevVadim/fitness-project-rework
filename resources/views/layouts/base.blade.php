@@ -10,8 +10,10 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="{{mix('/css/app.css')}}">
         <link rel="icon" href="images/logo.svg" type="image/x-icon">
     </head>
@@ -30,9 +32,9 @@
             <div class="container">
                 <ul id="footer-nav" class="footer__nav">
                     <li><a href="#questions">Вопрос-ответ</a></li>
-                    <li><a href="#program">Программы</a></li>
-                    <li><a href="#office">О приложении</a></li>
+                    <li><a href="#program">Программа</a></li>
                     <li><a href="#program">Марафон</a></li>
+                    <li><a href="https://goodiets.com/base" target="_blank">База</a></li>
                 </ul>
                 <div class="footer__social">
                     <a href="https://vk.com/goodiets">
@@ -107,15 +109,14 @@
         {{--<!-- Modal-end -->--}}
     </div>
 @section('footerScript')
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
             crossorigin="anonymous"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 @show
 </body>
 </html>

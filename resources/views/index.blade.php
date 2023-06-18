@@ -270,45 +270,13 @@
             <h4 class="office__caption">
                 Здесь ты обретёшь свой новый образ жизни! Здесь собрано всё необходимое для достижения идеального тела!
             </h4>
-            <div class="office__block">
-                <div class="office__img-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="office__img">
-                                <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin11.JPG') }}" alt="#">
-                                </div>
-                            </div>
+            <div class="office__slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="office__slide swiper-slide">
+                        <div class="office__img">
+                            <img src="{{ ('images/scrin/scrin11.JPG') }}" alt="#">
                         </div>
-                        <div class="swiper-slide">
-                            <div class="office__img">
-                                <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin12.JPG') }}" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="office__img">
-                                <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin13.JPG') }}" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="office__img">
-                                <div class="office__img-elem">
-                                    <img src="{{ ('images/scrin/scrin14.JPG') }}" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="office__img-pagination">
-                        <div class="swiper-img-pagination"></div>
-                    </div>
-                </div>
-                <div class="office__txt-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide office__elem">
+                        <div class="office__texts">
                             <div class="office__icon workout">
                                 <svg width="23" height="28" viewBox="0 0 23 28" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -326,7 +294,12 @@
                                 от разминки до растяжки выполним всю тренировку!
                             </p>
                         </div>
-                        <div class="swiper-slide office__elem">
+                    </div>
+                    <div class="office__slide swiper-slide">
+                        <div class="office__img">
+                            <img src="{{ ('images/scrin/scrin12.JPG') }}" alt="#">
+                        </div>
+                        <div class="office__texts">
                             <div class="office__icon diet">
                                 <svg width="18" height="33" viewBox="0 0 18 33" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -342,12 +315,18 @@
                                 ВКУСНОЕ МЕНЮ
                             </h4>
                             <p class="office__txt">
-                                Грамотно составленное меню это 70% успеха. Никаких диет и голодовок. Только вкусные
+                                Грамотно составленное меню это 70% успеха. Никаких диет и голодовок. Только
+                                вкусные
                                 рецепты из
                                 доступных продуктов, которые можно купить в любом магазине!
                             </p>
                         </div>
-                        <div class="swiper-slide office__elem">
+                    </div>
+                    <div class="office__slide swiper-slide">
+                        <div class="office__img">
+                            <img src="{{ ('images/scrin/scrin13.JPG') }}" alt="#">
+                        </div>
+                        <div class="office__texts">
                             <div class="office__icon question">
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -377,7 +356,12 @@
                                 поддерживать тонус кожи во время и после похудения очень важно!
                             </p>
                         </div>
-                        <div class="swiper-slide office__elem">
+                    </div>
+                    <div class="office__slide swiper-slide">
+                        <div class="office__img">
+                            <img src="{{ ('images/scrin/scrin14.JPG') }}" alt="#">
+                        </div>
+                        <div class="office__texts">
                             <div class="office__icon home">
                                 <svg width="30" height="36" viewBox="0 0 30 36" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -390,12 +374,16 @@
                                 КОНТРОЛЬ и МОТИВАЦИЯ
                             </h4>
                             <p class="office__txt">
-                                Коллектив девочек и личный дневник это отдельная наша гордость! Мы лично общаемся с
+                                Коллектив девочек и личный дневник это отдельная наша гордость! Мы лично
+                                общаемся с
                                 каждым, проверяем дневники и раздаем "Волшебные пендели" для мотивации!
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="office__img-pagination">
+                <div class="swiper-img-pagination"></div>
             </div>
         </div>
     </section>
@@ -433,6 +421,7 @@
                                 }
                             }, 1000);
                         }
+
                         function processProgram(program) {
                             let countDownDateForProgram = localStorage.getItem('countDownDateForProgram');
                             if (countDownDateForProgram === null) {
@@ -477,7 +466,9 @@
                                                          transform="rotate(-165 -6.13868 0.861328)" fill="white"/>
                                             </svg>
                                         </div>
-                                        <img class="program__img-first" src="{{ $marathon->is_marathon ? ('images/program2.png') : ('images/program.png')}}" alt="#">
+                                        <img class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
+                                             src="{{ $marathon->is_marathon ? ('images/program2.png') : ('images/program.png')}}"
+                                             alt="#">
                                         <div class="program__title">
                                             {{$marathon->name}}
                                         </div>
@@ -489,9 +480,9 @@
                                              class="program__promo-time"></div>
                                         <script type="application/javascript">
                                             @if($marathon->is_marathon)
-                                                processMarathon({!! json_encode($marathon) !!});
+                                            processMarathon({!! json_encode($marathon) !!});
                                             @else
-                                                processProgram({!! json_encode($marathon) !!})
+                                            processProgram({!! json_encode($marathon) !!})
                                             @endif
                                         </script>
                                     </div>
@@ -733,12 +724,12 @@
             <div class="swiper-pagination program-pagination"></div>
         </div>
     </section>
-    <section id="calories-calculator">
+    <section id="calories-calculator" class="calories-calculator">
         <div class="container">
-            <h2 class="title-second">
+            <h2 class="calories-calculator__title title-second">
                 Калькулятор калорий
             </h2>
-            <h4 class="office__caption">
+            <h4 class="calories-calculator__caption">
                 Если не знаешь какую калорийность меню указать в анкете - воспользуйся нашим калькулятором!
             </h4>
             <calories-calculator></calories-calculator>
@@ -786,7 +777,8 @@
                         </div>
                         <div class="questions-accordion__body">
                             Материалы ты получишь сразу после заполнения анкеты и оплаты курса.<br>
-                            ВАЖНО: если на почту ничего не пришло, то проверь папку "спам". Если и там ничего нет, то напиши нам в чат, указанный внизу сайта. Мы быстро решим этот вопрос.
+                            ВАЖНО: если на почту ничего не пришло, то проверь папку "спам". Если и там ничего нет, то
+                            напиши нам в чат, указанный внизу сайта. Мы быстро решим этот вопрос.
                         </div>
                     </li>
                     <li class="questions-accordion__item">
@@ -833,7 +825,8 @@
                             Я не из России, могу ли я записаться в вашу фитнес – семью?
                         </div>
                         <div class="questions-accordion__body">
-                            Цены на сайте указаны в рублях, но записаться в нашу фитнес-семью можно из любой точки планеты.
+                            Цены на сайте указаны в рублях, но записаться в нашу фитнес-семью можно из любой точки
+                            планеты.
                             Внизу сайта есть окошко для связи с нами. Напиши нам в чат из какой ты страны и мы дадим
                             актуальный способ оплаты.
                         </div>
@@ -876,18 +869,62 @@
             </div>
         </div>
     </section>
-    <section id="feedback">
+    <section id="telegram" class="telegram">
         <div class="container">
-            <h2 class="title-second">
+            <h2 class="telegram__title title-second">
                 Остались вопросы ?
             </h2>
-            <div class="d-flex justify-content-center p-0 mt-4">
-                <div class="widget-image-wrapper">
-                    <a href="https://t.me/goodietshelp">
-                        <img src="{{ ('images/scrin/scrin007.jpg') }}" class="widget-image" alt="#">
+            <div class="telegram__wrap">
+                <div class="telegram-head">
+                    <img class="telegram-head__img" src="{{ ('images/telegram-head__img.png') }}" alt="#">
+                    <div class="telegram-head__text">
+                        <div class="telegram-head__name">
+                            Любовь и Алексей
+                        </div>
+                        <div class="telegram-head__online">
+                            сейчас в сети
+                        </div>
+                    </div>
+                </div>
+                <div class="telegram-body">
+                    <div class="telegram-body__text">
+                        <div class="telegram-body__name">
+                            Любовь и Алексей
+                        </div>
+                        <p>
+                            Привет, остались вопросы<br>
+                            или нужна помощь?
+                        </p>
+                        <p>
+                            Пиши нам в чат!
+                        </p>
+                    </div>
+                </div>
+                <div class="telegram-foot">
+                    <a href="https://t.me/goodietshelp" target="_blank" class="telegram-foot__link button">
+                        Начать чат
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="base" class="base">
+        <div class="container">
+            <h2 class="base__title title-second">
+                НАШ ВТОРОЙ ПРОЕКТ
+            </h2>
+            <a href="https://goodiets.com/base" target="_blank" class="base__wrap">
+                <img class="base__img" src="{{ ('images/base-program-head__img.png') }}" alt="#">
+                <div class="base__texts">
+                    <div class="base__name">
+                        База<br>
+                        поставщиков
+                    </div>
+                    <button type="button" class="base__link button">
+                        ОЗНАКОМИТЬСЯ
+                    </button>
+                </div>
+            </a>
         </div>
     </section>
 @endsection

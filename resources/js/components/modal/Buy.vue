@@ -38,17 +38,16 @@
                         />
                     </svg>
                 </button>
-
                 <h5 class="modal__title">ВАШ ЗАКАЗ</h5>
                 <p class="buy-head__prg">
                     <b>ВАЖНО! Внимательно вводите ваш электронный адрес без ошибок.</b>
                 </p>
-                <div class="buy__label buy-head__txt-small">
+                <div class="buy-head__txt-small">
                     Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении
                     суток после оплаты - используйте ее для начала Ваших тренировок!
                 </div>
                 <form class="buy-form" v-if="activeStep === 1" @submit.prevent="initializeTinkoffPayment">
-                    <div class="buy-form__row buy-form__row-three">
+                    <div class="buy__row">
                         <div class="buy__group" v-for="(info, index) in users" :key="index">
                             <label :for="info.id" class="buy__label">
                                 {{ info.name }}
@@ -62,8 +61,6 @@
                                 v-model="info.value"
                             />
                         </div>
-                    </div>
-                    <div class="buy-form__row">
                         <Myselect
                             :select="selects[0]"
                             :list="GetLifeStyles.data"
@@ -82,8 +79,21 @@
                             v-on:result="result"
                             ref="menu_calories_select"
                         ></Myselect>
+                        <div class="buy__group">
+                            <label for="email" class="buy__label">
+                                Ваш Email
+                            </label>
+                            <input
+                                required
+                                id="email"
+                                type="Email"
+                                class="buy__input"
+                                placeholder="Email"
+                                v-model="email"
+                            />
+                        </div>
                     </div>
-                    <div class="buy__price">Сумма: {{SERVICE_INFO.price}}р.</div>
+                    <div class="buy__price">Сумма: {{ SERVICE_INFO.price }}р.</div>
                     <button type="submit" class="button buy-form__btn">
                         ОПЛАТИТЬ И ЗАРЕГИСТРИРОВАТЬСЯ
                     </button>
@@ -100,89 +110,84 @@
 <script>
 import Myselect from "../general/Select.vue";
 import {mapGetters} from "vuex";
+
 export default {
-  components: {
-    Myselect,
-  },
+    components: {
+        Myselect,
+    },
     mounted() {
         this.$store.dispatch('fetchLifeStyles');
         this.$store.dispatch('fetchMenuCalories');
         this.$store.dispatch('fetchTrainingLocations');
     },
     data: () => ({
-    disabled: false,
-    oldPrice : null,
-    errors:[],
-    activeStep: 1,
-    deletepackage: false,
-    returnpackage: true,
-    users: [
-      {
-          id: "name",
-          name: "Имя",
-          placeholder: "Любовь Мишанкова",
-          value: "",
-          type: "text"
-      },
-      {
-          id: "age",
-          name: "Ваш возраст",
-          placeholder: "25 лет",
-          value: "",
-          type: "number"
-      },
-      {
-          id: "email",
-          name: "Ваш Email",
-          placeholder: "Email",
-          value: "",
-          type: "email"
-      },
-      {
-          id: "weight",
-          name: "Ваш вес",
-          placeholder: "60 кг",
-          value: "",
-          type: "number"
-      },
-      {
-          id: "tall",
-          name: "Ваш рост",
-          placeholder: "165 см",
-          value: "",
-          type: "number"
-      },
-      {
-          id: "required_weight",
-          name: "Желаемый вес",
-          placeholder: "55 кг",
-          value: "",
-          type: "number"
-      },
-    ],
-    additionValues: {
-        'training_location_id' : 1,
-        'life_style_id' : 1,
-        'menu_calories_id' : 1
-    },
-    selects: [
-      {
-        id : "life_style_id",
-        label: "Выберите Ваш образ жизни: ",
-        value: "Ваш образ жизни"
-      },
-      {
-        id : "training_location_id",
-        label: "Тренировки для: ",
-        value: "Дома"
-      },
-      {
-        id : "menu_calories_id",
-        label: "Желаемая калорийность меню: ",
-        value: "1300-1400"
-      },
-    ],
-  }),
+        disabled: false,
+        oldPrice: null,
+        errors: [],
+        activeStep: 1,
+        deletepackage: false,
+        returnpackage: true,
+        email: '',
+        users: [
+            {
+                id: "name",
+                name: "Имя",
+                placeholder: "Любовь Мишанкова",
+                value: "",
+                type: "text"
+            },
+            {
+                id: "age",
+                name: "Ваш возраст",
+                placeholder: "25 лет",
+                value: "",
+                type: "number"
+            },
+            {
+                id: "weight",
+                name: "Ваш вес",
+                placeholder: "60 кг",
+                value: "",
+                type: "number"
+            },
+            {
+                id: "tall",
+                name: "Ваш рост",
+                placeholder: "165 см",
+                value: "",
+                type: "number"
+            },
+            {
+                id: "required_weight",
+                name: "Желаемый вес",
+                placeholder: "55 кг",
+                value: "",
+                type: "number"
+            },
+        ],
+        additionValues: {
+            'training_location_id': 1,
+            'life_style_id': 1,
+            'menu_calories_id': 1
+        },
+        selects: [
+            {
+                id: "life_style_id",
+                label: "Выберите Ваш образ жизни: ",
+                value: "Ваш образ жизни"
+            },
+            {
+                id: "training_location_id",
+                label: "Тренировки для: ",
+                value: "Дома"
+            },
+            {
+                id: "menu_calories_id",
+                label: "Желаемая калорийность меню: ",
+                value: "1300-1400"
+            },
+        ],
+    }),
     computed: {
         ...mapGetters(['GetLifeStyles']),
         ...mapGetters(['GetMenuCalories']),
@@ -194,64 +199,62 @@ export default {
                     this.GetTrainingLocations[this.GetTrainingLocations.length - 1].name += " (+ 1300р.)";
                 this.GetTrainingLocations[this.GetTrainingLocations.length - 1].extra = 1300;
                 return this.GetTrainingLocations;
-            }
-            catch (e) {
+            } catch (e) {
                 return [];
             }
         }
     },
-  methods: {
-    toggleDelete() {
-      this.deletepackage = !this.deletepackage;
-    },
-    result(item, id) {
-        this.additionValues[id] = item.id;
-    },
-    resultForLocation(item, id) {
-        if (item.extra && this.SERVICE_INFO.price === this.SERVICE_INFO.old_price) {
-            this.SERVICE_INFO.price += item.extra;
-            this.SERVICE_INFO.current_stripe_id = this.SERVICE_INFO.extended_stripe_id;
+    methods: {
+        toggleDelete() {
+            this.deletepackage = !this.deletepackage;
+        },
+        result(item, id) {
+            this.additionValues[id] = item.id;
+        },
+        resultForLocation(item, id) {
+            if (item.extra && this.SERVICE_INFO.price === this.SERVICE_INFO.old_price) {
+                this.SERVICE_INFO.price += item.extra;
+                this.SERVICE_INFO.current_stripe_id = this.SERVICE_INFO.extended_stripe_id;
+            } else if (!item.extra) {
+                this.SERVICE_INFO.price = this.SERVICE_INFO.old_price;
+                this.SERVICE_INFO.current_stripe_id = this.SERVICE_INFO.stripe_id;
+            }
+            this.additionValues[id] = item.id;
+        },
+        initializeTinkoffPayment() {
+            let user = {
+                "name": this.users[0].value,
+                "age": this.users[1].value,
+                "email": this.email,
+                "weight": this.users[2].value,
+                "tall": this.users[3].value,
+                "required_weight": this.users[4].value,
+                "training_location_id": this.additionValues.training_location_id,
+                "menu_calories_id": this.additionValues.menu_calories_id,
+                "life_style_id": this.additionValues.life_style_id,
+                "product_name": this.SERVICE_INFO.name,
+                "price": this.SERVICE_INFO.price,
+                "stripe_id": this.SERVICE_INFO.current_stripe_id
+            }
+            let formData = new FormData();
+            formData.append('user_info', JSON.stringify(user));
+            axios.post('/initialize-checkout/tinkoff', formData)
+                .then((response) => {
+                    window.location.href = response.data.paymentUrl;
+                })
+                .catch((error) => {
+                    console.log(error.response);
+                })
+        },
+        closeModal() {
+            this.$refs.life_style_select.label = "Ваш образ жизни";
+            this.$refs.menu_calories_select.label = "1300-1400";
+            this.$refs.training_location_select.label = "Дома";
+            this.$refs.life_style_select.value = null;
+            this.$refs.menu_calories_select.value = null;
+            this.$refs.training_location_select.value = null;
+            this.$store.dispatch('fetchTrainingLocations');
         }
-        else if (!item.extra) {
-            this.SERVICE_INFO.price = this.SERVICE_INFO.old_price;
-            this.SERVICE_INFO.current_stripe_id = this.SERVICE_INFO.stripe_id;
-        }
-        this.additionValues[id] = item.id;
     },
-      initializeTinkoffPayment() {
-          let user = {
-              "name" : this.users[0].value,
-              "age" : this.users[1].value,
-              "email" : this.users[2].value,
-              "weight" : this.users[3].value,
-              "tall" : this.users[4].value,
-              "required_weight" : this.users[5].value,
-              "training_location_id" : this.additionValues.training_location_id,
-              "menu_calories_id" : this.additionValues.menu_calories_id,
-              "life_style_id" : this.additionValues.life_style_id,
-              "product_name" : this.SERVICE_INFO.name,
-              "price" : this.SERVICE_INFO.price,
-              "stripe_id" : this.SERVICE_INFO.current_stripe_id
-          }
-          let formData = new FormData();
-          formData.append('user_info', JSON.stringify(user));
-          axios.post('/initialize-checkout/tinkoff', formData)
-              .then((response) => {
-                  window.location.href = response.data.paymentUrl;
-              })
-              .catch((error) => {
-                  console.log(error.response);
-              })
-      },
-      closeModal() {
-        this.$refs.life_style_select.label = "Ваш образ жизни";
-        this.$refs.menu_calories_select.label = "1300-1400";
-        this.$refs.training_location_select.label = "Дома";
-        this.$refs.life_style_select.value = null;
-        this.$refs.menu_calories_select.value = null;
-        this.$refs.training_location_select.value = null;
-        this.$store.dispatch('fetchTrainingLocations');
-      }
-  },
 };
 </script>
