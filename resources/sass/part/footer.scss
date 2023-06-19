@@ -1,0 +1,131 @@
+footer {
+    padding-bottom: 38px;
+}
+
+.footer__nav {
+    padding-left: 0;
+    padding-bottom: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__nav li a {
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9180ff;
+}
+
+.footer__nav li a:focus, .footer__nav li a:active, .footer__nav li a:hover {
+    color: #9e8fff;
+    text-decoration: none;
+}
+
+
+.footer__nav::after {
+    content: "";
+    width: 302px;
+    height: 1px;
+    background: #9180ff;
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 27px 0;
+}
+
+.footer__social a {
+    margin: 0 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__social a:focus, .footer__social a:active, .footer__social a:hover {
+    text-decoration: none;
+}
+
+.footer__link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link a {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: underline;
+    transition: all 0.25s ease-in-out;
+    color: #9180ff;
+}
+
+.footer__link a:focus, .footer__link a:active, .footer__link a:hover {
+    color: #9e8fff;
+}
+
+@media only screen and (max-width: 998px) {
+
+}
+
+@media only screen and (max-width: 778px) {
+    .footer__nav li a {
+        margin: 0 6px;
+        font-size: 18px;
+        line-height: 110%;
+    }
+}
+
+@media only screen and (max-width: 556px) {
+    .footer {
+        padding-bottom: 15px;
+
+        &__nav {
+            padding-bottom: 20px;
+
+            li a {
+                margin: 0 3px;
+                font-size: 10px;
+            }
+        }
+
+        &__social {
+            margin: 20px 0;
+
+            a {
+                margin: 0 11px;
+            }
+
+            svg {
+                width: 15px;
+                height: auto;
+            }
+        }
+
+        &__link {
+            a {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 375px) {
+
+}

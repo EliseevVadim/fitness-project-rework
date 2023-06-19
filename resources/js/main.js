@@ -2,18 +2,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let officeSlider = new Swiper('.office__slider', {
         centeredSlides: true,
-        slidesPerView: 3,
-        spaceBetween: 10,
+        slidesPerView: 1,
+        spaceBetween: 0,
         autoHeight: true,
         keyboard: true,
         loop: true,
-        //initialSlide: 1,
         pagination: {
             el: '.swiper-img-pagination',
         },
         breakpoints: {
-            556: {
-                spaceBetween: 20
+            778: {
+                slidesPerView: 3,
+                spaceBetween: 10,
             }
         }
     });
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     var program__slider = new Swiper(".program__slider", {
-        slidesPerView: 1,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 0,
         IOSEdgeSwipeDetection: true,
         allowSlidePrev: true,
         pagination: {
@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 2,
                 spaceBetween: 40,
             },
+            556: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            }
         }
     });
 

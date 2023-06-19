@@ -103,6 +103,7 @@
                                     <li><a href="#program">Программы и марафоны</a></li>
                                     <li><a href="#calories-calculator">Калькулятор калорий</a></li>
                                     <li><a href="#questions">Вопрос-ответ</a></li>
+                                    <li class="mob__link"><a href="https://goodiets.com/base" target="_blank" >База поставщиков</a></li>
                                     <div id="indicator"></div>
                                 </ul>
                                 <div class="head__social">

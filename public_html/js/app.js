@@ -2872,18 +2872,18 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 document.addEventListener("DOMContentLoaded", function () {
   var officeSlider = new Swiper('.office__slider', {
     centeredSlides: true,
-    slidesPerView: 3,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 0,
     autoHeight: true,
     keyboard: true,
     loop: true,
-    //initialSlide: 1,
     pagination: {
       el: '.swiper-img-pagination'
     },
     breakpoints: {
-      556: {
-        spaceBetween: 20
+      778: {
+        slidesPerView: 3,
+        spaceBetween: 10
       }
     }
   });
@@ -2896,8 +2896,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   var program__slider = new Swiper(".program__slider", {
-    slidesPerView: 1,
-    spaceBetween: 20,
+    slidesPerView: 2,
+    spaceBetween: 0,
     IOSEdgeSwipeDetection: true,
     allowSlidePrev: true,
     pagination: {
@@ -2908,6 +2908,10 @@ document.addEventListener("DOMContentLoaded", function () {
       999: {
         slidesPerView: 2,
         spaceBetween: 40
+      },
+      556: {
+        slidesPerView: 1,
+        spaceBetween: 20
       }
     }
   });
@@ -37137,10 +37141,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/base.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/base.scss ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -42054,20 +42058,20 @@ var render = function () {
     ),
     _vm._v(" "),
     _vm.resultWasCalculated
-      ? _c("div", { staticClass: "row d-flex w-100" }, [
-          _c("div", { staticClass: "col-12" }, [
+      ? _c("ul", { staticClass: "calories-calculator-result" }, [
+          _c("li", { staticClass: "calories-calculator-result__item" }, [
             _vm._v("\n            Для поддержания веса необходимо: "),
             _c("b", [_vm._v(_vm._s(_vm.holdingResult))]),
             _vm._v(" ккал/день\n        "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("li", { staticClass: "calories-calculator-result__item" }, [
             _vm._v("\n            Для набора веса необходимо: "),
             _c("b", [_vm._v(_vm._s(_vm.gainResult))]),
             _vm._v(" ккал/день\n        "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("li", { staticClass: "calories-calculator-result__item" }, [
             _vm._v("\n            Для сброса веса необходимо: "),
             _c("b", [_vm._v(_vm._s(_vm.lossResult))]),
             _vm._v(" ккал/день\n        "),
@@ -57732,9 +57736,9 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/app": 0,
 /******/ 			"css/admin/style": 0,
-/******/ 			"css/supplierBase": 0
+/******/ 			"css/supplierBase": 0,
+/******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -57784,11 +57788,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/style","css/supplierBase"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/style","css/supplierBase"], () => (__webpack_require__("./resources/js/main.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/style","css/supplierBase"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/admin/style","css/supplierBase"], () => (__webpack_require__("./resources/sass/supplierBase/main.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/admin/style","css/supplierBase"], () => (__webpack_require__("./resources/sass/admin-sass/style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/js/main.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/sass/base.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/sass/supplierBase/main.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/sass/admin-sass/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

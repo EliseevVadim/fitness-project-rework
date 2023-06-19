@@ -55,17 +55,17 @@
             </div>
             <button type="submit" class="calories-calculator__btn button">Рассчитать</button>
         </form>
-        <div class="row d-flex w-100" v-if="resultWasCalculated">
-            <div class="col-12">
+        <ul class="calories-calculator-result" v-if="resultWasCalculated">
+            <li class="calories-calculator-result__item">
                 Для поддержания веса необходимо: <b>{{holdingResult}}</b> ккал/день
-            </div>
-            <div class="col-12">
+            </li>
+            <li class="calories-calculator-result__item">
                 Для набора веса необходимо: <b>{{gainResult}}</b> ккал/день
-            </div>
-            <div class="col-12">
+            </li>
+            <li class="calories-calculator-result__item">
                 Для сброса веса необходимо: <b>{{lossResult}}</b> ккал/день
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 </template>
 
