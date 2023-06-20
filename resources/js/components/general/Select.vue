@@ -1,5 +1,5 @@
 <template>
-  <div class="buy__selector">
+  <div class="buy__selector buy__group">
     <label class="buy__label">
       {{ select.label }}
     </label>

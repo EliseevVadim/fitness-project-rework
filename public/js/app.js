@@ -2147,10 +2147,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "CaloriesCalculator",
   data: function data() {
@@ -2447,6 +2443,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2466,6 +2472,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       activeStep: 1,
       deletepackage: false,
       returnpackage: true,
+      email: '',
       users: [{
         id: "name",
         name: "Имя",
@@ -2478,12 +2485,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         placeholder: "25 лет",
         value: "",
         type: "number"
-      }, {
-        id: "email",
-        name: "Ваш Email",
-        placeholder: "Email",
-        value: "",
-        type: "email"
       }, {
         id: "weight",
         name: "Ваш вес",
@@ -2556,10 +2557,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var user = {
         "name": this.users[0].value,
         "age": this.users[1].value,
-        "email": this.users[2].value,
-        "weight": this.users[3].value,
-        "tall": this.users[4].value,
-        "required_weight": this.users[5].value,
+        "email": this.email,
+        "weight": this.users[2].value,
+        "tall": this.users[3].value,
+        "required_weight": this.users[4].value,
         "training_location_id": this.additionValues.training_location_id,
         "menu_calories_id": this.additionValues.menu_calories_id,
         "life_style_id": this.additionValues.life_style_id,
@@ -2869,19 +2870,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ (() => {
 
 document.addEventListener("DOMContentLoaded", function () {
-  /*var swiperProgram = new Swiper(".program__slider", {
-      spaceBetween: 100,
-      slidesPerView: 2,
-      allowSlidePrev: true
-  });*/
-  // var swiperDiet = new Swiper(".calendar__slider-account", {
-  //     spaceBetween: 0,
-  //     slidesPerView: 1,
-  //     navigation: {
-  //         nextEl: ".swiper-button-next",
-  //         prevEl: ".swiper-button-prev",
-  //     },
-  // });
+  var officeSlider = new Swiper('.office__slider', {
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    keyboard: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-img-pagination'
+    },
+    breakpoints: {
+      778: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      }
+    }
+  });
   var swiperDiet = new Swiper(".calendar__slider-diet", {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -2890,45 +2895,9 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev"
     }
   });
-  /*var swiperWorkout = new Swiper(".calendar__slider-workout", {
-      spaceBetween: 0,
-      slidesPerView: 1,
-      navigation: {
-          nextEl: ".swiper-button-next.workout-swiper",
-          prevEl: ".swiper-button-prev.workout-swiper",
-      },
-  });*/
-
-  var swiperScrinImg = new Swiper('.office__img-slider', {
-    centeredSlides: true,
-    roundLengths: true,
-    loop: true,
-    loopAdditionalSlides: 30,
-    slidesPerView: 3,
-    spaceBetween: 0,
-    pagination: {
-      el: '.swiper-img-pagination'
-    },
-    breakpoints: {
-      556: {
-        spaceBetween: 20
-      }
-    }
-  });
-  var swiperScrinTxt = new Swiper('.office__txt-slider', {
-    centeredSlides: true,
-    roundLengths: true,
-    loop: true,
-    loopAdditionalSlides: 30,
-    spaceBetween: 16,
-    direction: "vertical",
-    slidesPerView: 3
-  });
-  swiperScrinTxt.disable();
-  swiperScrinImg.controller.control = swiperScrinTxt;
   var program__slider = new Swiper(".program__slider", {
-    slidesPerView: 1,
-    spaceBetween: 20,
+    slidesPerView: 2,
+    spaceBetween: 0,
     IOSEdgeSwipeDetection: true,
     allowSlidePrev: true,
     pagination: {
@@ -2939,6 +2908,10 @@ document.addEventListener("DOMContentLoaded", function () {
       999: {
         slidesPerView: 2,
         spaceBetween: 40
+      },
+      556: {
+        slidesPerView: 1,
+        spaceBetween: 20
       }
     }
   });
@@ -19832,9 +19805,9 @@ return jQuery;
 
 /***/ }),
 
-/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
+/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
+  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -19856,9 +19829,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.loading-screen[data-v-7ab65994] {\r
 
 /***/ }),
 
-/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&":
+/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& ***!
+  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -37168,10 +37141,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/sass/admin-sass/style.scss":
-/*!**********************************************!*\
-  !*** ./resources/sass/admin-sass/style.scss ***!
-  \**********************************************/
+/***/ "./resources/sass/base.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/base.scss ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37185,6 +37158,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************!*\
   !*** ./resources/sass/supplierBase/main.scss ***!
   \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/admin-sass/style.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/admin-sass/style.scss ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40783,9 +40769,9 @@ try {
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -40796,7 +40782,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!../vue-loader/lib/loaders/stylePostLoader.js!../postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
+/* harmony import */ var _laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!../vue-loader/lib/loaders/stylePostLoader.js!../postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
 
             
 
@@ -40805,17 +40791,17 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&":
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& ***!
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -40826,7 +40812,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&");
 
             
 
@@ -40835,11 +40821,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -41490,7 +41476,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_loader_dist_cjs_js_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../style-loader/dist/cjs.js!../laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!../vue-loader/lib/loaders/stylePostLoader.js!../postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
+/* harmony import */ var _style_loader_dist_cjs_js_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../style-loader/dist/cjs.js!../laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!../vue-loader/lib/loaders/stylePostLoader.js!../postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -41503,7 +41489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_11_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CaloriesCalculator_vue_vue_type_style_index_0_id_57c46b4c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-11[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/general/CaloriesCalculator.vue?vue&type=style&index=0&id=57c46b4c&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -41694,7 +41680,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "calories-calculator__wrap" }, [
     _c(
       "form",
       {
@@ -41706,8 +41692,15 @@ var render = function () {
         },
       },
       [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "calc-age" } }, [_vm._v("Ваш возраст:")]),
+        _c("div", { staticClass: "calories-calculator__group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "calories-calculator__label",
+              attrs: { for: "calc-age" },
+            },
+            [_vm._v("Ваш возраст:")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -41718,7 +41711,7 @@ var render = function () {
                 expression: "age",
               },
             ],
-            staticClass: "form-control",
+            staticClass: "calories-calculator__input",
             attrs: {
               type: "number",
               id: "calc-age",
@@ -41737,10 +41730,12 @@ var render = function () {
           }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "mb-2" }, [
-          _c("span", [_vm._v("Ваш пол:")]),
+        _c("div", { staticClass: "calories-calculator__group" }, [
+          _c("span", { staticClass: "calories-calculator__label" }, [
+            _vm._v("Ваш пол:"),
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-check" }, [
+          _c("div", { staticClass: "calories-calculator-check" }, [
             _c("input", {
               directives: [
                 {
@@ -41751,7 +41746,7 @@ var render = function () {
                   modifiers: { number: true },
                 },
               ],
-              staticClass: "form-check-input colored-radio",
+              staticClass: "calories-calculator-check__input",
               attrs: {
                 type: "radio",
                 name: "sex",
@@ -41770,14 +41765,15 @@ var render = function () {
             _c(
               "label",
               {
-                staticClass: "form-check-label",
+                staticClass:
+                  "calories-calculator-check__label calories-calculator__label",
                 attrs: { for: "male-option" },
               },
               [_vm._v("\n                    Мужской\n                ")]
             ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-check" }, [
+          _c("div", { staticClass: "calories-calculator-check" }, [
             _c("input", {
               directives: [
                 {
@@ -41788,7 +41784,7 @@ var render = function () {
                   modifiers: { number: true },
                 },
               ],
-              staticClass: "form-check-input colored-radio",
+              staticClass: "calories-calculator-check__input",
               attrs: {
                 type: "radio",
                 name: "sex",
@@ -41806,7 +41802,8 @@ var render = function () {
             _c(
               "label",
               {
-                staticClass: "form-check-label",
+                staticClass:
+                  "calories-calculator-check__label calories-calculator__label",
                 attrs: { for: "female-option" },
               },
               [_vm._v("\n                    Женский\n                ")]
@@ -41814,8 +41811,15 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "calc-weight" } }, [_vm._v("Ваш вес:")]),
+        _c("div", { staticClass: "calories-calculator__group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "calories-calculator__label",
+              attrs: { for: "calc-weight" },
+            },
+            [_vm._v("Ваш вес:")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -41826,7 +41830,7 @@ var render = function () {
                 expression: "weight",
               },
             ],
-            staticClass: "form-control",
+            staticClass: "calories-calculator__input",
             attrs: {
               type: "number",
               id: "calc-weight",
@@ -41845,8 +41849,15 @@ var render = function () {
           }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "height" } }, [_vm._v("Ваш рост:")]),
+        _c("div", { staticClass: "calories-calculator__group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "calories-calculator__label",
+              attrs: { for: "height" },
+            },
+            [_vm._v("Ваш рост:")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -41857,7 +41868,7 @@ var render = function () {
                 expression: "height",
               },
             ],
-            staticClass: "form-control",
+            staticClass: "calories-calculator__input",
             attrs: {
               type: "number",
               id: "height",
@@ -41876,10 +41887,15 @@ var render = function () {
           }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "activity-level" } }, [
-            _vm._v("Степень физической активности:"),
-          ]),
+        _c("div", { staticClass: "calories-calculator__group" }, [
+          _c(
+            "label",
+            {
+              staticClass: "calories-calculator__label",
+              attrs: { for: "activity-level" },
+            },
+            [_vm._v("Степень физической активности:")]
+          ),
           _vm._v(" "),
           _c(
             "select",
@@ -41892,7 +41908,8 @@ var render = function () {
                   expression: "activityLevel",
                 },
               ],
-              staticClass: "form-control",
+              staticClass:
+                "calories-calculator__select calories-calculator__input",
               attrs: { id: "activity-level" },
               on: {
                 change: function ($event) {
@@ -41940,10 +41957,12 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "mb-2" }, [
-          _c("span", [_vm._v("Формула:")]),
+        _c("div", { staticClass: "calories-calculator__group" }, [
+          _c("span", { staticClass: "calories-calculator__label" }, [
+            _vm._v("Формула:"),
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-check" }, [
+          _c("div", { staticClass: "calories-calculator-check" }, [
             _c("input", {
               directives: [
                 {
@@ -41954,7 +41973,7 @@ var render = function () {
                   modifiers: { number: true },
                 },
               ],
-              staticClass: "form-check-input colored-radio",
+              staticClass: "calories-calculator-check__input",
               attrs: {
                 type: "radio",
                 name: "calculating-formula",
@@ -41973,7 +41992,8 @@ var render = function () {
             _c(
               "label",
               {
-                staticClass: "form-check-label",
+                staticClass:
+                  "calories-calculator-check__label calories-calculator__label",
                 attrs: { for: "miffline-formula" },
               },
               [
@@ -41984,7 +42004,7 @@ var render = function () {
             ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-check" }, [
+          _c("div", { staticClass: "calories-calculator-check" }, [
             _c("input", {
               directives: [
                 {
@@ -41995,7 +42015,7 @@ var render = function () {
                   modifiers: { number: true },
                 },
               ],
-              staticClass: "form-check-input colored-radio",
+              staticClass: "calories-calculator-check__input",
               attrs: {
                 type: "radio",
                 name: "calculating-formula",
@@ -42013,37 +42033,45 @@ var render = function () {
             _c(
               "label",
               {
-                staticClass: "form-check-label",
+                staticClass:
+                  "calories-calculator-check__label calories-calculator__label",
                 attrs: { for: "harris-formula" },
               },
               [
                 _vm._v(
-                  "\n                    Харриса-Бенедикта\n                "
+                  "\n                    Харриса - Бенедикта\n                "
                 ),
               ]
             ),
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(0),
+        _c(
+          "button",
+          {
+            staticClass: "calories-calculator__btn button",
+            attrs: { type: "submit" },
+          },
+          [_vm._v("Рассчитать")]
+        ),
       ]
     ),
     _vm._v(" "),
     _vm.resultWasCalculated
-      ? _c("div", { staticClass: "row d-flex w-100" }, [
-          _c("div", { staticClass: "col-12" }, [
+      ? _c("ul", { staticClass: "calories-calculator-result" }, [
+          _c("li", { staticClass: "calories-calculator-result__item" }, [
             _vm._v("\n            Для поддержания веса необходимо: "),
             _c("b", [_vm._v(_vm._s(_vm.holdingResult))]),
             _vm._v(" ккал/день\n        "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("li", { staticClass: "calories-calculator-result__item" }, [
             _vm._v("\n            Для набора веса необходимо: "),
             _c("b", [_vm._v(_vm._s(_vm.gainResult))]),
             _vm._v(" ккал/день\n        "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("li", { staticClass: "calories-calculator-result__item" }, [
             _vm._v("\n            Для сброса веса необходимо: "),
             _c("b", [_vm._v(_vm._s(_vm.lossResult))]),
             _vm._v(" ккал/день\n        "),
@@ -42052,29 +42080,7 @@ var render = function () {
       : _vm._e(),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "row d-flex w-100 justify-content-between m-0" },
-      [
-        _c("div", { staticClass: "col-12 text-center mb-2" }, [
-          _c(
-            "button",
-            {
-              staticClass: "button px-4 text-center",
-              attrs: { type: "submit" },
-            },
-            [_vm._v("Рассчитать")]
-          ),
-        ]),
-      ]
-    )
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -42097,7 +42103,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "buy__selector" }, [
+  return _c("div", { staticClass: "buy__selector buy__group" }, [
     _c("label", { staticClass: "buy__label" }, [
       _vm._v("\n    " + _vm._s(_vm.select.label) + "\n  "),
     ]),
@@ -42297,7 +42303,7 @@ var render = function () {
             _vm._v(" "),
             _vm._m(0),
             _vm._v(" "),
-            _c("div", { staticClass: "buy__label buy-head__txt-small" }, [
+            _c("div", { staticClass: "buy-head__txt-small" }, [
               _vm._v(
                 "\n                Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении\n                суток после оплаты - используйте ее для начала Ваших тренировок!\n            "
               ),
@@ -42321,146 +42327,141 @@ var render = function () {
                   [
                     _c(
                       "div",
-                      { staticClass: "buy-form__row buy-form__row-three" },
-                      _vm._l(_vm.users, function (info, index) {
-                        return _c(
-                          "div",
-                          { key: index, staticClass: "buy__group" },
-                          [
-                            _c(
-                              "label",
-                              {
-                                staticClass: "buy__label",
-                                attrs: { for: info.id },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                            " +
-                                    _vm._s(info.name) +
-                                    "\n                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            info.type === "checkbox"
-                              ? _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: info.value,
-                                      expression: "info.value",
-                                    },
-                                  ],
-                                  staticClass: "buy__input",
-                                  attrs: {
-                                    required: "",
-                                    id: info.id,
-                                    placeholder: info.placeholder,
-                                    type: "checkbox",
-                                  },
-                                  domProps: {
-                                    checked: Array.isArray(info.value)
-                                      ? _vm._i(info.value, null) > -1
-                                      : info.value,
-                                  },
-                                  on: {
-                                    change: function ($event) {
-                                      var $$a = info.value,
-                                        $$el = $event.target,
-                                        $$c = $$el.checked ? true : false
-                                      if (Array.isArray($$a)) {
-                                        var $$v = null,
-                                          $$i = _vm._i($$a, $$v)
-                                        if ($$el.checked) {
-                                          $$i < 0 &&
-                                            _vm.$set(
-                                              info,
-                                              "value",
-                                              $$a.concat([$$v])
-                                            )
-                                        } else {
-                                          $$i > -1 &&
-                                            _vm.$set(
-                                              info,
-                                              "value",
-                                              $$a
-                                                .slice(0, $$i)
-                                                .concat($$a.slice($$i + 1))
-                                            )
-                                        }
-                                      } else {
-                                        _vm.$set(info, "value", $$c)
-                                      }
-                                    },
-                                  },
-                                })
-                              : info.type === "radio"
-                              ? _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: info.value,
-                                      expression: "info.value",
-                                    },
-                                  ],
-                                  staticClass: "buy__input",
-                                  attrs: {
-                                    required: "",
-                                    id: info.id,
-                                    placeholder: info.placeholder,
-                                    type: "radio",
-                                  },
-                                  domProps: {
-                                    checked: _vm._q(info.value, null),
-                                  },
-                                  on: {
-                                    change: function ($event) {
-                                      return _vm.$set(info, "value", null)
-                                    },
-                                  },
-                                })
-                              : _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: info.value,
-                                      expression: "info.value",
-                                    },
-                                  ],
-                                  staticClass: "buy__input",
-                                  attrs: {
-                                    required: "",
-                                    id: info.id,
-                                    placeholder: info.placeholder,
-                                    type: info.type,
-                                  },
-                                  domProps: { value: info.value },
-                                  on: {
-                                    input: function ($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        info,
-                                        "value",
-                                        $event.target.value
-                                      )
-                                    },
-                                  },
-                                }),
-                          ]
-                        )
-                      }),
-                      0
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "buy-form__row" },
+                      { staticClass: "buy__row" },
                       [
+                        _vm._l(_vm.users, function (info, index) {
+                          return _c(
+                            "div",
+                            { key: index, staticClass: "buy__group" },
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "buy__label",
+                                  attrs: { for: info.id },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            " +
+                                      _vm._s(info.name) +
+                                      "\n                        "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              info.type === "checkbox"
+                                ? _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: info.value,
+                                        expression: "info.value",
+                                      },
+                                    ],
+                                    staticClass: "buy__input",
+                                    attrs: {
+                                      required: "",
+                                      id: info.id,
+                                      placeholder: info.placeholder,
+                                      type: "checkbox",
+                                    },
+                                    domProps: {
+                                      checked: Array.isArray(info.value)
+                                        ? _vm._i(info.value, null) > -1
+                                        : info.value,
+                                    },
+                                    on: {
+                                      change: function ($event) {
+                                        var $$a = info.value,
+                                          $$el = $event.target,
+                                          $$c = $$el.checked ? true : false
+                                        if (Array.isArray($$a)) {
+                                          var $$v = null,
+                                            $$i = _vm._i($$a, $$v)
+                                          if ($$el.checked) {
+                                            $$i < 0 &&
+                                              _vm.$set(
+                                                info,
+                                                "value",
+                                                $$a.concat([$$v])
+                                              )
+                                          } else {
+                                            $$i > -1 &&
+                                              _vm.$set(
+                                                info,
+                                                "value",
+                                                $$a
+                                                  .slice(0, $$i)
+                                                  .concat($$a.slice($$i + 1))
+                                              )
+                                          }
+                                        } else {
+                                          _vm.$set(info, "value", $$c)
+                                        }
+                                      },
+                                    },
+                                  })
+                                : info.type === "radio"
+                                ? _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: info.value,
+                                        expression: "info.value",
+                                      },
+                                    ],
+                                    staticClass: "buy__input",
+                                    attrs: {
+                                      required: "",
+                                      id: info.id,
+                                      placeholder: info.placeholder,
+                                      type: "radio",
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(info.value, null),
+                                    },
+                                    on: {
+                                      change: function ($event) {
+                                        return _vm.$set(info, "value", null)
+                                      },
+                                    },
+                                  })
+                                : _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: info.value,
+                                        expression: "info.value",
+                                      },
+                                    ],
+                                    staticClass: "buy__input",
+                                    attrs: {
+                                      required: "",
+                                      id: info.id,
+                                      placeholder: info.placeholder,
+                                      type: info.type,
+                                    },
+                                    domProps: { value: info.value },
+                                    on: {
+                                      input: function ($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          info,
+                                          "value",
+                                          $event.target.value
+                                        )
+                                      },
+                                    },
+                                  }),
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
                         _c("Myselect", {
                           ref: "life_style_select",
                           attrs: {
@@ -42487,8 +42488,50 @@ var render = function () {
                           },
                           on: { result: _vm.result },
                         }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "buy__group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "buy__label",
+                              attrs: { for: "email" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                            Ваш Email\n                        "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.email,
+                                expression: "email",
+                              },
+                            ],
+                            staticClass: "buy__input",
+                            attrs: {
+                              required: "",
+                              id: "email",
+                              type: "Email",
+                              placeholder: "Email",
+                            },
+                            domProps: { value: _vm.email },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.email = $event.target.value
+                              },
+                            },
+                          }),
+                        ]),
                       ],
-                      1
+                      2
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "buy__price" }, [
@@ -57693,8 +57736,9 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/admin/style": 0,
 /******/ 			"css/supplierBase": 0,
-/******/ 			"css/admin/style": 0
+/******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -57744,10 +57788,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/supplierBase","css/admin/style"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/supplierBase","css/admin/style"], () => (__webpack_require__("./resources/js/main.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/supplierBase","css/admin/style"], () => (__webpack_require__("./resources/sass/admin-sass/style.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/supplierBase","css/admin/style"], () => (__webpack_require__("./resources/sass/supplierBase/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/js/main.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/sass/base.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/sass/supplierBase/main.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/admin/style","css/supplierBase","css/app"], () => (__webpack_require__("./resources/sass/admin-sass/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

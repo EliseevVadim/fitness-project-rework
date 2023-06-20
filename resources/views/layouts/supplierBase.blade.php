@@ -6,7 +6,10 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{ config('app.name', 'GoodDiets') }}</title>
+        <title>САМАЯ БОЛЬШАЯ БАЗА ПОСТАВЩИКОВ!</title>
+        <meta name="description"
+              content="Что такое база поставщиков? База — это огромный список контактов поставщиков из стран СНГ и всего МИРА! В нашей базе собраны продавцы и производители, осуществляющие торговлю в розницу и оптом, благодаря этому Вы сможете заказывать множество качественных товаров ПО СЕБЕСТОИМОСТИ!">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap"
@@ -31,7 +34,7 @@
                     <nav class="header-nav" id="nav">
                         <ul class="header-nav__list">
                             <li class="header-nav__item">
-                                <a href="#base-main" class="header-nav__link nav__link nav-close">
+                                <a href="https://goodiets.com" class="header-nav__link nav__link nav-close">
                                     Главная
                                 </a>
                             </li>
@@ -61,7 +64,8 @@
                                 </a>
                                 <ul class="header-nav-mob-social__list">
                                     <li class="header-nav-mob-social__item">
-                                        <a  href="https://instagram.com/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://instagram.com/goodiets" target="_blank"
+                                           class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="20" height="20"
                                                  viewBox="0 0 20 20" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +89,8 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="https://vk.com/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://vk.com/goodiets" target="_blank"
+                                           class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="26" height="24"
                                                  viewBox="0 0 26 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +109,8 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="https://www.youtube.com/c/Goodiet" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://www.youtube.com/c/Goodiet" target="_blank"
+                                           class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="26" height="18"
                                                  viewBox="0 0 26 18" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +121,8 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://vt.tiktok.com/ZSR8GoCKR/" target="_blank"
+                                           class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="22" height="21"
                                                  viewBox="0 0 22 21" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +141,8 @@
                                         </a>
                                     </li>
                                     <li class="header-nav-mob-social__item">
-                                        <a href="https://t.me/goodiets" target="_blank" class="header-nav-mob-social__link nav-close">
+                                        <a href="https://t.me/goodiets" target="_blank"
+                                           class="header-nav-mob-social__link nav-close">
                                             <svg class="header-nav-mob-social__svg object-fit" width="19" height="21"
                                                  viewBox="0 0 19 21" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +209,8 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="https://drive.google.com/drive/folders/1-JSoiF_RaGaQh7dnFXihzfnf4oZERUls" target="_blank" class="footer__link">
+                    <a href="https://drive.google.com/drive/folders/1-JSoiF_RaGaQh7dnFXihzfnf4oZERUls" target="_blank"
+                       class="footer__link">
                         Договор оферты
                     </a>
                 </div>

@@ -1,36 +1,36 @@
 <template>
-    <div class="container">
+    <div class="calories-calculator__wrap">
         <form @submit.prevent="calculateCalories">
-            <div class="form-group">
-                <label for="calc-age">Ваш возраст:</label>
-                <input type="number" class="form-control" id="calc-age" placeholder="Сколько вам лет?" required v-model="age">
+            <div class="calories-calculator__group">
+                <label class="calories-calculator__label" for="calc-age">Ваш возраст:</label>
+                <input type="number" class="calories-calculator__input" id="calc-age" placeholder="Сколько вам лет?" required v-model="age">
             </div>
-            <div class="mb-2">
-                <span>Ваш пол:</span>
-                <div class="form-check">
-                    <input class="form-check-input colored-radio" type="radio" name="sex" id="male-option" value="0" checked v-model.number="sex">
-                    <label class="form-check-label" for="male-option">
+            <div class="calories-calculator__group">
+                <span class="calories-calculator__label">Ваш пол:</span>
+                <div class="calories-calculator-check">
+                    <input class="calories-calculator-check__input" type="radio" name="sex" id="male-option" value="0" checked v-model.number="sex">
+                    <label class="calories-calculator-check__label calories-calculator__label" for="male-option">
                         Мужской
                     </label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input colored-radio" type="radio" name="sex" id="female-option" value="1" v-model.number="sex">
-                    <label class="form-check-label" for="female-option">
+                <div class="calories-calculator-check">
+                    <input class="calories-calculator-check__input" type="radio" name="sex" id="female-option" value="1" v-model.number="sex">
+                    <label class="calories-calculator-check__label calories-calculator__label" for="female-option">
                         Женский
                     </label>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="calc-weight">Ваш вес:</label>
-                <input type="number" class="form-control" id="calc-weight" placeholder="Ваш вес (в кг)" required v-model="weight">
+            <div class="calories-calculator__group">
+                <label class="calories-calculator__label" for="calc-weight">Ваш вес:</label>
+                <input type="number" class="calories-calculator__input" id="calc-weight" placeholder="Ваш вес (в кг)" required v-model="weight">
             </div>
-            <div class="form-group">
-                <label for="height">Ваш рост:</label>
-                <input type="number" class="form-control" id="height" placeholder="Ваш рост (в см)" required v-model="height">
+            <div class="calories-calculator__group">
+                <label class="calories-calculator__label" for="height">Ваш рост:</label>
+                <input type="number" class="calories-calculator__input" id="height" placeholder="Ваш рост (в см)" required v-model="height">
             </div>
-            <div class="form-group">
-                <label for="activity-level">Степень физической активности:</label>
-                <select id="activity-level" class="form-control" v-model="activityLevel">
+            <div class="calories-calculator__group">
+                <label class="calories-calculator__label" for="activity-level">Степень физической активности:</label>
+                <select id="activity-level" class="calories-calculator__select calories-calculator__input" v-model="activityLevel">
                     <option value="1.2">Минимальная (сидячая работа, отсутствие физических нагрузок)</option>
                     <option value="1.375" selected>Низкая (тренировки не менее 20 мин 1-3 раза в неделю</option>
                     <option value="1.55">Умеренная (тренировки 30-60 мин 3-4 раза в неделю)</option>
@@ -38,38 +38,34 @@
                     <option value="1.9">Экстремальная (несколько интенсивных тренировок в день 6-7 раз в неделю; очень трудоемкая работа)</option>
                 </select>
             </div>
-            <div class="mb-2">
-                <span>Формула:</span>
-                <div class="form-check">
-                    <input class="form-check-input colored-radio" type="radio" name="calculating-formula" id="miffline-formula" value="0" checked v-model.number="formula">
-                    <label class="form-check-label" for="miffline-formula">
+            <div class="calories-calculator__group">
+                <span class="calories-calculator__label">Формула:</span>
+                <div class="calories-calculator-check">
+                    <input class="calories-calculator-check__input" type="radio" name="calculating-formula" id="miffline-formula" value="0" checked v-model.number="formula">
+                    <label class="calories-calculator-check__label calories-calculator__label" for="miffline-formula">
                         Миффлина - Сан Жеора
                     </label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input colored-radio" type="radio" name="calculating-formula" id="harris-formula" value="1" v-model.number="formula">
-                    <label class="form-check-label" for="harris-formula">
-                        Харриса-Бенедикта
+                <div class="calories-calculator-check">
+                    <input class="calories-calculator-check__input" type="radio" name="calculating-formula" id="harris-formula" value="1" v-model.number="formula">
+                    <label class="calories-calculator-check__label calories-calculator__label" for="harris-formula">
+                        Харриса - Бенедикта
                     </label>
                 </div>
             </div>
-            <div class="row d-flex w-100 justify-content-between m-0">
-                <div class="col-12 text-center mb-2">
-                    <button type="submit" class="button px-4 text-center">Рассчитать</button>
-                </div>
-            </div>
+            <button type="submit" class="calories-calculator__btn button">Рассчитать</button>
         </form>
-        <div class="row d-flex w-100" v-if="resultWasCalculated">
-            <div class="col-12">
+        <ul class="calories-calculator-result" v-if="resultWasCalculated">
+            <li class="calories-calculator-result__item">
                 Для поддержания веса необходимо: <b>{{holdingResult}}</b> ккал/день
-            </div>
-            <div class="col-12">
+            </li>
+            <li class="calories-calculator-result__item">
                 Для набора веса необходимо: <b>{{gainResult}}</b> ккал/день
-            </div>
-            <div class="col-12">
+            </li>
+            <li class="calories-calculator-result__item">
                 Для сброса веса необходимо: <b>{{lossResult}}</b> ккал/день
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 </template>
 
