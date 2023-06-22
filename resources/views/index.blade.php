@@ -42,6 +42,10 @@
                         </defs>
                     </svg>
                 </div>
+
+
+
+
                 <div class="first__back first__back-modile">
                     <svg width="491" height="690" viewBox="0 0 491 690" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +107,8 @@
                                     <li><a href="#program">Программы и марафоны</a></li>
                                     <li><a href="#calories-calculator">Калькулятор калорий</a></li>
                                     <li><a href="#questions">Вопрос-ответ</a></li>
-                                    <li class="mob__link"><a href="https://goodiets.com/base" target="_blank" >База поставщиков</a></li>
+                                    <li class="mob__link"><a href="https://goodiets.com/base" target="_blank">База
+                                            поставщиков</a></li>
                                     <div id="indicator"></div>
                                 </ul>
                                 <div class="head__social">
@@ -467,9 +472,10 @@
                                                          transform="rotate(-165 -6.13868 0.861328)" fill="white"/>
                                             </svg>
                                         </div>
-                                        <img class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
-                                             src="{{ $marathon->is_marathon ? ('images/program2.png') : ('images/program.png')}}"
-                                             alt="#">
+                                        <img
+                                            class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
+                                            src="{{ $marathon->is_marathon ? ('images/program2.png') : ('images/program.png')}}"
+                                            alt="#">
                                         <div class="program__title">
                                             {{$marathon->name}}
                                         </div>
