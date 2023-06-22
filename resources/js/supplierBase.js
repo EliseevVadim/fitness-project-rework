@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //плавный скролл
-    $(document).on("click", "a[href^=\"#\"]", function (event) {
+    $("body").on("click", "a[href^=\"#\"]", function (event) {
         event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: Math.abs(top)}, 1500);
+        let id = $(this).attr('href').substring(1);
+        let top = document.getElementById(id).offsetTop;
+        $('body,html').animate({scrollTop: top}, 1500);
     });
 
 
