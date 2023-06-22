@@ -219,44 +219,22 @@
 
     .office__slider {
         width: 90%;
-        height: auto;
+        height: fit-content;
         overflow: hidden;
-    }
-}
-
-.office__slide {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 90px;
-
-    &.swiper-slide-active {
-        padding-top: 0;
-
-        .office__img {
-            border-radius: 30px;
-            max-width: 381px;
-            height: 677px;
-        }
-
-        .office__texts {
-            display: block;
-        }
     }
 }
 
 .office__img {
     overflow: hidden;
-    max-width: 305px;
-    height: 541px;
     border-radius: 20px;
+    transition: all 1s ease;
+    width: fit-content;
 
     img {
-        width: 100%;
-        height: 100%;
+        width: 305px;
+        height: auto;
         object-fit: cover;
+        transition: all 1s ease;
     }
 }
 
@@ -269,10 +247,57 @@
     margin: 0 auto 17px;
 }
 
+@keyframes spin-office__texts {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        display: block;
+        height: 100%;
+    }
+}
+
+
+.office__slide {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+
+
+    &.swiper-slide-active {
+        padding-top: 0;
+
+        .office__img {
+            border-radius: 30px;
+
+            img {
+                width: 381px;
+            }
+        }
+
+        .office__texts {
+            opacity: 1;
+            animation: spin-office__texts 1.5s ease;
+            display: block;
+        }
+    }
+
+    &.swiper-slide-prev, &.swiper-slide-next {
+        .office__texts {
+            height: 0;
+        }
+    }
+}
+
 .office__texts {
     margin-top: 30px;
     text-align: center;
-    display: none;
+    opacity: 0;
+    padding-bottom: 20px;
 }
 
 .office__subtitle {
@@ -321,7 +346,7 @@
 }
 
 .office__img-pagination {
-    margin: 20px auto 0;
+    margin: 0 auto;
     width: 72px;
 }
 
@@ -1042,7 +1067,6 @@ input[type='number'] {
     margin-top: 50px;
     padding: 0 9.5rem;
 }
-
 
 
 .btn-none {
