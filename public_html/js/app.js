@@ -2871,18 +2871,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 document.addEventListener("DOMContentLoaded", function () {
   var officeSlider = new Swiper('.office__slider', {
+    speed: 800,
     centeredSlides: true,
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 0,
     autoHeight: true,
-    keyboard: true,
     loop: true,
     pagination: {
       el: '.swiper-img-pagination'
     },
     breakpoints: {
       778: {
-        slidesPerView: 3,
         spaceBetween: 10
       }
     }

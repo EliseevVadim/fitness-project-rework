@@ -180,7 +180,7 @@ nav .head__btn .button {
     .nav {
         background: #ffffff;
         position: fixed;
-        z-index: 9;
+        z-index: 9999;
         top: 0;
         left: 0;
         height: 100%;
@@ -273,19 +273,6 @@ nav .head__btn .button {
         color: #9180ff;
     }
     .nav {
-        background: #ffffff;
-        position: fixed;
-        z-index: 9;
-        top: 0;
-        left: 0;
-        height: 100%;
-        max-width: 390px;
-        width: 100%;
-        padding: 80px 20px 0px 35px;
-        overflow-y: auto;
-        //@include transform(translateX(-100%));
-        //@include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
-
         &.show {
             //@include transform(translateX(0px));
 
