@@ -426,11 +426,6 @@
                                                         <tr>
                                                             <td align="center" style="padding:0;Margin:0;font-size:0px">
                                                                 <img class="adapt-img"
-                                                                     src="{{ ('images/confirmed_registration_mail.png') }}"
-                                                                     alt
-                                                                     style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
-                                                                     width="130">
-                                                                <img class="adapt-img"
                                                                      src="https://goodiets.com/images/confirmed_registration_mail.png"
                                                                      alt
                                                                      style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
