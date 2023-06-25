@@ -30,6 +30,7 @@ use App\Http\Controllers\AccessHistoryController;
 Route::get("/", [MainPageController::class,'index'])->name('main');
 Route::get('/base', [SupplierBasePageController::class, 'index'])->name('supplierBase');
 Route::view('/supplierBasePaymentFailure', 'supplierBasePaymentFailure');
+Route::view('/confirmed_registration_mail', 'emails/confirmed_registration_mail');
 
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, "openAdminDashboard"])->name('adminMain');
