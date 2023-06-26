@@ -544,7 +544,7 @@
                                                         <tr>
                                                             <td align="left" style="padding:0;Margin:0"><p
                                                                     style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:Poppins, sans-serif;line-height:30px;color:#464646;font-size:20px">
-                                                                    Если вам понадобится помощь, напишите нам
+                                                                    Если понадобится помощь, напиши нам
                                                                     в&nbsp;<strong><a target="_blank"
                                                                                       href="https://t.me/goodietshelp"
                                                                                       style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#9180ff;font-size:20px">ЧАТ</a></strong>!
