@@ -21,4 +21,9 @@ class SupplierBase extends Model
     {
         return $this->belongsTo(SupplierBaseType::class, 'base_type_id', 'id');
     }
+
+    public function customers()
+    {
+        return $this->hasMany(SupplierBaseCustomer::class, 'supplier_base_id', 'id');
+    }
 }
