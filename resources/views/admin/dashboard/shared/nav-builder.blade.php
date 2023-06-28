@@ -56,7 +56,13 @@ if (!function_exists('renderDropdown')) {
     <li class="c-sidebar-nav-item">
         <a class="c-sidebar-nav-link" href="/admin/users">
             <i class="c-sidebar-nav-icon"></i>
-            Пользователи
+            Пользователи фитнеса
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="/admin/base_customers">
+            <i class="c-sidebar-nav-icon"></i>
+            Покупатели баз
         </a>
     </li>
     <li class="c-sidebar-nav-item">

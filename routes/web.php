@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutsController;
 use App\Http\Controllers\ProgramContentsController;
 use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\SupplierBaseCustomerController;
 use App\Http\Controllers\SupplierBasePageController;
 use App\Http\Controllers\SupplierBasesController;
 use App\Http\Controllers\SupplierBaseTypesController;
@@ -63,6 +64,9 @@ Route::prefix('/admin')->group(function () {
         Route::get('/edit/{id}', [SupplierBasesController::class, "openSupplierBaseEditingPage"]);
         Route::post('/edit/{id}', [SupplierBasesController::class, "editSupplierBase"])->name('editSupplierBase');
         Route::delete('/remove/{id}', [SupplierBasesController::class, "deleteSupplierBase"]);
+    });
+    Route::prefix('/base_customers')->group(function () {
+        Route::get('/', [SupplierBaseCustomerController::class, "showAll"])->name('showAllSupplierBaseCustomers');
     });
     Route::prefix('/menu')->group(function () {  // word: "icons" - not working as part of adress
         Route::get('/', [MenuController::class,'adminMenus'])->name('menu');

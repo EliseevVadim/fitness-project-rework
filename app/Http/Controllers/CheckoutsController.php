@@ -11,6 +11,7 @@ use App\Models\Menu;
 use App\Models\PersonalAccount;
 use App\Models\ProgramContent;
 use App\Models\SupplierBase;
+use App\Models\SupplierBaseCustomer;
 use App\Models\Training;
 use App\Models\TrainingUser;
 use App\Models\User;
@@ -263,6 +264,10 @@ class CheckoutsController extends Controller
     {
         $supplierBase = SupplierBase::find($id);
         (new SupplierBaseMailer())->sendSupplierBase($email, $supplierBase->base_type_id, $supplierBase->content_link);
+        SupplierBaseCustomer::create([
+            'email' => $email,
+            'supplier_base_id' => $id
+        ]);
         Session::remove('user_data');
         Session::remove('base_was_sent');
     }
