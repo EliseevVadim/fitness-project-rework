@@ -66,6 +66,12 @@ if (!function_exists('renderDropdown')) {
         </a>
     </li>
     <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="/admin/export_customers">
+            <i class="c-sidebar-nav-icon"></i>
+            Выгрузка списков <wbr> покупателей
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
         <a class="c-sidebar-nav-link" href="/admin/notification">
             <i class="c-sidebar-nav-icon"></i>
             Уведомления

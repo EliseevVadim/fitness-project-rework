@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutsController;
+use App\Http\Controllers\CustomersExportController;
 use App\Http\Controllers\ProgramContentsController;
 use App\Http\Controllers\ProgramsController;
 use App\Http\Controllers\SupplierBaseCustomerController;
@@ -67,6 +68,13 @@ Route::prefix('/admin')->group(function () {
     });
     Route::prefix('/base_customers')->group(function () {
         Route::get('/', [SupplierBaseCustomerController::class, "showAll"])->name('showAllSupplierBaseCustomers');
+    });
+    Route::prefix('/export_customers')->group(function () {
+        Route::get('/', [CustomersExportController::class, "openExportPage"])->name('openExportPage');
+        Route::post('/all_from_bases', [CustomersExportController::class, "loadAllBasesCustomers"])->name('loadAllBasesCustomers');
+        Route::post('/specific_from_bases', [CustomersExportController::class, "loadSpecificBasesCustomers"])->name('loadSpecificBasesCustomers');
+        Route::post('/all_from_fitness', [CustomersExportController::class, "loadAllFitnessCustomers"])->name('loadAllFitnessCustomers');
+        Route::post('/specific_from_fitness', [CustomersExportController::class, "loadSpecificFitnessCustomers"])->name('loadSpecificFitnessCustomers');
     });
     Route::prefix('/menu')->group(function () {  // word: "icons" - not working as part of adress
         Route::get('/', [MenuController::class,'adminMenus'])->name('menu');
