@@ -18,7 +18,7 @@ class CustomersExportController extends Controller
             abort(401);
         $trainingLocations = TrainingLocation::all();
         $supplierBases = SupplierBase::all();
-        return view('admin.dashboard.notification.notificationList',
+        return view('admin.dashboard.customers-export.excel-export',
             compact('trainingLocations', 'supplierBases'));
     }
 
