@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SupplierBase;
 use App\Models\SupplierBaseCustomer;
+use App\Models\TrainingLocation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -10,6 +12,16 @@ use Illuminate\Support\Facades\Auth;
 
 class CustomersExportController extends Controller
 {
+    public function openExportPage()
+    {
+        if(is_null(Auth::guard('admin')->user()))
+            abort(401);
+        $trainingLocations = TrainingLocation::all();
+        $supplierBases = SupplierBase::all();
+        return view('admin.dashboard.notification.notificationList',
+            compact('trainingLocations', 'supplierBases'));
+    }
+
     public function loadAllBasesCustomers()
     {
         if(is_null(Auth::guard('admin')->user()))

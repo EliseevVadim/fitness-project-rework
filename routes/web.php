@@ -70,10 +70,11 @@ Route::prefix('/admin')->group(function () {
         Route::get('/', [SupplierBaseCustomerController::class, "showAll"])->name('showAllSupplierBaseCustomers');
     });
     Route::prefix('/export_customers')->group(function () {
-        Route::get('/all_from_bases', [CustomersExportController::class, "loadAllBasesCustomers"])->name('loadAllBasesCustomers');
-        Route::get('/specific_from_bases', [CustomersExportController::class, "loadSpecificBasesCustomers"])->name('loadSpecificBasesCustomers');
-        Route::get('/all_from_fitness', [CustomersExportController::class, "loadAllFitnessCustomers"])->name('loadAllFitnessCustomers');
-        Route::get('/specific_from_fitness', [CustomersExportController::class, "loadSpecificFitnessCustomers"])->name('loadSpecificFitnessCustomers');
+        Route::get('/', [CustomersExportController::class, "openExportPage"])->name('openExportPage');
+        Route::post('/all_from_bases', [CustomersExportController::class, "loadAllBasesCustomers"])->name('loadAllBasesCustomers');
+        Route::post('/specific_from_bases', [CustomersExportController::class, "loadSpecificBasesCustomers"])->name('loadSpecificBasesCustomers');
+        Route::post('/all_from_fitness', [CustomersExportController::class, "loadAllFitnessCustomers"])->name('loadAllFitnessCustomers');
+        Route::post('/specific_from_fitness', [CustomersExportController::class, "loadSpecificFitnessCustomers"])->name('loadSpecificFitnessCustomers');
     });
     Route::prefix('/menu')->group(function () {  // word: "icons" - not working as part of adress
         Route::get('/', [MenuController::class,'adminMenus'])->name('menu');
