@@ -908,7 +908,7 @@
                     </div>
                 </div>
                 <div class="telegram-foot">
-                    <a href="https://t.me/goodietshelp" target="_blank" class="telegram-foot__link button">
+                    <a href="https://t.me/AlexLiubov" target="_blank" class="telegram-foot__link button">
                         Начать чат
                     </a>
                 </div>

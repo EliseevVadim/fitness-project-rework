@@ -19,7 +19,7 @@
             <div class="thanks__caption title__caption">
                 ССЫЛКА НА ВЕСЬ МАТЕРИАЛ ОТПРАВЛЕНА НА УКАЗАННУЮ ПОЧТУ!<br><br>
                 Если письмо долго не приходит, проверь папку "СПАМ"! Если и там нет, напиши нам в
-                <a class="chat__link" href="https://t.me/goodietshelp">ЧАТ</a> и мы решим эту проблему!
+                <a class="chat__link" href="https://t.me/AlexLiubov">ЧАТ</a> и мы решим эту проблему!
             </div>
         </section>
     </main>
