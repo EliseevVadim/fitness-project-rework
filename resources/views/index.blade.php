@@ -271,7 +271,7 @@
                 Что ты получаешь?
             </h3>
             <h2 class="title-second">
-                О программе и марафоне
+                О ПРОЕКТЕ МОДИФИКАЦИЯ
             </h2>
             <h4 class="office__caption">
                 Здесь ты обретёшь свой новый образ жизни! Здесь собрано всё необходимое для достижения идеального тела!
@@ -396,7 +396,7 @@
     <section id="program">
         <div class="container">
             <h2 class="title-second">
-                Программы <br>и марафоны
+                МОДИФИКАЦИЯ <br> И КАРМАННЫЙ ДИЕТОЛОГ
             </h2>
             <div class="program__slider">
                 <div class="swiper-wrapper">
@@ -709,11 +709,11 @@
                                             {{$marathon->price}} <sub>₽</sub>
 											</span>
                                         </div>
-                                        @if($marathon->is_marathon)
-                                            <div class="program__start">
-                                                <span>СТАРТ</span> в понедельник!
-                                            </div>
-                                        @endif
+{{--                                        @if($marathon->is_marathon)--}}
+{{--                                            <div class="program__start">--}}
+{{--                                                <span>СТАРТ</span> в понедельник!--}}
+{{--                                            </div>--}}
+{{--                                        @endif--}}
                                         <buy-modal-opener
                                             :name="'{{$marathon->name}}'"
                                             :price="{{$marathon->discount_price}}"
