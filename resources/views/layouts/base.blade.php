@@ -41,7 +41,7 @@
                         <li><a href="#questions">Вопрос-ответ</a></li>
                         <li><a href="#program">Программа</a></li>
                         <li><a href="#program">Марафон</a></li>
-                        <li><a href="https://goodiets.com/base" target="_blank">База</a></li>
+{{--                        <li><a href="https://goodiets.com/base" target="_blank">База</a></li>--}}
                     </ul>
                     <div class="footer__social">
                         <a href="https://vk.com/goodiets">
