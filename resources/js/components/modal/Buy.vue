@@ -94,7 +94,21 @@
                         </div>
                     </div>
                     <div class="buy__price">Сумма: {{ SERVICE_INFO.price }}р.</div>
-                    <button type="submit" class="button buy-form__btn">
+                    <div class="buy__agreement mt-1">
+                        <label class="agreement-label">
+                            <input
+                                type="checkbox"
+                                id="subscriptionAgreement"
+                                v-model="agreed"
+                                required
+                                class="agreement-checkbox"
+                            />
+                            <span>
+                                Каждые 30 дней происходит списание указанной суммы с карты для продления подписки. За несколько дней до списания мы оповещаем об этом. Отменить подписку можно в любой момент.
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="button buy-form__btn" :disabled="!agreed">
                         ОПЛАТИТЬ И ЗАРЕГИСТРИРОВАТЬСЯ
                     </button>
                 </form>
@@ -128,6 +142,7 @@ export default {
         deletepackage: false,
         returnpackage: true,
         email: '',
+        agreed: false,
         users: [
             {
                 id: "name",
@@ -258,3 +273,11 @@ export default {
     },
 };
 </script>
+<style scoped>
+    .button.buy-form__btn:disabled {
+        background-color: #CCCCCC;
+        color: #666666;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+</style>
