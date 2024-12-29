@@ -39,8 +39,8 @@
                 <div class="container">
                     <ul id="footer-nav" class="footer__nav">
                         <li><a href="#questions">Вопрос-ответ</a></li>
-                        <li><a href="#program">Программа</a></li>
-                        <li><a href="#program">Марафон</a></li>
+                        <li><a href="#program">Модификация</a></li>
+                        <li><a href="#program">Карманный диетолог</a></li>
 {{--                        <li><a href="https://goodiets.com/base" target="_blank">База</a></li>--}}
                     </ul>
                     <div class="footer__social">

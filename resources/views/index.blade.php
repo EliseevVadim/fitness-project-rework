@@ -103,12 +103,12 @@
                                 <ul class="main">
                                     <li><a href="#first">Главная</a></li>
                                     <li><a href="#welcome">О проекте</a></li>
-                                    <li><a href="#office">О программе и марафоне</a></li>
-                                    <li><a href="#program">Программы и марафоны</a></li>
+                                    <li><a href="#office">Что ты получаешь?</a></li>
+                                    <li><a href="#program">Проект Модификация и Карманный диетолог</a></li>
                                     <li><a href="#calories-calculator">Калькулятор калорий</a></li>
                                     <li><a href="#questions">Вопрос-ответ</a></li>
-                                    <li class="mob__link"><a href="https://goodiets.com/base" target="_blank">База
-                                            поставщиков</a></li>
+{{--                                    <li class="mob__link"><a href="https://goodiets.com/base" target="_blank">База--}}
+{{--                                            поставщиков</a></li>--}}
                                     <div id="indicator"></div>
                                 </ul>
                                 <div class="head__social">
@@ -873,7 +873,7 @@
             </div>
         </div>
     </section>
-    <section id="telegram" class="telegram">
+    <section id="telegram" class="telegram" style="margin-bottom: 55px">
         <div class="container">
             <h2 class="telegram__title title-second">
                 Остались вопросы ?
@@ -912,23 +912,23 @@
             </div>
         </div>
     </section>
-    <section id="base" class="base">
-        <div class="container">
-            <h2 class="base__title title-second">
-                НАШ ВТОРОЙ ПРОЕКТ
-            </h2>
-            <a href="https://goodiets.com/base" target="_blank" class="base__wrap">
-                <img class="base__img" src="{{ ('images/base-program-head__img.png') }}" alt="#">
-                <div class="base__texts">
-                    <div class="base__name">
-                        База<br>
-                        поставщиков
-                    </div>
-                    <button type="button" class="base__link button">
-                        ОЗНАКОМИТЬСЯ
-                    </button>
-                </div>
-            </a>
-        </div>
-    </section>
+{{--    <section id="base" class="base">--}}
+{{--        <div class="container">--}}
+{{--            <h2 class="base__title title-second">--}}
+{{--                НАШ ВТОРОЙ ПРОЕКТ--}}
+{{--            </h2>--}}
+{{--            <a href="https://goodiets.com/base" target="_blank" class="base__wrap">--}}
+{{--                <img class="base__img" src="{{ ('images/base-program-head__img.png') }}" alt="#">--}}
+{{--                <div class="base__texts">--}}
+{{--                    <div class="base__name">--}}
+{{--                        База<br>--}}
+{{--                        поставщиков--}}
+{{--                    </div>--}}
+{{--                    <button type="button" class="base__link button">--}}
+{{--                        ОЗНАКОМИТЬСЯ--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--            </a>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 @endsection
