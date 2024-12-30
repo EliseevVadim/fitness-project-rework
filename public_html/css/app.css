@@ -12040,7 +12040,7 @@ input[type=number] {
 
   .program__head {
     height: 154px;
-    padding: 40px 26px;
+    padding: 30px 26px;
     margin: 0;
   }
 
@@ -12278,7 +12278,7 @@ input[type=number] {
   }
 
   .program__head {
-    padding: 40px 16px;
+    padding: 30px 16px;
   }
 
   .program__start {
