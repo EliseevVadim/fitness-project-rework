@@ -10766,7 +10766,7 @@ p:last-child {
 
 .program__head {
   color: #ffffff;
-  padding: 82px 48px 58px;
+  padding: 58px 48px 58px;
   height: 279px;
   background: linear-gradient(104.62deg, #9180ff 43.76%, #573dff 110.05%);
   box-shadow: 0px 9px 40px rgba(0, 0, 0, 0.2);
@@ -10793,16 +10793,16 @@ p:last-child {
 
 .program__img-second {
   position: absolute;
-  bottom: -14px;
-  right: 55px;
-  width: 215px;
+  bottom: 0;
+  right: 0;
+  width: 316px;
 }
 
 .program__img-first {
   position: absolute;
-  bottom: -13.5px;
-  right: 70px;
-  width: 195px;
+  bottom: 0;
+  right: 0;
+  width: 292px;
   height: auto;
 }
 
@@ -11421,7 +11421,7 @@ input[type=number] {
   }
 
   .program__img-first, .program__img-second {
-    right: 10px;
+    right: -10px;
   }
 
   .office__slide {
@@ -12068,11 +12068,14 @@ input[type=number] {
     text-align: left;
   }
 
-  .program__img-first,
-.program__img-second {
-    width: 108px;
-    bottom: -8px;
-    right: 35px;
+  .program__img-first {
+      width: 156px;
+      right: 10px;
+  }
+
+  .program__img-second {
+      width: 167px;
+      right: 0;
   }
 
   .program__body {
@@ -12266,9 +12269,12 @@ input[type=number] {
     width: 130px;
   }
 
-  .program__img-first, .program__img-second {
-    bottom: -7px;
-    right: 8px;
+  .program__img-first {
+    right: 10px;
+  }
+
+  .program__img-second {
+      right: 0;
   }
 
   .program__head {

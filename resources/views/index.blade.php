@@ -474,10 +474,10 @@
                                         </div>
                                         <img
                                             class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
-                                            src="{{ $marathon->is_marathon ? ('images/program2.png') : ('images/program.png')}}"
+                                            src="{{ $marathon->is_marathon ? ('images/mod.png') : ('images/diet.png')}}"
                                             alt="#">
                                         <div class="program__title">
-                                            {{$marathon->name}}
+                                            {!! $marathon->name !!}
                                         </div>
 
                                         <div class="program__promo">
