@@ -42,18 +42,17 @@
                 <p class="buy-head__prg">
                     <b>ВАЖНО! Внимательно вводите ваш электронный адрес без ошибок.</b>
                 </p>
-                <div class="buy-head__txt-small">
-                    Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении
-                    суток после оплаты - используйте ее для начала Ваших тренировок!
-                </div>
-                <form class="buy-form" v-if="activeStep === 1" @submit.prevent="initializeTinkoffPayment">
+<!--                <div class="buy-head__txt-small">-->
+<!--                    Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении-->
+<!--                    суток после оплаты - используйте ее для начала Ваших тренировок!-->
+<!--                </div>-->
+                <form class="buy-form mt-3" v-if="activeStep === 1" @submit.prevent="initializeTinkoffPayment">
                     <div class="buy__row">
-                        <div class="buy__group" v-for="(info, index) in users" :key="index">
+                        <div class="buy__group d-none" v-for="(info, index) in users" :key="index">
                             <label :for="info.id" class="buy__label">
                                 {{ info.name }}
                             </label>
                             <input
-                                required
                                 :id="info.id"
                                 :type="info.type"
                                 class="buy__input"
@@ -66,18 +65,21 @@
                             :list="GetLifeStyles.data"
                             v-on:result="result"
                             ref="life_style_select"
+                            class="d-none"
                         ></Myselect>
                         <Myselect
                             :select="selects[1]"
                             :list="trainingLocations"
                             v-on:result="resultForLocation"
                             ref="training_location_select"
+                            class="d-none"
                         ></Myselect>
                         <Myselect
                             :select="selects[2]"
                             :list="GetMenuCalories"
                             v-on:result="result"
                             ref="menu_calories_select"
+                            class="d-none"
                         ></Myselect>
                         <div class="buy__group">
                             <label for="email" class="buy__label">
@@ -94,7 +96,7 @@
                         </div>
                     </div>
                     <div class="buy__price">Сумма: {{ SERVICE_INFO.price }}р.</div>
-                    <div class="buy__agreement mt-1">
+                    <div class="buy__agreement mt-3">
                         <label class="agreement-label">
                             <input
                                 type="checkbox"
@@ -109,11 +111,11 @@
                         </label>
                     </div>
                     <button type="submit" class="button buy-form__btn" :disabled="!agreed">
-                        ОПЛАТИТЬ И ЗАРЕГИСТРИРОВАТЬСЯ
+                        ПРОДОЛЖИТЬ
                     </button>
                 </form>
                 <div class="buy-form__prg">
-                    Нажимая “Оплатить и зарегестрироваться”, я принимаю условия
+                    Нажимая “Продолжить”, я принимаю условия
                     <span>Политики обработки персональных данный и условия Оферты </span>
                 </div>
             </div>
@@ -148,35 +150,35 @@ export default {
                 id: "name",
                 name: "Имя",
                 placeholder: "Любовь Мишанкова",
-                value: "",
+                value: "MOVED_TO_BOT",
                 type: "text"
             },
             {
                 id: "age",
                 name: "Ваш возраст",
                 placeholder: "25 лет",
-                value: "",
+                value: "25",
                 type: "number"
             },
             {
                 id: "weight",
                 name: "Ваш вес",
                 placeholder: "60 кг",
-                value: "",
+                value: "60",
                 type: "number"
             },
             {
                 id: "tall",
                 name: "Ваш рост",
                 placeholder: "165 см",
-                value: "",
+                value: "165",
                 type: "number"
             },
             {
                 id: "required_weight",
                 name: "Желаемый вес",
                 placeholder: "55 кг",
-                value: "",
+                value: "55",
                 type: "number"
             },
         ],
@@ -262,13 +264,13 @@ export default {
                 })
         },
         closeModal() {
-            this.$refs.life_style_select.label = "Ваш образ жизни";
-            this.$refs.menu_calories_select.label = "1300-1400";
-            this.$refs.training_location_select.label = "Дома";
-            this.$refs.life_style_select.value = null;
-            this.$refs.menu_calories_select.value = null;
-            this.$refs.training_location_select.value = null;
-            this.$store.dispatch('fetchTrainingLocations');
+            // this.$refs.life_style_select.label = "Ваш образ жизни";
+            // this.$refs.menu_calories_select.label = "1300-1400";
+            // this.$refs.training_location_select.label = "Дома";
+            // this.$refs.life_style_select.value = null;
+            // this.$refs.menu_calories_select.value = null;
+            // this.$refs.training_location_select.value = null;
+            // this.$store.dispatch('fetchTrainingLocations');
         }
     },
 };

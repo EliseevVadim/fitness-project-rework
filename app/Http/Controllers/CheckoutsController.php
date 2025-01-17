@@ -27,6 +27,11 @@ use App\Core\Tinkoff;
 
 class CheckoutsController extends Controller
 {
+    private array $productLinkMap = array(
+        'КАРМАННЫЙ<br> ДИЕТОЛОГ' => 'https://t.me/AlexLiubov?text=Хочу карманного диетолога',
+        'ПРОЕКТ <br>МОДИФИКАЦИЯ' => 'https://t.me/AlexLiubov?text=Хочу в проект МОДИФИКАЦИЯ'
+    );
+
     public function prepareStripeCheckoutPage(Request $request)
     {
         $userInfo = json_decode($request->user_info);
@@ -101,11 +106,12 @@ class CheckoutsController extends Controller
             'NDS' => 'none',
             'Quantity' => 1
         ];
-        $paymentUrl = $tinkoff->paymentURL($payment, $item);
-        if (!$paymentUrl)
-            dd($tinkoff->error);
-        $paymentId = $tinkoff->payment_id;
-        Session::put('tinkoff_id', $paymentId);
+//        $paymentUrl = $tinkoff->paymentURL($payment, $item);
+//        if (!$paymentUrl)
+//            dd($tinkoff->error);
+//        $paymentId = $tinkoff->payment_id;
+//        Session::put('tinkoff_id', $paymentId);
+        $paymentUrl = $this->productLinkMap[$userInfo->product_name];
         return response()->json([
             'paymentUrl' => $paymentUrl
         ]);

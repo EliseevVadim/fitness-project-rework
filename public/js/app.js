@@ -2467,6 +2467,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2492,31 +2494,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         id: "name",
         name: "Имя",
         placeholder: "Любовь Мишанкова",
-        value: "",
+        value: "MOVED_TO_BOT",
         type: "text"
       }, {
         id: "age",
         name: "Ваш возраст",
         placeholder: "25 лет",
-        value: "",
+        value: "25",
         type: "number"
       }, {
         id: "weight",
         name: "Ваш вес",
         placeholder: "60 кг",
-        value: "",
+        value: "60",
         type: "number"
       }, {
         id: "tall",
         name: "Ваш рост",
         placeholder: "165 см",
-        value: "",
+        value: "165",
         type: "number"
       }, {
         id: "required_weight",
         name: "Желаемый вес",
         placeholder: "55 кг",
-        value: "",
+        value: "55",
         type: "number"
       }],
       additionValues: {
@@ -2591,14 +2593,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         console.log(error.response);
       });
     },
-    closeModal: function closeModal() {
-      this.$refs.life_style_select.label = "Ваш образ жизни";
-      this.$refs.menu_calories_select.label = "1300-1400";
-      this.$refs.training_location_select.label = "Дома";
-      this.$refs.life_style_select.value = null;
-      this.$refs.menu_calories_select.value = null;
-      this.$refs.training_location_select.value = null;
-      this.$store.dispatch('fetchTrainingLocations');
+    closeModal: function closeModal() {// this.$refs.life_style_select.label = "Ваш образ жизни";
+      // this.$refs.menu_calories_select.label = "1300-1400";
+      // this.$refs.training_location_select.label = "Дома";
+      // this.$refs.life_style_select.value = null;
+      // this.$refs.menu_calories_select.value = null;
+      // this.$refs.training_location_select.value = null;
+      // this.$store.dispatch('fetchTrainingLocations');
     }
   }
 });
@@ -42386,17 +42387,11 @@ var render = function () {
             _vm._v(" "),
             _vm._m(0),
             _vm._v(" "),
-            _c("div", { staticClass: "buy-head__txt-small" }, [
-              _vm._v(
-                "\n                Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении\n                суток после оплаты - используйте ее для начала Ваших тренировок!\n            "
-              ),
-            ]),
-            _vm._v(" "),
             _vm.activeStep === 1
               ? _c(
                   "form",
                   {
-                    staticClass: "buy-form",
+                    staticClass: "buy-form mt-3",
                     on: {
                       submit: function ($event) {
                         $event.preventDefault()
@@ -42415,7 +42410,7 @@ var render = function () {
                         _vm._l(_vm.users, function (info, index) {
                           return _c(
                             "div",
-                            { key: index, staticClass: "buy__group" },
+                            { key: index, staticClass: "buy__group d-none" },
                             [
                               _c(
                                 "label",
@@ -42425,9 +42420,9 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                            " +
+                                    "\n                                " +
                                       _vm._s(info.name) +
-                                      "\n                        "
+                                      "\n                            "
                                   ),
                                 ]
                               ),
@@ -42444,7 +42439,6 @@ var render = function () {
                                     ],
                                     staticClass: "buy__input",
                                     attrs: {
-                                      required: "",
                                       id: info.id,
                                       placeholder: info.placeholder,
                                       type: "checkbox",
@@ -42497,7 +42491,6 @@ var render = function () {
                                     ],
                                     staticClass: "buy__input",
                                     attrs: {
-                                      required: "",
                                       id: info.id,
                                       placeholder: info.placeholder,
                                       type: "radio",
@@ -42522,7 +42515,6 @@ var render = function () {
                                     ],
                                     staticClass: "buy__input",
                                     attrs: {
-                                      required: "",
                                       id: info.id,
                                       placeholder: info.placeholder,
                                       type: info.type,
@@ -42547,6 +42539,7 @@ var render = function () {
                         _vm._v(" "),
                         _c("Myselect", {
                           ref: "life_style_select",
+                          staticClass: "d-none",
                           attrs: {
                             select: _vm.selects[0],
                             list: _vm.GetLifeStyles.data,
@@ -42556,6 +42549,7 @@ var render = function () {
                         _vm._v(" "),
                         _c("Myselect", {
                           ref: "training_location_select",
+                          staticClass: "d-none",
                           attrs: {
                             select: _vm.selects[1],
                             list: _vm.trainingLocations,
@@ -42565,6 +42559,7 @@ var render = function () {
                         _vm._v(" "),
                         _c("Myselect", {
                           ref: "menu_calories_select",
+                          staticClass: "d-none",
                           attrs: {
                             select: _vm.selects[2],
                             list: _vm.GetMenuCalories,
@@ -42581,7 +42576,7 @@ var render = function () {
                             },
                             [
                               _vm._v(
-                                "\n                            Ваш Email\n                        "
+                                "\n                                Ваш Email\n                            "
                               ),
                             ]
                           ),
@@ -42621,7 +42616,7 @@ var render = function () {
                       _vm._v("Сумма: " + _vm._s(_vm.SERVICE_INFO.price) + "р."),
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "buy__agreement mt-1" }, [
+                    _c("div", { staticClass: "buy__agreement mt-3" }, [
                       _c("label", { staticClass: "agreement-label" }, [
                         _c("input", {
                           directives: [
@@ -42668,7 +42663,7 @@ var render = function () {
                         _vm._v(" "),
                         _c("span", [
                           _vm._v(
-                            "\n                            Каждые 30 дней происходит списание указанной суммы с карты для продления подписки. За несколько дней до списания мы оповещаем об этом. Отменить подписку можно в любой момент.\n                        "
+                            "\n                                Каждые 30 дней происходит списание указанной суммы с карты для продления подписки. За несколько дней до списания мы оповещаем об этом. Отменить подписку можно в любой момент.\n                            "
                           ),
                         ]),
                       ]),
@@ -42682,7 +42677,7 @@ var render = function () {
                       },
                       [
                         _vm._v(
-                          "\n                    ОПЛАТИТЬ И ЗАРЕГИСТРИРОВАТЬСЯ\n                "
+                          "\n                        ПРОДОЛЖИТЬ\n                    "
                         ),
                       ]
                     ),
@@ -42714,7 +42709,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "buy-form__prg" }, [
       _vm._v(
-        "\n                Нажимая “Оплатить и зарегестрироваться”, я принимаю условия\n                "
+        "\n                    Нажимая “Продолжить”, я принимаю условия\n                    "
       ),
       _c("span", [
         _vm._v("Политики обработки персональных данный и условия Оферты "),
