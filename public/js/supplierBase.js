@@ -5315,12 +5315,6 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "base-order__caption" }, [
-          _vm._v(
-            "\n                Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после\n                оплаты.\n            "
-          ),
-        ]),
-        _vm._v(" "),
         _c(
           "form",
           {
@@ -5456,12 +5450,6 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "base-order__caption" }, [
-          _vm._v(
-            "\n                Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после\n                оплаты.\n            "
-          ),
-        ]),
-        _vm._v(" "),
         _vm._m(1),
       ]
     ),
@@ -5486,7 +5474,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("small", { staticClass: "base-order__small" }, [
-      _vm._v("\n                Нажимая “Оплатить”, я принимаю условия "),
+      _vm._v("\n                Нажимая “Хочу”, я принимаю условия "),
       _c("a", { staticClass: "base-order__link", attrs: { href: "" } }, [
         _vm._v(
           "Политики обработки\n                персональных данный и условия Оферты"
