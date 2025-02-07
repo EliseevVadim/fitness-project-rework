@@ -5288,36 +5288,36 @@ var render = function () {
       },
       [
         _c("h3", { staticClass: "base-order__title" }, [
-          _vm._v("\n            ВАШ ЗАКАЗ\n        "),
+          _vm._v("\n                ВАШ ЗАКАЗ\n            "),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "base-order-price" }, [
           _c("b", { staticClass: "base-order-price__text" }, [
             _vm._v(
-              "\n                " +
+              "\n                    " +
                 _vm._s(_vm.supplierBase.name) +
-                "\n            "
+                "\n                "
             ),
           ]),
           _vm._v(" "),
           _c("small", { staticClass: "base-order-price__price" }, [
             _vm._v(
-              "\n                " +
+              "\n                    " +
                 _vm._s(_vm.supplierBase.discount_price) +
-                " р.\n            "
+                " р.\n                "
             ),
           ]),
         ]),
         _vm._v(" "),
         _c("h5", { staticClass: "base-order__subtitle" }, [
           _vm._v(
-            "\n            Внимательно вводите ваш электронный адрес без ошибок.\n        "
+            "\n                Внимательно вводите ваш электронный адрес без ошибок.\n            "
           ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "base-order__caption" }, [
           _vm._v(
-            "\n            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после\n            оплаты.\n        "
+            "\n                Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после\n                оплаты.\n            "
           ),
         ]),
         _vm._v(" "),
@@ -5389,7 +5389,7 @@ var render = function () {
               _vm.$v.email.$dirty && !_vm.$v.email.required
                 ? _c("small", [
                     _vm._v(
-                      "\n                    Поле не должно быть пустым\n                "
+                      "\n                        Поле не должно быть пустым\n                    "
                     ),
                   ])
                 : _vm._e(),
@@ -5397,7 +5397,7 @@ var render = function () {
               _vm.$v.email.$dirty && !_vm.$v.email.email
                 ? _c("small", [
                     _vm._v(
-                      "\n                    Неверный формат\n                "
+                      "\n                        Неверный формат\n                    "
                     ),
                   ])
                 : _vm._e(),
@@ -5411,7 +5411,7 @@ var render = function () {
                   "base-order-ready-open-modal-" +
                   _vm.supplierBase.base_type_id,
               },
-              [_vm._v("\n                ОПЛАТИТЬ\n            ")]
+              [_vm._v("\n                    ХОЧУ\n                ")]
             ),
           ]
         ),
@@ -5429,42 +5429,36 @@ var render = function () {
       },
       [
         _c("h3", { staticClass: "base-order__title" }, [
-          _vm._v("\n            ВАШ ЗАКАЗ\n        "),
+          _vm._v("\n                ВАШ ЗАКАЗ\n            "),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "base-order-price" }, [
           _c("b", { staticClass: "base-order-price__text" }, [
             _vm._v(
-              "\n                " +
+              "\n                    " +
                 _vm._s(_vm.supplierBase.name) +
-                "\n            "
+                "\n                "
             ),
           ]),
           _vm._v(" "),
           _c("small", { staticClass: "base-order-price__price" }, [
             _vm._v(
-              "\n                " +
+              "\n                    " +
                 _vm._s(_vm.supplierBase.discount_price) +
-                " р.\n            "
+                " р.\n                "
             ),
           ]),
         ]),
         _vm._v(" "),
         _c("h5", { staticClass: "base-order__subtitle" }, [
           _vm._v(
-            "\n            Внимательно вводите ваш электронный адрес без ошибок.\n        "
+            "\n                Внимательно вводите ваш электронный адрес без ошибок.\n            "
           ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "base-order__caption" }, [
           _vm._v(
-            "\n            Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после\n            оплаты.\n        "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "base-order__banner" }, [
-          _vm._v(
-            "\n            Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...\n        "
+            "\n                Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после\n                оплаты.\n            "
           ),
         ]),
         _vm._v(" "),
@@ -5479,10 +5473,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("small", { staticClass: "base-order__small" }, [
-      _vm._v("\n            Нажимая “Оплатить”, я принимаю условия "),
+      _vm._v("\n                Нажимая “Хочу”, я принимаю условия "),
       _c("a", { staticClass: "base-order__link", attrs: { href: "" } }, [
         _vm._v(
-          "Политики обработки\n            персональных данный и условия Оферты"
+          "Политики обработки\n                персональных данных и условия Оферты"
         ),
       ]),
     ])
@@ -5492,10 +5486,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("small", { staticClass: "base-order__small" }, [
-      _vm._v("\n            Нажимая “Оплатить”, я принимаю условия "),
+      _vm._v("\n                Нажимая “Оплатить”, я принимаю условия "),
       _c("a", { staticClass: "base-order__link", attrs: { href: "" } }, [
         _vm._v(
-          "Политики обработки\n            персональных данный и условия Оферты"
+          "Политики обработки\n                персональных данный и условия Оферты"
         ),
       ]),
     ])

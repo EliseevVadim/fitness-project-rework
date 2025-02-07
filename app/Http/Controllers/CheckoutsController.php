@@ -29,7 +29,9 @@ class CheckoutsController extends Controller
 {
     private array $productLinkMap = array(
         'КАРМАННЫЙ<br> ДИЕТОЛОГ' => 'https://t.me/AlexLiubov?text=Хочу карманного диетолога',
-        'ПРОЕКТ <br>МОДИФИКАЦИЯ' => 'https://t.me/AlexLiubov?text=Хочу в проект МОДИФИКАЦИЯ'
+        'ПРОЕКТ <br>МОДИФИКАЦИЯ' => 'https://t.me/AlexLiubov?text=Хочу в проект МОДИФИКАЦИЯ',
+        'Семейная база' => 'https://t.me/AlexLiubov?text=Хочу СЕМЕЙНУЮ БАЗУ',
+        'Бизнес база' => 'https://t.me/AlexLiubov?text=Хочу БИЗНЕС БАЗУ'
     );
 
     public function prepareStripeCheckoutPage(Request $request)
@@ -151,11 +153,16 @@ class CheckoutsController extends Controller
             'NDS' => 'none',
             'Quantity' => 1
         ];
-        $paymentUrl = $tinkoff->paymentURL($payment, $item);
-        if (!$paymentUrl)
-            dd($tinkoff->error);
-        $paymentId = $tinkoff->payment_id;
-        Session::put('tinkoff_id', $paymentId);
+//        $paymentUrl = $tinkoff->paymentURL($payment, $item);
+//        if (!$paymentUrl)
+//            dd($tinkoff->error);
+//        $paymentId = $tinkoff->payment_id;
+//        Session::put('tinkoff_id', $paymentId);
+        SupplierBaseCustomer::create([
+            'email' => $email,
+            'supplier_base_id' => $id
+        ]);
+        $paymentUrl = $this->productLinkMap[$supplierBase->name];
         return response()->json([
             'paymentUrl' => $paymentUrl
         ]);

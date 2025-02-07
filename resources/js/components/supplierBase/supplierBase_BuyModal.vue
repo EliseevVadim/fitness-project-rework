@@ -41,12 +41,12 @@
                 </div>
                 <button class="base-order__btn base-order-ready-open-modal"
                         :class="'base-order-ready-open-modal-' + supplierBase.base_type_id">
-                    ОПЛАТИТЬ
+                    ХОЧУ
                 </button>
             </form>
             <small class="base-order__small">
-                Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
-                персональных данный и условия Оферты</a>
+                Нажимая “Хочу”, я принимаю условия <a href="" class="base-order__link">Политики обработки
+                персональных данных и условия Оферты</a>
             </small>
         </div>
         <div :id="'base-order-ready-' + supplierBase.id"
@@ -71,9 +71,9 @@
                 Доступ к выбранной базе придёт на указанную Вами электронную почту в течение нескольких минут после
                 оплаты.
             </div>
-            <div class="base-order__banner">
-                Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...
-            </div>
+<!--            <div class="base-order__banner">-->
+<!--                Спасибо! Заказ оформлен. Пожалуйста, подождите. Идет переход к оплате...-->
+<!--            </div>-->
             <small class="base-order__small">
                 Нажимая “Оплатить”, я принимаю условия <a href="" class="base-order__link">Политики обработки
                 персональных данный и условия Оферты</a>
