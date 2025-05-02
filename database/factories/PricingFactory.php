@@ -24,9 +24,9 @@ class PricingFactory extends Factory
     {
         return [
             'month' => $this->faker->regexify('[A-Za-z0-9]{50}'),
-            'number' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'price' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'discount' => $this->faker->randomFloat(0, 0, 9999999999.),
+            'number' => $this->faker->randomFloat(0, 0, 99999.),
+            'price' => $this->faker->randomFloat(0, 0, 99999.),
+            'discount' => $this->faker->randomFloat(0, 0, 99999.),
         ];
     }
 }

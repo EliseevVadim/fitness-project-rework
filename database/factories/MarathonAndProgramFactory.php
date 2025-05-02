@@ -27,7 +27,7 @@ class MarathonAndProgramFactory extends Factory
             'description' => $this->faker->text,
             'price' => $this->faker->word,
             'discount_price' => $this->faker->word,
-            'finish_date' => $this->faker->dateTime(),
+           // 'finish_date' => $this->faker->dateTime(),
         ];
     }
 }

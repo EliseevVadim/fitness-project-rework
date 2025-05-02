@@ -24,8 +24,8 @@ class FoodCalendarFactory extends Factory
     public function definition()
     {
         return [
-            'users_menus_id' => UserMenu::factory(),
-            'day' => $this->faker->numberBetween(-10000, 10000),
+            'user_menu_id' => UserMenu::factory(),
+            'day' => $this->faker->numberBetween(0, 30),
             'is_active' => false,
         ];
     }
