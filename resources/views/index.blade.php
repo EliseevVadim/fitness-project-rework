@@ -68,9 +68,17 @@
                     </svg>
                 </div>
                 <svg class="first__back" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M399.776 528.442C499.561 303.664 184.43 -26.0526 14.392 -162.814L0 -348C251.593 -322.989 756.057 -271.052 761.174 -263.389C767.571 -253.81 1023.43 -76.6063 1023.43 -43.0812C1023.43 -16.2612 1056.48 518.331 1073 782.275C1054.34 858.904 971.297 1011.52 788.359 1008.97C559.687 1005.78 275.046 809.414 399.776 528.442Z"
-                        fill="url(#paint0_linear)"/>
+                    <svg width="720" height="741" viewBox="0 0 836 741" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.3151 599.032C123.099 374.254 441 120.5 276 -188.5L380 -418C631.593 -392.989 530.057 -271.052 535.174 -263.389C541.571 -253.81 957.428 -76.6063 957.428 -43.0812C957.428 -16.2612 990.476 518.331 1007 782.275C988.344 858.904 718.112 1030.05 535.174 1027.5C306.502 1024.31 -101.415 880.004 23.3151 599.032Z" fill="url(#paint0_linear_748_1578)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_748_1578" x1="109.999" y1="214" x2="824.5" y2="728.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6CB3"/>
+                                <stop offset="0.361235" stop-color="#9180FF"/>
+                                <stop offset="0.758861" stop-color="#B0FFAA"/>
+                                <stop offset="1" stop-color="#FFFF99"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
                     <ellipse opacity="0.13" rx="322.642" ry="306.642"
                              transform="matrix(-0.969532 -0.244963 0.273341 -0.961917 856.63 108)" fill="white"/>
                     <ellipse opacity="0.13" rx="271.699" ry="258.225"
@@ -105,7 +113,6 @@
                                     <li><a href="#welcome">О проекте</a></li>
                                     <li><a href="#office">Что ты получаешь?</a></li>
                                     <li><a href="#program">Проект Модификация и Карманный диетолог</a></li>
-                                    <li><a href="#calories-calculator">Калькулятор калорий</a></li>
                                     <li><a href="#questions">Вопрос-ответ</a></li>
 {{--                                    <li class="mob__link"><a href="https://goodiets.com/base" target="_blank">База--}}
 {{--                                            поставщиков</a></li>--}}
@@ -181,12 +188,13 @@
                             От Любы и Алексея
                         </h4>
                         <a href="#program" class="button first__btn first__btn-more">
-                            Подробнее
+                            Программы
                         </a>
                     </div>
                 </div>
                 <div class="first__img">
-                    <img src="{{ ('images/first.png') }}" alt="">
+                    <div class="blurred"></div>
+                    <img src="{{ ('images/first-screen-image.png') }}" alt="">
                 </div>
                 <div class="first__col">
                     <div class="first__social">
@@ -258,10 +266,18 @@
                     <ellipse opacity="0.13" rx="255.55" ry="257.039"
                              transform="matrix(0.965489 0.260443 -0.257204 0.966357 345.625 380.947)" fill="white"/>
                 </svg>
-                {!!$main_welcome->content!!}
+                @if($main_welcome)
+                    {!! $main_welcome->content !!}
+                @else
+                    <p>Welcome content is not available.</p>
+                @endif
             </div>
             <div class="merit__block">
-                {!!$address_us_if->content!!}
+                @if($address_us_if)
+                    {!! $address_us_if->content !!}
+                @else
+                    <p>Address content is not available.</p>
+                @endif
             </div>
         </div>
     </section>
@@ -472,10 +488,13 @@
                                                          transform="rotate(-165 -6.13868 0.861328)" fill="white"/>
                                             </svg>
                                         </div>
-                                        <img
-                                            class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
-                                            src="{{ $marathon->is_marathon ? ('images/mod.png') : ('images/diet.png')}}"
-                                            alt="#">
+                                        <div class="program__img-wrapper">
+                                            <img
+                                                class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
+                                                src="{{ $marathon->is_marathon ? ('images/mod_new.png') : ('images/diet_new.png')}}"
+                                                alt="#">
+                                        </div>
+
                                         <div class="program__title">
                                             {!! $marathon->name !!}
                                         </div>
@@ -733,7 +752,7 @@
             <div class="swiper-pagination program-pagination"></div>
         </div>
     </section>
-    <section id="calories-calculator" class="calories-calculator">
+    <!--<section id="calories-calculator" class="calories-calculator">
         <div class="container">
             <h2 class="calories-calculator__title title-second">
                 Калькулятор калорий
@@ -743,7 +762,7 @@
             </h4>
             <calories-calculator></calories-calculator>
         </div>
-    </section>
+    </section>!-->
     <section id="questions">
         <div class="container">
             <h2 class="title-second">
@@ -882,10 +901,10 @@
                 <div class="telegram-head">
                     <img class="telegram-head__img" src="{{ ('images/telegram-head__img.png') }}" alt="#">
                     <div class="telegram-head__text">
-                        <div class="telegram-head__name">
+                        <div class="telegram-head__name text-body">
                             Любовь и Алексей
                         </div>
-                        <div class="telegram-head__online">
+                        <div class="telegram-head__online text-body">
                             сейчас в сети
                         </div>
                     </div>

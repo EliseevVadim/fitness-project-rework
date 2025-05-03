@@ -41,7 +41,7 @@ html, body {
 
 html {
     box-sizing: border-box;
-    font-size: 100vw / (1920/10);
+    font-size: calc(100vw / (1600 / 10));
     overflow-y: auto;
 }
 

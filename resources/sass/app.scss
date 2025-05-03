@@ -275,8 +275,8 @@ p:last-child {
     text-transform: uppercase;
     color: #ffffff;
     height: 69px;
-    background: #9180ff;
-    transition: all 0.7s ease-in-out;
+    background: linear-gradient(93.53deg, #FF6CB3 -5.8%, #9180FF 79.67%);
+    //transition: all 0.7s ease-in-out;
     border-radius: 10000px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -286,7 +286,7 @@ p:last-child {
 }
 
 .button:focus, .button:active, .button:hover {
-    background: #9e8fff;
+    background: #9180FF;
     color: #ffffff;
     text-decoration: none;
 }
