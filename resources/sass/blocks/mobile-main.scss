@@ -114,6 +114,15 @@
             }
         }
     }
+    .our-experts__slider {
+        .swiper-slide-next {
+            transform: translateX(-84%) scale(0.85);
+        }
+
+        .swiper-slide-prev {
+            transform: translateX(84%) scale(0.85);
+        }
+    }
 }
 
 @media only screen and (max-width: 998px) {
@@ -162,6 +171,7 @@
                     width: 250px;
                 }
             }
+
             .office__texts {
                 width: 300px;
             }
@@ -187,6 +197,16 @@
 
         &__name {
             font-size: 50px;
+        }
+    }
+}
+
+@media (min-width: 778px) and (max-width: 998px) {
+    #our-experts {
+        .our-experts__slider {
+            .our-experts__slide {
+                width: calc(100% - 150px);
+            }
         }
     }
 }
@@ -375,6 +395,64 @@
             font-weight: 900;
             font-size: 40px;
             line-height: 120%;
+        }
+    }
+
+    #our-experts {
+        .our-experts__slider {
+            padding: 0;
+            overflow: visible;
+            position: relative;
+
+            .swiper-button-prev, .swiper-button-next {
+                width: 29px;
+                height: 29px;
+
+                &:after {
+                    font-size: 12px;
+                }
+            }
+
+            .swiper-slide-prev {
+                transform: translateX(45%) scale(0.65);
+            }
+
+            .swiper-slide-next {
+                transform: translateX(-45%) scale(0.65);
+            }
+        }
+
+        .our-experts__slide {
+            width: calc(100% - 50px);
+        }
+
+        .our-experts__img img {
+            border-radius: 12px;
+            //width: 300px;
+        }
+
+        .our-experts__subtitle {
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .title-second {
+            margin-bottom: 30px;
+        }
+
+        .our-experts__txt {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    #our-experts {
+        .our-experts__slider {
+            .swiper-button-wrapper {
+                width: 100% !important;
+            }
         }
     }
 }
@@ -887,5 +965,9 @@
     }
     .base__name {
         font-size: 26px;
+    }
+
+    #our-experts {
+
     }
 }

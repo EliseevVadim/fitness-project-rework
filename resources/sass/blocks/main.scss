@@ -247,6 +247,117 @@
     margin: 0 auto 17px;
 }
 
+#our-experts {
+    padding: 30px 0;
+
+    .title-second {
+        margin-bottom: 40px;
+    }
+
+    .our-experts__subtitle {
+        margin: 27px 0 22px;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+
+    .our-experts__slider {
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+    }
+}
+
+.our-experts__img {
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 1s ease;
+
+    img {
+        border-radius: 28px;
+    }
+}
+
+.our-experts__slider {
+    padding-top: 0;
+    padding-bottom: 60px;;
+    overflow: visible;
+
+    .swiper-slide-prev {
+        transform: translateX(67%) scale(0.85);
+        z-index: 5;
+    }
+
+    .swiper-slide-next {
+        transform: translateX(-67%) scale(0.85);
+        z-index: 5;
+    }
+
+    .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .swiper-slide-active {
+        transform: scale(1);
+        filter: brightness(1);
+        z-index: 10;
+
+        .our-experts__texts {
+            display: block;
+        }
+    }
+
+    .swiper-button-wrapper {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        justify-self: anchor-center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        z-index: 10;
+        display: flex;
+        cursor: pointer;
+        color: #9180FF;
+        border: 1px solid;
+        border-radius: 100%;
+        width: 43px;
+        height: 43px;
+
+        &:after {
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
+}
+
+.our-experts__slide {
+    width: 800px;
+    transform: scale(0.85);
+    opacity: 1;
+    filter: brightness(0.6);
+    transition: all 0.4s ease;
+    z-index: 1;
+
+    .our-experts__texts {
+        display: none;
+    }
+}
+
+.our-experts__txt {
+    margin: 0 25px;
+}
+
+
 @keyframes spin-office__texts {
     from {
         opacity: 0;
