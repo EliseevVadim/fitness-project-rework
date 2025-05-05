@@ -32,18 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!containerRect) return;
 
-        const leftOffset = textRect.left - containerRect.left;
-
         arrowsWrapper.style.top = '0';
         arrowsWrapper.style.marginTop = `${imgHeight + 100}px`;
         arrowsWrapper.style.transform = 'translateY(-60%)';
         arrowsWrapper.style.width = `${textRect.width + 220}px`;
-
-        console.log('Позиция обновлена:', {
-            leftOffset,
-            width: textRect.width,
-            height: textRect.height,
-        });
     }
 
     const ourExpertsSlider = new Swiper('.our-experts__slider', {
@@ -59,8 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         on: {
             init: updateArrowPosition,
+            resize: updateArrowPosition,
            // slideChange: updateArrowPosition,
-            slideChangeTransitionEnd: updateArrowPosition
+           // slideChangeTransitionEnd: updateArrowPosition
         }
     });
 
