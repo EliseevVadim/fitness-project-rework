@@ -40,7 +40,7 @@
                 </button>
                 <h5 class="modal__title">ВАШ ЗАКАЗ</h5>
 
-                <p class="buy-head__prg text-nowrap">
+                <p class="buy-head__prg">
                     <b>ВАЖНО! Внимательно вводите ваш электронный адрес без ошибок.</b>
                 </p>
                 <!--                <div class="buy-head__txt-small">-->
@@ -106,12 +106,12 @@
                                 required
                                 class="agreement-checkbox"
                             />
-                            <span v-if="SERVICE_INFO.is_marathon">
-                                Я даю согласие на ежемесячные регулярные списания. <br>Отменить подписку можно в любой момент.
-                            </span>
                             <span v-if="!SERVICE_INFO.is_marathon">
-                                Нажимая “Продолжить”, я принимаю условия
-                                <span class="text-decoration-underline">Политики обработки <br> персональных данный и условия Оферты </span>
+                                Я даю согласие на ежемесячные регулярные списания. <span class="desktop-br"></span>Отменить подписку можно в любой момент.
+                            </span>
+                            <span v-if="SERVICE_INFO.is_marathon">
+                                Нажимая “Продолжить”,<span class="mobile-br"></span> я принимаю условия
+                                <span class="text-decoration-underline">Политики<span class="desktop-br"></span> обработки персональных данных и условия Оферты </span>
                             </span>
                         </label>
                     </div>
@@ -119,9 +119,9 @@
                         ПРОДОЛЖИТЬ
                     </button>
                 </form>
-                <div v-if="SERVICE_INFO.is_marathon" class="buy-form__prg">
+                <div v-if="!SERVICE_INFO.is_marathon" class="buy-form__prg">
                     Нажимая “Продолжить”, я принимаю условия
-                    <span>Политики обработки <br> персональных данный и условия Оферты </span>
+                    <span>Политики обработки <br> персональных данных и условия Оферты </span>
                 </div>
             </div>
         </div>

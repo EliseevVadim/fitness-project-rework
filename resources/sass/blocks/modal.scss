@@ -472,6 +472,8 @@
     appearance: none;
     width: 20px;
     height: 20px;
+    min-height: 20px;
+    min-width: 20px;
     border: 2px solid #9180ff;
     border-radius: 4px;
     cursor: pointer;
@@ -496,6 +498,14 @@
 
 .text-decoration-underline {
     text-decoration: underline;
+}
+
+.desktop-br::after {
+    content: "";
+    display: block;
+}
+.mobile-br {
+    display: none;
 }
 
 @media only screen and (max-width: 778px) {
@@ -758,5 +768,18 @@
     .modal__close svg {
         width: 10px;
         height: 10px;
+    }
+
+    .agreement-label {
+        font-size: 12px !important;
+    }
+
+    .desktop-br::after {
+        display: none;
+    }
+
+    .mobile-br::after {
+        content: "";
+        display: block !important;
     }
 }

@@ -4,7 +4,7 @@ footer {
 
 .footer__nav {
     padding-left: 0;
-    padding-bottom: 35px;
+    padding-bottom: 38px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -94,11 +94,12 @@ footer {
         padding-bottom: 15px;
 
         &__nav {
-            padding-bottom: 20px;
+            padding-bottom: 33px;
 
             li a {
                 margin: 0 3px;
                 font-size: 10px;
+                letter-spacing: -0.2px;
             }
         }
 

@@ -2,10 +2,11 @@
     color: #9180ff;
     font-weight: 500;
     background: #ffffff;
-    box-shadow: 0px 25px 41px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 41px rgba(0, 0, 0, 0.1);
     padding: 45px 70px 160px 90px;
     overflow: hidden;
     position: relative;
+    border-radius: 0 0 50px 50px;
 }
 
 .first__row {
@@ -45,6 +46,10 @@
     right: 60px;
     bottom: 0;
     width: 535px;
+
+    img {
+        filter: drop-shadow(10.6px 4.24px 10.6px rgba(0, 0, 0, 0.25));
+    }
 }
 
 .first__col {
@@ -56,10 +61,10 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 67px;
-    line-height: 126.4%;
+    line-height: 110%;
     text-transform: uppercase;
     color: #9180F6;
-    text-shadow: 0px 8px 24px rgba(129, 135, 189, 0.25);
+    text-shadow: 0 8px 24px rgba(129, 135, 189, 0.25);
     margin: 30px 0 40px;
 }
 
@@ -105,7 +110,7 @@
     line-height: 49px;
     color: #9180ff;
     text-align: center;
-    text-shadow: 0px 8px 24px rgba(129, 135, 189, 0.25);
+    text-shadow: 0 8px 24px rgba(129, 135, 189, 0.25);
 }
 
 .title-caption {
@@ -130,7 +135,7 @@
     overflow: hidden;
     padding: 75px 20px 90px;
     background: linear-gradient(245.4deg, #9180FF 37.47%, #573DFF 98.72%);
-    box-shadow: 0px 30px 52px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 30px 52px rgba(0, 0, 0, 0.2);
     border-radius: 28px;
     width: 100%;
     max-width: 960px;
@@ -455,7 +460,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,12 +529,12 @@
 
 .swiper-pagination-bullet-active {
     background: #9180ff;
-    box-shadow: 0px 31px 41px -7px rgba(129, 135, 189, 0.25);
+    box-shadow: 0 31px 41px -7px rgba(129, 135, 189, 0.25);
 }
 
 .program__block {
     background: #ffffff;
-    box-shadow: 0px 30px 52px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 30px 52px rgba(0, 0, 0, 0.2);
     border-radius: 28px;
     height: 100%;
     padding: 0 58px 42px;
@@ -553,7 +558,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-top-left-radius: 28px;
     overflow: hidden;
     height: 152px;
     width: 145px;
@@ -563,6 +567,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    border-top-left-radius: 28px;
 }
 
 .program__img-wrapper {
@@ -571,7 +576,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    overflow-x: clip;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.program__img-clip {
+    position: relative;
+    width: 100%;
 }
 
 .program__img-second {
@@ -593,9 +605,9 @@
 
 .program__title {
     font-weight: 900;
-    font-size: 42px;
-    line-height: 46px;
-    letter-spacing: -0.9px;
+    font-size: 38px;
+    line-height: 100%;
+    letter-spacing: -0.3px;
     text-transform: uppercase;
 }
 
@@ -619,12 +631,14 @@
     font-size: 17px;
     line-height: 21px;
     background: #ffffff;
-    box-shadow: 0px 30px 52px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 30px 52px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
     width: 138px;
     height: 36px;
     padding: 7px 25px;
+    display: flex;
+    gap: 6px;
 }
 
 .program__list {
@@ -681,14 +695,13 @@
 
 .program__price .grey {
     color: #c4c4c4;
-    margin-left: 30px;
     position: relative;
     padding: 0 6px;
 }
 
 .program__price .grey::after {
     content: "";
-    height: 2px;
+    height: 1px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -803,10 +816,12 @@
 }
 
 .telegram {
+    margin-bottom: 60px;
+
     &__wrap {
         max-width: 710px;
         background: #FFFFFF;
-        box-shadow: 0 7px 63px 0 #0000003D;
+        box-shadow: 0 7px 40px 0 #0000003D;
         border-radius: 30px;
         margin: 50px auto 0;
         overflow: hidden;
@@ -862,7 +877,7 @@
             line-height: 24px;
             position: relative;
             background: #FFFFFF;
-            box-shadow: 0px 30px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 30px 32px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             padding: 30px 20px 42px;
             max-width: 460px;
@@ -898,7 +913,7 @@
             width: 100%;
             max-width: 267px;
             height: 46px;
-            box-shadow: 0px 30px 52px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 30px 52px rgba(0, 0, 0, 0.2);
             font-size: 18px;
         }
     }
@@ -909,7 +924,7 @@
 
     &__title {
         color: #AF00CB;
-        text-shadow: 0px 8px 24px rgba(129, 135, 189, 0.25);
+        text-shadow: 0 8px 24px rgba(129, 135, 189, 0.25);
         margin-bottom: 95px;
     }
 
@@ -954,7 +969,7 @@
         line-height: 131.9%;
         text-transform: uppercase;
         color: #FFFFFF;
-        text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
     &__link {
@@ -962,8 +977,8 @@
         width: 100%;
         height: 46px;
         background: #FFFFFF;
-        box-shadow: 0px 30px 52px rgba(0, 0, 0, 0.2);
-        filter: drop-shadow(0px 0px 30px #FFF8F8);
+        box-shadow: 0 30px 52px rgba(0, 0, 0, 0.2);
+        filter: drop-shadow(0 0 30px #FFF8F8);
         font-size: 18px;
         color: #AF00CB;
         margin: 15px 0 0;
@@ -1056,11 +1071,11 @@ input[type='number'] {
 }
 
 .questions-accordion__item .arrow:before {
-    transform: translate(0px, 0) rotate(45deg);
+    transform: translate(0, 0) rotate(45deg);
 }
 
 .questions-accordion__item .arrow:after {
-    transform: translate(0px, 0) rotate(-45deg);
+    transform: translate(0, 0) rotate(-45deg);
 }
 
 .questions-accordion__item input[type=checkbox] {
@@ -1084,11 +1099,11 @@ input[type='number'] {
 }
 
 .questions-accordion__item input[type=checkbox]:checked ~ .arrow:before {
-    transform: translate(0px, 0) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
 }
 
 .questions-accordion__item input[type=checkbox]:checked ~ .arrow:after {
-    transform: translate(0px, 0) rotate(-90deg);
+    transform: translate(0, 0) rotate(-90deg);
 }
 
 .questions-accordion__item input[type=checkbox]:checked ~ .arrow:before,
@@ -1180,9 +1195,9 @@ input[type='number'] {
     height: 50px;
     width: 100%;
     background: #ffffff;
-    box-shadow: 0px 15px 22px rgba(0, 0, 0, 0.34);
-    -webkit-box-shadow: 0px 15px 22px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 0px 15px 22px rgba(0, 0, 0, 0.34);
+    box-shadow: 0 15px 22px rgba(0, 0, 0, 0.34);
+    -webkit-box-shadow: 0 15px 22px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0 15px 22px rgba(0, 0, 0, 0.34);
     border-radius: 15px;
     font-size: 16px;
     line-height: 24px;

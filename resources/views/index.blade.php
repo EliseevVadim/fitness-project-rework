@@ -5,65 +5,21 @@
         <div class="container">
             <div class="first__row">
                 <div class="first__back first__back-modile-second">
-                    <svg viewBox="0 0 259 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="213" height="369" viewBox="0 0 213 369" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
-                            d="M137.854 198.183C172.262 117.349 63.5966 -1.22231 4.96274 -50.4039L0 -117C86.7561 -108.006 260.709 -89.3282 262.474 -86.5725C264.68 -83.1278 352.906 -19.4023 352.906 -7.34608C352.906 2.29887 364.302 194.547 370 289.466C363.567 317.023 334.93 371.907 271.848 370.989C192.996 369.84 94.8435 299.226 137.854 198.183Z"
-                            fill="url(#paint0_linear_230:2107)"/>
-                        <g filter="url(#filter0_d_230:2107)">
-                            <path
-                                d="M209.854 198.183C244.262 117.349 135.597 -1.22231 76.9627 -50.4039L72 -117C158.756 -108.006 332.709 -89.3282 334.474 -86.5725C336.68 -83.1278 424.906 -19.4023 424.906 -7.34608C424.906 2.29887 436.302 194.547 442 289.466C435.567 317.023 406.93 371.907 343.848 370.989C264.996 369.84 166.844 299.226 209.854 198.183Z"
-                                fill="url(#paint1_linear_230:2107)"/>
-                        </g>
+                            d="M9.57308 269.371C47.6774 183.536 169.073 86.6356 106.065 -31.3615L145.779 -119C241.854 -109.449 203.081 -62.8853 205.035 -59.9591C207.478 -56.3014 366.28 11.3671 366.28 24.1692C366.28 34.4109 378.9 238.554 385.21 339.346C378.086 368.608 274.893 433.965 205.035 432.989C117.713 431.77 -38.0573 376.665 9.57308 269.371Z"
+                            fill="url(#paint0_linear_748_4545)"/>
                         <defs>
-                            <filter id="filter0_d_230:2107" x="47" y="-133" width="420" height="538"
-                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                               result="hardAlpha"/>
-                                <feOffset dy="9"/>
-                                <feGaussianBlur stdDeviation="12.5"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix"
-                                         result="effect1_dropShadow_230:2107"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230:2107"
-                                         result="shape"/>
-                            </filter>
-                            <linearGradient id="paint0_linear_230:2107" x1="185" y1="-117" x2="185" y2="371"
-                                            gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9180FF"/>
-                                <stop offset="1" stop-color="#573DFF"/>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_230:2107" x1="175" y1="215" x2="385" y2="371"
-                                            gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9180FF"/>
-                                <stop offset="1" stop-color="#573DFF"/>
+                            <linearGradient id="paint0_linear_748_4545" x1="49.2318" y1="15.2594" x2="263.268"
+                                            y2="322.74" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6CB3"/>
+                                <stop offset="0.361235" stop-color="#9180FF"/>
+                                <stop offset="0.758861" stop-color="#B0FFAA"/>
+                                <stop offset="1" stop-color="#FFFF99"/>
                             </linearGradient>
                         </defs>
                     </svg>
-                </div>
 
-
-                <div class="first__back first__back-modile">
-                    <svg width="491" height="690" viewBox="0 0 491 690" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M239.195 402.444C298.898 267.942 110.349 70.6465 8.61103 -11.1885L0 -122C150.534 -107.034 452.366 -75.9559 455.428 -71.3706C459.255 -65.639 612.34 40.3962 612.34 60.4569C612.34 76.5055 632.113 396.394 642 554.332C630.838 600.185 581.149 691.51 471.693 689.981C334.873 688.07 164.566 570.572 239.195 402.444Z"
-                            fill="url(#paint0_linear_230:961)"/>
-                        <ellipse opacity="0.13" rx="276.92" ry="263.188"
-                                 transform="matrix(-0.969532 -0.244963 0.273341 -0.961917 574.423 74)"
-                                 fill="white"/>
-                        <ellipse opacity="0.13" rx="233.196" ry="221.632"
-                                 transform="matrix(-0.969532 -0.244963 0.273341 -0.961917 605.904 44.6236)"
-                                 fill="white"/>
-                        <defs>
-                            <linearGradient id="paint0_linear_230:961" x1="187" y1="178" x2="483" y2="690"
-                                            gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9180FF"/>
-                                <stop offset="1" stop-color="#573DFF"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
                 </div>
                 <svg class="first__back" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <svg width="720" height="741" viewBox="0 0 836 741" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,9 +36,9 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <ellipse opacity="0.13" rx="322.642" ry="306.642"
+                    <ellipse opacity="0.13" rx="400" ry="380"
                              transform="matrix(-0.969532 -0.244963 0.273341 -0.961917 856.63 108)" fill="white"/>
-                    <ellipse opacity="0.13" rx="271.699" ry="258.225"
+                    <ellipse opacity="0.13" rx="370" ry="380"
                              transform="matrix(-0.969532 -0.244963 0.273341 -0.961917 893.309 73.7733)"
                              fill="white"/>
                     <defs>
@@ -194,7 +150,6 @@
                     </div>
                 </div>
                 <div class="first__img">
-                    <div class="blurred"></div>
                     <img src="{{ ('images/first-screen-image.png') }}" alt="">
                 </div>
                 <div class="first__col">
@@ -436,8 +391,10 @@
                                 let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                                 let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                                document.getElementById(marathon.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
-                                    + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+                                document.getElementById(marathon.id + "promo_time").innerHTML =
+                                    `<span>${days}</span><span>:</span><span>${hours.toString().padStart(2, '0')}</span><span>:</span><span>${minutes.toString().padStart(2, '0')}</span>`;
+                                /*document.getElementById(marathon.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
+                                    + minutes.toString().padStart(2, '0'); + ":" + seconds.toString().padStart(2, '0');*/
                                 if (distance < 0) {
                                     localStorage.removeItem('countDownDate');
                                     clearInterval(m);
@@ -461,8 +418,10 @@
                                 let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                                 let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                                document.getElementById(program.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
-                                    + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+                                document.getElementById(program.id + "promo_time").innerHTML =
+                                    `<span>${days}</span><span>:</span><span>${hours.toString().padStart(2, '0')}</span><span>:</span><span>${minutes.toString().padStart(2, '0')}</span>`;
+                                /*document.getElementById(program.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
+                                    + minutes.toString().padStart(2, '0'); + ":" + seconds.toString().padStart(2, '0');*/
                                 if (distance < 0) {
                                     localStorage.removeItem('countDownDateForProgram');
                                     clearInterval(p);
@@ -476,7 +435,7 @@
                             <div id="{{'marathon' . $marathon->id}}">
                                 <div class="program__block">
                                     <div class="program__head">
-                                        <div class="program__svg">
+                                        <div class="program__svg d-none d-lg-block d-sm-block">
                                             <svg width="145" height="152" viewBox="0 0 145 152" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <ellipse opacity="0.13" cx="21.6477" cy="28.6478" rx="123.003"
@@ -490,29 +449,47 @@
                                                          transform="rotate(-165 -6.13868 0.861328)" fill="white"/>
                                             </svg>
                                         </div>
+                                        <div class="program__svg d-block d-lg-none d-sm-none">
+                                            <svg width="94" height="94" viewBox="0 0 94 94" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <ellipse opacity="0.13" cx="44" cy="-6.01367" rx="47" ry="47"
+                                                         transform="rotate(-90 44 -6.01367)" fill="white"/>
+                                            </svg>
+                                            <svg width="94" height="94" viewBox="0 0 94 94" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <ellipse opacity="0.13" cx="8" cy="12.9863" rx="47" ry="47"
+                                                         transform="rotate(-90 8 12.9863)" fill="white"/>
+                                            </svg>
+
+                                        </div>
                                         <div class="program__img-wrapper">
-                                            <img
-                                                class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
-                                                src="{{ $marathon->is_marathon ? ('images/mod_new.png') : ('images/diet_new.png')}}"
-                                                alt="#">
+                                            <div class="program__img-clip">
+                                                <img
+                                                    class="{{ $marathon->is_marathon ? 'program__img-first' : 'program__img-second'}}"
+                                                    src="{{ $marathon->is_marathon ? ('images/mod_new.png') : ('images/diet_new.png')}}"
+                                                    alt="#">
+                                            </div>
                                         </div>
 
-                                        <div class="program__title">
-                                            {!! $marathon->name !!}
-                                        </div>
+                                        <div class="program__head-content">
 
-                                        <div class="program__promo">
-                                            Окончание акции
+                                            <div class="program__title">
+                                                {!! $marathon->name !!}
+                                            </div>
+
+                                            <div class="program__promo">
+                                                Окончание акции
+                                            </div>
+                                            <div id="{{$marathon->id . 'promo_time'}}"
+                                                 class="program__promo-time"></div>
+                                            <script type="application/javascript">
+                                                @if($marathon->is_marathon)
+                                                processMarathon({!! json_encode($marathon) !!});
+                                                @else
+                                                processProgram({!! json_encode($marathon) !!})
+                                                @endif
+                                            </script>
                                         </div>
-                                        <div id="{{$marathon->id . 'promo_time'}}"
-                                             class="program__promo-time"></div>
-                                        <script type="application/javascript">
-                                            @if($marathon->is_marathon)
-                                            processMarathon({!! json_encode($marathon) !!});
-                                            @else
-                                            processProgram({!! json_encode($marathon) !!})
-                                            @endif
-                                        </script>
                                     </div>
                                     <div class="program__body">
                                         <ul class="program__list">
@@ -743,13 +720,14 @@
                                             @endif
                                         </ul>
                                         <div class="program__price">
-											<span>
-												{{$marathon->discount_price}} <sub> ₽  за {{$marathon->duration}} дней</sub>
-											</span>
+                                            <span>
+                                                {{ number_format($marathon->discount_price, 0, ',', ' ') }} <sub> ₽ за {{ $marathon->duration }} дней</sub>
+                                            </span>
                                             <span class="grey">
-                                            {{$marathon->price}} <sub>₽</sub>
-											</span>
+                                                {{ number_format($marathon->price, 0, ',', ' ') }} <sub>₽</sub>
+                                            </span>
                                         </div>
+
                                         {{--                                        @if($marathon->is_marathon)--}}
                                         {{--                                            <div class="program__start">--}}
                                         {{--                                                <span>СТАРТ</span> в понедельник!--}}
@@ -769,7 +747,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="swiper-pagination program-pagination"></div>
+            <div class="swiper-pagination program-pagination d-none d-sm-block"></div>
         </div>
     </section>
     <!--<section id="calories-calculator" class="calories-calculator">
@@ -853,7 +831,7 @@
                         allowFullScreen></iframe>
             </div>
             <div class="d-flex justify-content-center">
-                <a href="#program" class="button first__btn first__btn-more">
+                <a href="#program" class="button first__btn first__btn-more watch-video__btn">
                     Хочу в проект
                 </a>
             </div>
@@ -989,10 +967,10 @@
             </div>
         </div>
     </section>
-    <section id="telegram" class="telegram" style="margin-bottom: 55px">
+    <section id="telegram" class="telegram">
         <div class="container">
             <h2 class="telegram__title title-second">
-                Остались вопросы ?
+                Остались вопросы?
             </h2>
             <div class="telegram__wrap">
                 <div class="telegram-head">

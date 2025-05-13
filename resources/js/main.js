@@ -17,6 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    function updateSliderHeight(slider) {
+        setTimeout(() => {
+            slider.updateAutoHeight();
+        }, 100);
+    }
+
+    window.addEventListener('load', () => {
+        updateSliderHeight(officeSlider);
+    });
+
+
     function updateArrowPosition() {
         const activeSlide = document.querySelector('.our-experts__slide.swiper-slide-active');
         const image = activeSlide?.querySelector('.our-experts__img');
