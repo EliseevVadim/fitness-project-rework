@@ -761,57 +761,32 @@
             <calories-calculator></calories-calculator>
         </div>
     </section>!-->
-
+    @php
+        $experts = json_decode(file_get_contents(public_path('json/experts.json')), true);
+    @endphp
     <section id="our-experts">
         <div class="container">
             <h2 class="title-second">Наши эксперты</h2>
 
             <div class="our-experts__slider swiper position-relative">
                 <div class="swiper-wrapper">
-                    <div class="our-experts__slide swiper-slide">
-                        <div class="our-experts__img">
-                            <img src="{{ ('images/experts/1.png') }}" alt="#">
+                    @foreach($experts as $expert)
+                        <div class="our-experts__slide swiper-slide">
+                            <div class="our-experts__img">
+                                <img src="{{ asset($expert['image']) }}" alt="{{ $expert['title'] }}">
+                            </div>
+                            <div class="our-experts__texts">
+                                <h4 class="our-experts__subtitle">{{ $expert['title'] }}, {{ $expert['specialization'] }}</h4>
+                                <p class="our-experts__txt">
+                                    В этом выпуске вы узнаете:<br>
+                                    @foreach($expert['text'] as $line)
+                                        — {{ $line }}<br>
+                                    @endforeach
+                                </p>
+                            </div>
                         </div>
-                        <div class="our-experts__texts">
-                            <h4 class="our-experts__subtitle">Светлана Киричук, Врач - косметолог</h4>
-                            <p class="our-experts__txt">
-                                В этом выпуске вы узнаете:<br>
-                                — Какие изменения происходят с кожей во время похудения и как их минимизировать?<br>
-                                — Какие процедуры и уходовые средства помогут коже оставаться упругой и свежей?<br>
-                                — Как избежать появления нежелательных морщин и дряблости кожи?<br>
-                                — Какие витамины особенно важны для кожи в период похудения?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="our-experts__slide swiper-slide">
-                        <div class="our-experts__img">
-                            <img src="{{ ('images/experts/2.png') }}" alt="#">
-                        </div>
-                        <div class="our-experts__texts">
-                            <h4 class="our-experts__subtitle">ВКУСНОЕ МЕНЮ</h4>
-                            <p class="our-experts__txt">
-                                В этом выпуске вы узнаете:<br>
-                                — Какие изменения происходят с кожей во время похудения и как их минимизировать?<br>
-                                — Какие витамины особенно важны для кожи в период похудения?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="our-experts__slide swiper-slide">
-                        <div class="our-experts__img">
-                            <img src="{{ ('images/experts/3.png') }}" alt="#">
-                        </div>
-                        <div class="our-experts__texts">
-                            <h4 class="our-experts__subtitle">Советы по уходу</h4>
-                            <p class="our-experts__txt">
-                                В этом выпуске вы узнаете:<br>
-                                — Какие изменения происходят с кожей во время похудения и как их минимизировать?<br>
-                                — Какие процедуры и уходовые средства помогут коже оставаться упругой и свежей?<br>
-                                — Какие витамины особенно важны для кожи в период похудения?
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-
                 <!-- стрелки -->
                 <div class="swiper-button-wrapper position-absolute">
                     <div class="swiper-button-prev"></div>
