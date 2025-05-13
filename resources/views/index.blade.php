@@ -392,7 +392,7 @@
                                 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                                 let seconds = Math.floor((distance % (1000 * 60)) / 1000);
                                 document.getElementById(marathon.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
-                                    + minutes.toString().padStart(2, '0'); + ":" + seconds.toString().padStart(2, '0');
+                                    + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
                                 /*document.getElementById(marathon.id + "promo_time").innerHTML =
                                     `<span>${days}</span><span>:</span><span>${hours.toString().padStart(2, '0')}</span><span>:</span><span>${minutes.toString().padStart(2, '0')}</span>`;*/
                                 /*document.getElementById(marathon.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
@@ -423,7 +423,7 @@
                                 /*document.getElementById(program.id + "promo_time").innerHTML =
                                     `<span>${days}</span><span>:</span><span>${hours.toString().padStart(2, '0')}</span><span>:</span><span>${minutes.toString().padStart(2, '0')}</span>`;*/
                                 document.getElementById(program.id + "promo_time").innerHTML = days + ":" + hours.toString().padStart(2, '0') + ":"
-                                    + minutes.toString().padStart(2, '0'); + ":" + seconds.toString().padStart(2, '0');
+                                    + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
                                 if (distance < 0) {
                                     localStorage.removeItem('countDownDateForProgram');
                                     clearInterval(p);
