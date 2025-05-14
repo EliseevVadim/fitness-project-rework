@@ -17,6 +17,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    function updateSliderHeight(slider) {
+        setTimeout(() => {
+            slider.updateAutoHeight();
+        }, 100);
+    }
+
+    window.addEventListener('load', () => {
+        updateSliderHeight(officeSlider);
+    });
+
+
+    function updateArrowPosition() {
+        const activeSlide = document.querySelector('.our-experts__slide.swiper-slide-active');
+        const image = activeSlide?.querySelector('.our-experts__img');
+        const textBlock = activeSlide?.querySelector('.our-experts__texts');
+        const arrowsWrapper = document.querySelector('.swiper-button-wrapper');
+
+        if (!activeSlide || !image || !textBlock || !arrowsWrapper) return;
+
+        const imgHeight = image.offsetHeight;
+
+        const textRect = textBlock.getBoundingClientRect();
+        const containerRect = document.querySelector('.our-experts__slider')?.getBoundingClientRect();
+
+        if (!containerRect) return;
+
+        arrowsWrapper.style.top = '0';
+        arrowsWrapper.style.marginTop = `${imgHeight + 100}px`;
+        arrowsWrapper.style.transform = 'translateY(-60%)';
+        arrowsWrapper.style.width = `${textRect.width + 220}px`;
+    }
+
+    const ourExpertsSlider = new Swiper('.our-experts__slider', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 0,
+        loop: true,
+        speed: 1200,
+        //maxBackfaceHiddenSlides: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            init: updateArrowPosition,
+            resize: updateArrowPosition,
+           // slideChange: updateArrowPosition,
+           // slideChangeTransitionEnd: updateArrowPosition
+        }
+    });
+
+
     var swiperDiet = new Swiper(".calendar__slider-diet", {
         spaceBetween: 0,
         slidesPerView: 1,

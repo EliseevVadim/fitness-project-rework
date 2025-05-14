@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\MenuType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Menu;

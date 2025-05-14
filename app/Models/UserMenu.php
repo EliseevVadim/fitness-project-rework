@@ -33,7 +33,7 @@ class UserMenu extends Model
     ];
 
 
-    
+
     public function menuType()
     {
         return $this->belongsTo(\App\Models\MenuType::class);

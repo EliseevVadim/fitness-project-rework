@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Training;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\PhysicsParameters;
@@ -26,15 +27,15 @@ class PhysicsParametersFactory extends Factory
         return [
             'user_id' => User::factory(),
             'training_id' => Training::factory(),
-            'phase_number' => $this->faker->randomInteger(0, 0, 9999999),
+            'phase_number' => $this->faker->numberBetween(0, 0, 1000),
             'photoes' => '{}',
-            'weight' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'height' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'dream_weight' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'current_weight' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'hips_cm' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'waist_cm' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'chest_cm' => $this->faker->randomFloat(0, 0, 9999999999.),
+            'weight' => $this->faker->randomFloat(0, 0, 1000.),
+            'height' => $this->faker->randomFloat(0, 0, 1000.),
+            'dream_weight' => $this->faker->randomFloat(0, 0, 1000.),
+            'current_weight' => $this->faker->randomFloat(0, 0, 1000.),
+            'hips_cm' => $this->faker->randomFloat(0, 0, 1000.),
+            'waist_cm' => $this->faker->randomFloat(0, 0, 1000.),
+            'chest_cm' => $this->faker->randomFloat(0, 0, 1000.),
         ];
     }
 }

@@ -39,13 +39,14 @@
                     </svg>
                 </button>
                 <h5 class="modal__title">ВАШ ЗАКАЗ</h5>
+
                 <p class="buy-head__prg">
                     <b>ВАЖНО! Внимательно вводите ваш электронный адрес без ошибок.</b>
                 </p>
-<!--                <div class="buy-head__txt-small">-->
-<!--                    Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении-->
-<!--                    суток после оплаты - используйте ее для начала Ваших тренировок!-->
-<!--                </div>-->
+                <!--                <div class="buy-head__txt-small">-->
+                <!--                    Ссылка на папку с выбранной программой придёт на указанную Вами электронную почту в течении-->
+                <!--                    суток после оплаты - используйте ее для начала Ваших тренировок!-->
+                <!--                </div>-->
                 <form class="buy-form mt-3" v-if="activeStep === 1" @submit.prevent="initializeTinkoffPayment">
                     <div class="buy__row">
                         <div class="buy__group d-none" v-for="(info, index) in users" :key="index">
@@ -105,8 +106,12 @@
                                 required
                                 class="agreement-checkbox"
                             />
-                            <span>
-                                Я даю согласие на ежемесячные регулярные списания. Отменить подписку можно в любой момент.
+                            <span v-if="!SERVICE_INFO.is_marathon">
+                                Я даю согласие на ежемесячные регулярные списания. <span class="desktop-br"></span>Отменить подписку можно в любой момент.
+                            </span>
+                            <span v-if="SERVICE_INFO.is_marathon">
+                                Нажимая “Продолжить”,<span class="mobile-br"></span> я принимаю условия
+                                <span class="text-decoration-underline">Политики<span class="desktop-br"></span> обработки персональных данных и условия Оферты </span>
                             </span>
                         </label>
                     </div>
@@ -114,9 +119,9 @@
                         ПРОДОЛЖИТЬ
                     </button>
                 </form>
-                <div class="buy-form__prg">
+                <div v-if="!SERVICE_INFO.is_marathon" class="buy-form__prg">
                     Нажимая “Продолжить”, я принимаю условия
-                    <span>Политики обработки персональных данный и условия Оферты </span>
+                    <span>Политики обработки <br> персональных данных и условия Оферты </span>
                 </div>
             </div>
         </div>
@@ -276,13 +281,14 @@ export default {
 };
 </script>
 <style scoped>
-    .button.buy-form__btn:disabled {
-        background-color: #CCCCCC;
-        color: #666666;
-        cursor: not-allowed;
-        opacity: 0.7;
-    }
-    .agreement-label {
-        font-size: 14px;
-    }
+.button.buy-form__btn:disabled {
+    background: #CCCCCC;
+    color: #666666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.agreement-label {
+    font-size: 14px;
+}
 </style>

@@ -1,9 +1,22 @@
+@media (min-width: 557px) {
+    .program__img-clip {
+        height: calc(100% + 65px);
+        bottom: 65px;
+        position: relative;
+        overflow: hidden;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+@media (min-width: 1550px) and (max-width: 1900px) {
+    .first__img {
+        right: calc(15px + (100vw - 700px) * (15 - 50) / (1550 - 1765));
+    }
+}
+
 @media only screen and (max-width: 1350px) {
     .first__img {
-        position: absolute;
-        left: 595px;
-        bottom: 75px;
-        max-width: 430px;
+        max-width: 535px;
     }
     #first {
         padding-right: 30px;
@@ -13,7 +26,7 @@
         max-width: 730px;
     }
     .program__img-first, .program__img-second {
-        right: 10px;
+        right: -66px;
     }
 
     .office__slide {
@@ -64,23 +77,17 @@
         scrollbar-width: none;
     }
     .first__img {
-        left: 480px;
-        bottom: 80px;
         width: 390px;
     }
     .first__back {
         position: absolute;
-        top: -48px;
         height: 100%;
         width: 100%;
-        max-width: 800px;
         z-index: 0;
+        right: -30px;
     }
     #welcome {
         padding-top: 40px;
-    }
-    .first__back {
-        display: none;
     }
     .first__back-modile {
         display: block;
@@ -114,62 +121,70 @@
             }
         }
     }
+    .our-experts__slider {
+        .swiper-slide-next {
+            transform: translateX(-84%) scale(0.85);
+        }
+
+        .swiper-slide-prev {
+            transform: translateX(84%) scale(0.85);
+        }
+    }
 }
 
 @media only screen and (max-width: 998px) {
     .program__slider {
         width: 472px;
     }
+
     .head__social a svg {
         width: 23px;
         height: 23px;
     }
+
     .program__head {
-        box-shadow: 0px 9px 52px rgba(0, 0, 0, 0.20);
+        box-shadow: 0 9px 52px rgba(0, 0, 0, 0.2);
     }
+
     #first {
-        padding-right: 0;
-        padding-left: 0;
-        padding-bottom: 200px;
-        padding-top: 74px;
+        padding: 74px 0 200px;
     }
 
-
-    .first__img {
-        position: absolute;
-        left: auto;
-        right: 14px;
-        bottom: 80px;
-        max-width: 387px;
-    }
-    .first__back {
-        top: 0;
-    }
-    .first__social {
-        display: none;
-    }
-    .first__caption {
-        font-size: 15px;
-        line-height: 18px;
-    }
-    .first__btn.white-btn {
-        display: none;
-    }
-    .office__slide {
-        &.swiper-slide-active {
-            .office__img {
-                img {
-                    width: 250px;
-                }
-            }
-            .office__texts {
-                width: 300px;
-            }
+    .first {
+        &__img {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
         }
 
-        .office__img {
-            img {
-                width: 170px;
+        &__back {
+            top: 0;
+            right: -25%;
+        }
+
+        &__social,
+        &__btn.white-btn {
+            display: none;
+        }
+
+        &__caption {
+            font-size: 15px;
+            line-height: 1.2; // 18/15
+        }
+    }
+
+    .office__slide {
+        .office__img img {
+            width: 170px;
+        }
+
+        &.swiper-slide-active {
+            .office__img img {
+                width: 250px;
+            }
+
+            .office__texts {
+                width: 300px;
             }
         }
     }
@@ -189,20 +204,55 @@
             font-size: 50px;
         }
     }
+
+    .program__block {
+        box-shadow: 0 10px 18px 0 #00000030;
+    }
+}
+
+@media (min-width: 778px) and (max-width: 998px) {
+    #our-experts {
+        .our-experts__slider {
+            .our-experts__slide {
+                width: calc(100% - 150px);
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 778px) {
     #first {
-        padding-top: 0;
-        padding-right: 0;
-        padding-left: 0;
         padding-bottom: 73px;
+        margin-bottom: 52px;
 
         .container {
-            padding-right: 0;
-            padding-left: 0;
+            padding-inline: 0;
+        }
+
+        .first__back-modile-second {
+            display: block;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .first__back {
+            right: -20%;
+        }
+
+        .first__img {
+            width: 56%;
+            left: auto;
+            right: 0;
+        }
+
+        svg.first__back {
+            display: none;
         }
     }
+
 
     .title-second {
         font-size: 34px;
@@ -221,8 +271,9 @@
         line-height: 29px;
     }
     .questions-accordion__body {
-        font-size: 16px;
-        line-height: 25px;
+        line-height: 20px;
+        font-size: 14px;
+        margin-top: 10px;
     }
     .questions-accordion__list {
         padding-right: 0;
@@ -283,7 +334,7 @@
     }
     .first__row {
         overflow: hidden;
-        padding: 53px 30px 0;
+        padding-inline: 18px;
     }
     .first__btn-more {
         margin-top: 20px;
@@ -297,12 +348,6 @@
         justify-content: center;
         padding: 0;
         margin-bottom: 170px;
-    }
-    .first__img {
-        width: 330px;
-        bottom: 100px;
-        left: auto;
-        right: 14px;
     }
     .title {
         font-size: 35px;
@@ -377,54 +422,126 @@
             line-height: 120%;
         }
     }
+
+    #our-experts {
+        .our-experts__slider {
+            padding: 0;
+            overflow: visible;
+            position: relative;
+
+            .swiper-button-prev, .swiper-button-next {
+                width: 29px;
+                height: 29px;
+
+                &:after {
+                    font-size: 12px;
+                }
+            }
+
+            .swiper-slide-prev {
+                transform: translateX(45%) scale(0.65);
+            }
+
+            .swiper-slide-next {
+                transform: translateX(-45%) scale(0.65);
+            }
+        }
+
+        .our-experts__slide {
+            width: calc(100% - 50px);
+        }
+
+        .our-experts__img img {
+            border-radius: 12px;
+            //width: 300px;
+        }
+
+        .our-experts__subtitle {
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            position: relative;
+            left: -15px;
+        }
+
+        .title-second {
+            margin-bottom: 30px;
+        }
+
+        .our-experts__txt {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    #our-experts {
+        .our-experts__slider {
+            .swiper-button-wrapper {
+                width: 100% !important;
+            }
+        }
+    }
+
+    #watch-video {
+        padding: 50px 0;
+
+        .title-second {
+            padding-bottom: 30px;
+        }
+
+        .watch-video__btn {
+            width: 234px;
+            height: 56px;
+            font-size: 18px;
+        }
+    }
 }
 
 @media only screen and (max-width: 556px) {
     #first {
+        height: 369px;
         padding-bottom: 150px;
+        margin-bottom: 52px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 25px 41px rgba(0, 0, 0, 0.1);
     }
-    .first__row {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+
+    .first__back,
     .first__back-modile {
         display: none;
     }
-    .first__back-modile-second {
-        display: block;
-        height: 488px;
-        right: -26px;
-        top: -85px;
 
-        svg {
-            width: 100%;
-            height: 100%;
-        }
+    .first__back-modile-second {
+        right: -12% !important;
     }
+
     .first__img {
-        width: 223.98px;
-        right: 0;
+        width: 60%;
+        right: -40px !important;
+        bottom: -5px;
     }
+
     .first__btn-more {
         margin-bottom: 0;
     }
+
     .first__caption {
         margin-top: 32px;
         font-size: 14px;
-        line-height: 17px;
-    }
-    .title {
-        margin-top: 9px;
-        margin-bottom: 6px;
-        font-size: 25px;
-        line-height: 126.4%;
-    }
-    .title__caption {
-        font-size: 14px;
-        line-height: 17px;
-        text-transform: none;
+        line-height: 1.21;
     }
 
+    .title {
+        margin: 9px 0 6px;
+        font-size: 23px;
+        line-height: 1.264;
+    }
+
+    .title__caption {
+        font-size: 14px;
+        line-height: 1.21;
+        text-transform: none;
+    }
 
     .welcome__block {
         background: transparent;
@@ -475,7 +592,8 @@
     .title-second {
         font-size: 28px;
         line-height: 130%;
-        text-shadow: 0px 8px 24px rgba(129, 135, 189, 0.25);
+        padding-right: 30px;
+        padding-left: 30px;
     }
     .merit__block .title-second {
         margin-bottom: 60px;
@@ -513,10 +631,12 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 20px;
+        padding: 0 32px;
     }
 
     .office__texts {
         margin-top: 18px;
+        padding: 0 26px;
     }
     .office__subtitle {
         margin: 18px 0 12px;
@@ -559,6 +679,10 @@
 
     #program {
         padding: 0;
+
+        .title-second {
+            line-height: 158%;
+        }
     }
     .questions-accordion__head {
         font-weight: 500;
@@ -605,7 +729,7 @@
 
         .swiper-slide {
             width: 100% !important;
-            margin-bottom: 55px;
+            margin-bottom: 72px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -621,17 +745,25 @@
         position: static;
     }
     .program__block {
-        box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.17);
         padding: 0;
+    }
+    .program__img-clip {
+        overflow: hidden;
+        border-bottom-right-radius: 20px;
+        height: 198px;
+        top: -44px;
     }
     .program__head {
         height: 154px;
-        padding: 40px 26px;
+        border-radius: 20px;
+        padding: 25px 28px;
         margin: 0;
+        box-shadow: none;
     }
     .program__title {
         font-size: 22px;
         line-height: 131.9%;
+        letter-spacing: 0;
     }
     .program__promo {
         margin: 6px 0 4px;
@@ -652,12 +784,17 @@
     }
     .program__img-first,
     .program__img-second {
-        width: 108px;
-        bottom: -8px;
-        right: 35px;
+        right: -38px;
+        filter: drop-shadow(5.83px 2.33px 5.83px rgba(0, 0, 0, 0.25));
+    }
+    .program__img-first {
+        width: 158px;
+    }
+    .program__img-second {
+        width: 198px;
     }
     .program__body {
-        padding: 30px 10px 20px;
+        padding: 23px 10px 40px;
     }
     .program__list {
         padding: 0;
@@ -679,7 +816,7 @@
     }
     .program__price {
         line-height: 164.4%;
-        margin-top: 20px;
+        margin-top: 40px;
 
         span {
             font-size: 26px;
@@ -692,6 +829,10 @@
 
         .grey {
             font-size: 23px;
+
+            sub {
+                font-size: 16px;
+            }
         }
     }
     .program__start {
@@ -742,6 +883,8 @@
         padding: 0;
     }
     .telegram {
+        margin-bottom: 50px;
+
         &__wrap {
             margin-top: 20px;
         }
@@ -786,6 +929,10 @@
             height: 33px;
         }
     }
+
+    .telegram-foot {
+        padding: 11px 34px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -802,6 +949,11 @@
             margin-left: 3px;
         }
     }
+
+    .first__back-modile-second {
+        right: -21% !important;
+    }
+
     .office__subtitle {
         font-size: 14px;
         line-height: 18px;
@@ -836,9 +988,14 @@
 @media only screen and (max-width: 375px) {
     #first {
         padding-bottom: 120px;
-    }
-    .first__img {
-        bottom: 45px;
+
+        .first__back-modile-second {
+            right: -95px !important;
+        }
+
+        .first__img {
+            width: 58%;
+        }
     }
     .merit__list {
         max-width: 250px;
@@ -865,18 +1022,6 @@
             }
         }
     }
-
-    .program__img-first, .program__img-second {
-        bottom: -7px;
-        right: 8px;
-    }
-    .program__head {
-        padding: 40px 16px;
-    }
-    .program__start {
-        font-size: 22px;
-        line-height: 110%;
-    }
     .telegram-head__text {
         font-size: 16px;
     }
@@ -887,5 +1032,9 @@
     }
     .base__name {
         font-size: 26px;
+    }
+
+    #our-experts {
+
     }
 }

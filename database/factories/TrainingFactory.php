@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Training;
 use App\Models\TrainingLocation;
-use App\Models\ProblemZone;
 
 class TrainingFactory extends Factory
 {
@@ -27,9 +26,9 @@ class TrainingFactory extends Factory
         return [
             'name' => $this->faker->name,
             'description' => $this->faker->text,
-            'level' => $this->faker->random_int(0,99999),
+            'level' => $this->faker->numberBetween(0, 99999),
             'training_price' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'problem_zone_id'=> ProblemZone::factory(),
+            //'problem_zone_id'=> ProblemZone::factory(),
         ];
     }
 }

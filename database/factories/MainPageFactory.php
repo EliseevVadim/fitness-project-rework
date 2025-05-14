@@ -24,7 +24,7 @@ class MainPageFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'content' => $this->faker->paragraphs(3, true),
+            'content' => $this->faker->text(50),
         ];
     }
 }

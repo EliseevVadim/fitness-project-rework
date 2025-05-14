@@ -13,18 +13,14 @@ class UpdateQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::table('questions', function (Blueprint $table) {
-            $table->dropForeign(['topic_id']);
-            $table->unsignedBigInteger('topic_id')->change();
-            $table->foreign('topic_id')
-                ->references('id')
-                ->on('topics')
-                ->cascadeOnUpdate();
+            if (!Schema::hasColumn('questions', 'topic_id')) {
+                $table->foreignId('topic_id')
+                    ->nullable() // или без nullable, если обязательно
+                    ->constrained()
+                    ->cascadeOnUpdate();
+            }
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -34,6 +30,11 @@ class UpdateQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('questions');
+        Schema::table('questions', function (Blueprint $table) {
+            if (Schema::hasColumn('questions', 'topic_id')) {
+                $table->dropForeign(['topic_id']);
+                $table->dropColumn('topic_id');
+            }
+        });
     }
 }
