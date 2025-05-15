@@ -14,7 +14,6 @@
 
 .burger span {
     position: absolute;
-    top: 50%;
     left: 50%;
     margin-left: -15px;
     margin-top: -1.5px;
@@ -22,7 +21,7 @@
     height: 4.76px;
     background: #9180ff;
     border-radius: 47px;
-    top: 0;
+    top: 4px;
 }
 
 .burger span:before, .burger span:after {
@@ -110,7 +109,7 @@ nav .main li a:after {
     content: "";
     background-color: #9180ff;
     height: 2px;
-    width: 0%;
+    width: 0;
     left: 50%;
     bottom: -9px;
     position: absolute;
@@ -140,7 +139,7 @@ nav .head__social a {
 }
 
 nav .head__social a:last-of-type {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 nav .head__social a:hover svg path,
@@ -186,7 +185,7 @@ nav .head__btn .button {
         height: 100%;
         max-width: 390px;
         width: 100%;
-        padding: 80px 20px 0px 35px;
+        padding: 80px 20px 0 35px;
         overflow-y: auto;
         transform: translateX(-100%);
         transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -251,7 +250,7 @@ nav .head__btn .button {
         transition: all 0.3s ease;
     }
     .nav ul.main li:last-of-type {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
     .nav .main {
         flex-direction: column;
@@ -320,7 +319,7 @@ nav .head__btn .button {
                 @include transition(all 0.3s ease);
 
                 &:last-of-type {
-                    margin-bottom: 0px;
+                    margin-bottom: 0;
                 }
             }
         }

@@ -778,7 +778,8 @@
                                 <img src="{{ asset($expert['image']) }}" alt="{{ $expert['title'] }}">
                             </div>
                             <div class="our-experts__texts">
-                                <h4 class="our-experts__subtitle">{{ $expert['title'] }}, {{ $expert['specialization'] }}</h4>
+                                <h4 class="our-experts__subtitle">{{ $expert['title'] }}
+                                    , {{ $expert['specialization'] }}</h4>
                                 <p class="our-experts__txt">
                                     В этом выпуске вы узнаете:<br>
                                     @foreach($expert['text'] as $line)
@@ -842,8 +843,9 @@
                             Как работает ежемесячая оплата?
                         </div>
                         <div class="questions-accordion__body">
-                            Каждые 30 дней происходит списание указанной суммы с карты для продления участия в проекте.
-                            За несколько дней до списания мы оповещаем об этом. Отменить подписку можно в любой момент.
+                            Каждые 30 дней происходит списание указанной суммы с карты для продления использования
+                            карманного диетолога. За несколько дней до списания мы оповещаем об этом. Отменить подписку
+                            можно в любой момент.
                         </div>
                     </li>
                     <li class="questions-accordion__item">
