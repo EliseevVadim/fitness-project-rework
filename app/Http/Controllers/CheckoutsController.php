@@ -28,8 +28,8 @@ use App\Core\Tinkoff;
 class CheckoutsController extends Controller
 {
     private array $productLinkMap = array(
-        'КАРМАННЫЙ<br> ДИЕТОЛОГ' => 'https://t.me/AlexLiubov?text=Хочу карманного диетолога',
-        'ПРОЕКТ <br>МОДИФИКАЦИЯ' => 'https://t.me/AlexLiubov?text=Хочу в проект МОДИФИКАЦИЯ',
+        'КАРМАННЫЙ<br> ДИЕТОЛОГ' => 'https://t.me/goodietsBot',
+        'ПРОЕКТ <br>МОДИФИКАЦИЯ' => 'https://t.me/goodietsMBOT',
         'Семейная база' => 'https://t.me/AlexLiubov?text=Хочу СЕМЕЙНУЮ БАЗУ',
         'Бизнес база' => 'https://t.me/AlexLiubov?text=Хочу БИЗНЕС БАЗУ'
     );
