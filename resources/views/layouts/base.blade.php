@@ -6,9 +6,13 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>ВКУСНЫЕ МЕНЮ И ЭФФЕКТИВНЫЕ ТРЕНИРОВКИ!</title>
+        <title>ПРОЕКТ МОДИФИКАЦИЯ!</title>
+        <meta name="keywords" content="проект модификация, программа модификация, фитнес модификация, модификация питание тренировки, фитнес-семья">
         <meta name="description"
               content="Добро пожаловать в фитнес-семью! В нашей фитнес-семье ты будешь вкусно питаться, с удовольствием заниматься спортом и, в первую очередь, любить себя! Этому мы и обучаем в наших программах и марафонах!">
+        <meta property="og:title" content="ПРОЕКТ МОДИФИКАЦИЯ!">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://goodiets.com/">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap"
